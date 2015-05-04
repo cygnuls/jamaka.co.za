@@ -1,0 +1,175 @@
+//---------------------------------------------------------| HOME
+
+//-------------------------------------------- structure
+
+#billboard
+    position: relative
+    width: _16
+    margin: 0
+    padding: 0
+    padding-bottom: 30%
+    background: url('../images/home/billboard_5.jpg') no-repeat center
+    background-size: cover
+    box-shadow: inset 0 -4px 4px -3px rgba(0,0,0,0.6),
+                inset 0 4px 4px -3px rgba(0,0,0,0.6)
+    & div
+        width: _12
+        position: absolute
+        top: 50%
+        left: 50%
+        transform(translate(-50%, -50%))
+        margin: 0
+        & h1
+            font-size: 5em
+            font-weight: normal
+            color: white
+            text-shadow: 2px 2px 3px rgba(0,0,0,0.6)
+            margin: 0 0 0.05em -5px
+        & h2
+            font-size: 1.6em
+            font-weight: normal
+            color: white
+            text-shadow: 2px 2px 3px rgba(0,0,0,0.6)
+            margin: 0 0 0.7em 0
+        & a
+            font-family: heavyweightregular, sans_serif
+            button(dark, rgba(198, 116, 65, 0.8), 1.3em, normal, 5px, 14px 34px 10px)
+            margin-right: 5px
+            &:hover
+                text-decoration: none
+
+.oldie #billboard
+    margin-bottom: 50px
+    & div
+        margin: -100px 0 0 -400px
+        & h1
+            font-size: 5em
+            color: white
+            margin: 0 0 0.2em -5px
+        & h2
+            font-size: 1.6em
+            color: white
+            margin: 0 0 20px 0
+        & a
+            color: white
+            font-size: 1.6em
+            margin-right: 5px
+            padding: 14px 34px
+            background-color: #88684F
+            &:hover
+                text-decoration: none
+                background-color: #6B5341
+
+#introduction
+    margin: 2.2em 0 0 0
+    & h2
+        font-size: 2.6em
+        letter-spacing: -1px
+        margin-bottom: 0.05em
+    & p
+        font-family: sans_serif
+        font-size: 1.3em
+        font-weight: 300
+        line-height: 1.5
+        margin: 0
+
+#featured
+    margin: 0
+    clearfloat()
+    & a
+        margin: 1.3em 0 0.4em
+        padding-top: 1.5em
+        padding-bottom: 1.5em
+        width: 48.8%
+        float: left
+        text-align: center
+        text-shadow: 1px 1px 0 #000
+        border-radius: 10px
+        border-width: 4px
+        border-style: solid
+        text-decoration: none
+        transition(all 250ms ease)
+        & h2
+            font-size: 3em
+            margin: 0 0 0.1em
+            padding: 0
+            & i.fa
+                font-size: 1.1em
+        & h3
+            font-size: 1.6em
+            margin: 0
+            padding: 0
+        &:first-of-type
+            border-color: _brown
+            background: transparent url('../images/home/promotions.jpg') no-repeat center
+            background-size: cover
+            margin-right: 1em
+            & h2, h3
+                color: #E8E3DC
+            &:hover
+                opacity: 0.9
+                border-color: darken(_brown, 40%)
+        &:last-of-type
+            border-color: _green
+            background: transparent url('../images/home/maps.jpg') no-repeat center
+            background-size: cover
+            & h2, h3
+                color: #E8EDE9
+            &:hover
+                opacity: 0.9
+                border-color: darken(_green, 40%)
+
+#directory
+    clearfloat()
+    & div
+        margin: 0 1.1em 0 0
+        padding: 1.3em 0 0 0
+        float: left
+        width: 31.7%
+        border-radius: 8px
+        cursor: default
+        linear_gradient(bottom, rgba(226, 211, 201, 0.9), rgba(239, 229, 222, 0.5))
+        transition(all 250ms ease)
+        &:hover
+            background-color: rgba(216, 202, 192, 0.6)
+            box-shadow: inset 0 0 8px rgb(201, 185, 175)
+        & h3
+            font-size: 2.5em
+            margin: 0 0 0.1em 0
+            padding: 0 0 0.3em 0.5em
+            border-bottom: 2px dotted #C1ACA2
+            text-shadow: 1px 1px 0 #fff
+        & p
+            margin-top: 0.8em
+            margin-bottom: 1.1em
+            padding: 0 1.4em
+        &:nth-of-type(1) h3
+            background: transparent url('../images/home/chalets.png') no-repeat 95% top
+        &:nth-of-type(2) h3
+            background: transparent url('../images/home/tenting.png') no-repeat 93% top
+        &:nth-of-type(3)
+            margin-right: 0
+            & h3
+                background: transparent url('../images/home/farm.png') no-repeat 93% top
+        & a
+            font-family: 'Alegreya Sans', sans_serif
+            font-weight: 400
+            text-transform: uppercase
+            button(dark, rgba(173, 140, 119, 0.7), 1.2em, 700, 0 0 8px 8px, 12px 10px)
+            width: 100%
+            &:hover
+                text-decoration: none
+
+//-------------------------------------------- headings
+
+
+//-------------------------------------------- paragraphs
+
+
+//-------------------------------------------- anchors
+
+
+//-------------------------------------------- images
+
+
+//-------------------------------------------- tables 

@@ -1,0 +1,13 @@
+# directories
+build/
+**/.temp/
+node_modules/
+
+# backups
+*~
+
+# gimp
+*.xcf
+
+# komodo
+*.komodoproject

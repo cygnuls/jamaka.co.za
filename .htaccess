@@ -1,0 +1,3 @@
+# improves rendering speed as client knows ahead of time the charset to be used
+
+AddDefaultCharset UTF-8

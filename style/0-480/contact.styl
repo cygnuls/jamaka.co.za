@@ -1,0 +1,380 @@
+//-------------------------------------------- structure
+
+// contact
+
+#contact main.index
+    margin-bottom: 500px
+    padding-bottom: 5%
+    clearfloat()
+    & header
+        margin: 40px 0 0 0
+        padding: 0
+        & h1
+            font-size: 3.8em
+            text-align: center
+            margin: 0
+            & img
+                width: 54px
+                margin: 0 3px -5px 0
+                padding: 0
+    & section:first-of-type // target contact form
+        width: _16
+        float: left
+        margin: 10px 0 0 0
+        & form
+            position: relative
+            min-height: 570px
+            line-height: 1.8
+            & fieldset
+                width: _16
+                & legend
+                    font-size: 1.7em
+                    font-family: 'heavyweightregular'
+                    text-transform: lowercase                    
+                    margin: 0
+                    & i
+                        font-size: 0.9em
+                        vertical-align: middle
+                & > div
+                    width: _16
+                    margin: 0
+                    padding: 5px 0
+                    &#type // target accommodation type section
+                        margin-bottom: 2px
+                        clearfloat() // resume normal flow after radio buttons (for "type")
+                        & p
+                            float: left
+                            width: _16
+                            font-family: avec_serif
+                            font-size: 1em
+                            font-weight: bold
+                            color: #564D48
+                            margin: 0
+                        & div
+                            float: left
+                            width: _8
+                            margin: 0
+                            padding: 0
+                            & input
+                                margin: 9px 5px 0 0
+                            & label
+                                width: 77px
+                                margin: 0
+                                padding: 0
+                    &#options // target conditional options display
+                        width: 98%
+                        margin: 0 0 15px
+                        padding: 0
+                        & #options-cottage
+                            width: _16
+                            margin: auto 0
+                            padding: 8px 10px
+                            border: 1px solid #CCC4BF
+                            border-radius: 5px
+                            background: #E5DAD3
+                            clearfloat()
+                            & div:first-of-type
+                                width: _16                                
+                                margin: 0 0 0 10%
+                                padding: 0
+                                & input
+                                    margin: 0
+                                    padding: 0
+                                & label
+                                    width: auto
+                                    margin: 0 10px 0 0
+                                    padding: 0
+                                    text-shadow: 1px 1px 0 _light_brown
+                            & div:last-of-type
+                                float: left
+                                width: _16
+                                margin: 0 0 0 18%
+                                padding: 0
+                                & input
+                                    float: left
+                                    width: auto
+                                    margin: 9px 6px 0 0
+                                    padding: 0
+                                & label
+                                    width: auto
+                                    margin: 0
+                                    padding: 0
+                                    text-shadow: 1px 1px 0 _light_brown
+                        & #options-campsite
+                            width: _16
+                            margin: 0 auto
+                            padding: 14px 20px
+                            border: 1px solid #CCC4BF
+                            border-radius: 5px
+                            background: #E5DAD3                  
+                            & div
+                                width: _13                        
+                                margin: 0 auto
+                                padding: 0
+                                & input
+                                    width: 50px
+                                    margin: 0
+                                    padding: 0
+                                & label
+                                    width: auto
+                                    margin: -4px 8px 0 0
+                                    padding: 0
+                                    text-shadow: 1px 1px 0 _light_brown
+                    &:last-of-type // target spam quiz
+                        width: _16
+                        margin: 12px auto 20px
+                        padding: 0
+                        color: #564D48
+                        clearfloat()
+                        & p
+                            float: left
+                            display: block
+                            width: 132px
+                            font-family: avec_serif
+                            font-size: 1em
+                            font-weight: bold
+                            line-height: 1.8
+                            color: #564D48
+                            margin: 0
+                            padding: 0
+                        & > div
+                            float: left
+                            width: auto
+                            margin: 0
+                            padding: 0
+                            & div
+                                float: left
+                                width: auto
+                                margin: 0
+                                padding: 0
+                                & label
+                                    width: auto
+                                    font-size: 1em
+                                    padding: 0
+                                    margin: 0 8px 0 4px
+                                & input
+                                    width: auto
+                                    float: left
+                                    margin: 9px 0 0 0
+                                    padding: 0
+                                &:last-of-type label
+                                    margin-right: 0
+                    & label
+                        font-family: avec_serif
+                        font-size: 1em
+                        font-weight: bold
+                        color: #564D48
+                        margin: 0
+                        padding: 0
+                        &:not([for="message"]) // exclude textarea
+                            display: block
+                            float: left
+                            width: 102px
+                    & input
+                        display: block
+                        margin: 0
+                        box-shadow: none
+                        border: none
+                        font-family: avec_serif
+                        &:not([type="submit"])
+                            width: 98%
+                            font-size: 1.1em
+                            color: #424739
+                            padding: 4px 5px
+                            border: 1px solid #CCC4BF
+                            border-radius: 3px
+                        &[type="radio"]
+                            display: inline
+                            margin: 0
+                            padding: 0
+                            width: auto // webkit - override implicit width
+                        &[name="type"]
+                            float: left
+                        &.duration // allow calendar buttons to wrap
+                            display: inline-block
+                            width: 80%
+                            margin-right: 5px
+                    & textarea
+                        display: block
+                        box-shadow: none
+                        letter-spacing: 0.04em
+                        font-family: avec_serif
+                        width: 92%
+                        min-height: 150px
+                        margin: 0
+                        padding: 7px 0 7px 10px
+                        font-size: 1.15em // reduce font size to enable more text
+                        resize: none // remove ability to resize
+                        overflow: auto // remove scrollbars from IE
+                        border: none
+                        border: 1px solid #ccc
+                        border-radius: 3px
+                        &:required
+                            background: #fff url('../images/form/required.png') no-repeat 578px 10px // displays persistent "required" cue
+                        &:required:valid
+                            background: #fff url('../images/form/valid.png') no-repeat 578px 10px // displays persistent user feedback as valid
+                        &:focus:required:valid
+                            background: #fff url('../images/form/valid.png') no-repeat 578px 10px // displays valid cue in focused state
+                        &:focus:required:invalid
+                            background: #fff url('../images/form/invalid.png') no-repeat 578px 10px // displays invalid cue in focused state
+                        &::-moz-placeholder {font-size: 1em} // ensure textarea placeholder font remains consistent in size
+                        &:-moz-placeholder {font-size: 1em}
+                        &::-webkit-input-placeholder {font-size: 1em}
+                        &:-ms-input-placeholder {font-size: 1em}
+                & input[type="submit"]
+                    display: block !important
+                    width: 190px // set explicite width to center in IE8, Safari 5
+                    margin: 0 0 0 2%
+                    font-family: avec_serif
+                    letter-spacing: normal
+                    button(light, rgba(211, 193, 180, 0.7), 1.1em, 700, 5px, 12px 18px)
+    & section:last-of-type // target right side (various contact-related info)
+        width: _16
+        float: left
+        margin: 40px 0 0 0
+        & div
+            margin: 0
+            padding: 0
+            & h1
+                font-size: 1.9em
+                text-align: center
+                margin: 0
+                padding: 0
+                & i
+                    font-size: 0.9em
+                    vertical-align: middle
+            &:nth-of-type(1) // target div with table
+                & table
+                    margin: 0
+                    padding: 0
+                    & thead
+                        margin: 0
+                        padding: 0                    
+                        & th
+                            font-size: 1.1em
+                            font-family: avec_serif
+                            margin: 0
+                            padding: 5px 0
+                    & tbody
+                        & td
+                            font-size: 1em
+                            font-family: avec_serif
+                            padding: 1px 0
+            &:nth-of-type(2) // div with directions
+                & h1
+                    margin: 18px 0 6px
+                & p
+                    font-size: 1em
+                    line-height: 1.2
+                    margin: 0
+            &:nth-of-type(3) // div with resources
+                & h1
+                    margin: 20px 0 6px
+                & ul
+                    margin: 0
+                    padding: 0
+                    list-style-type: disc
+                    list-style-position: inside
+                    & li
+                        font-family: avec_serif
+                        font-size: 1em
+                        margin: 5px 0
+                        padding: 0
+            
+    
+// continue form styling
+:invalid
+	box-shadow: none // remove firefox's persistent red box shadow
+
+:focus
+    outline: none // remove webkit border on input elements
+
+:required
+    background: white url('../images/contact/required.png') no-repeat 98% 5px // displays persistent "required" cue
+
+:required:valid
+    background: white url('../images/contact/valid.png') no-repeat 98% 8px // displays persistent user feedback as valid
+
+input:focus:required:valid
+    background: white url('../images/contact/valid.png') no-repeat 98% 8px // displays valid cue in focused state
+
+input:focus:required:invalid
+    background: white url('../images/contact/invalid.png') no-repeat 98% 8px // displays invalid cue in focused state
+
+input[type="tel"]:focus // make background on focus consistent across non-required controls
+    background: white
+
+::-webkit-input-placeholder
+    color: #85897D
+    font-style: italic
+
+:-moz-placeholder // Firefox 18-
+    color: #85897D
+    font-style: italic
+
+::-moz-placeholder // Firefox 19+
+    color: #85897D
+    font-style: italic
+
+:-ms-input-placeholder
+    color: #85897D
+    font-style: italic
+
+// error styles
+#error
+    color: tomato
+    font-size: 1.2em
+    text-align: center
+    margin: auto
+
+// success styles
+#sent
+    text-align: center
+    margin: 40% 0 0 0
+    padding: 0
+    & h1
+        font-family: avec_serif
+        font-size: 1.3em
+        font-weight: 700
+        color: #3D3022
+        letter-spacing: normal
+        text-transform: none
+        margin-bottom: -10px
+        & span
+            color: #235B25
+    & h2
+        font-family: avec_serif
+        font-size: 1.3em
+        font-weight: 700
+        letter-spacing: normal
+        text-transform: none
+        color: #3D3022
+    & p
+        font-family: avec_serif
+        font-size: 1.1em
+        text-align: center
+        color: #3D3022
+
+// loader styles
+form img
+    display: block
+    position: absolute
+    top: 50%
+    left: 50%
+    margin: -22px 0 0 -22px // placed it higher than middle for optical adjustment
+
+// jquery ui augmentation
+div.ui-datepicker-header
+    margin: auto
+
+table.ui-datepicker-calendar thead tr th span[title]
+    text-shadow: -1px -1px 0 #4E513F
+
+button.ui-datepicker-trigger
+    line-height: 1
+    color: #564D48
+    border: none
+    vertical-align: bottom
+    button(light, rgba(216, 200, 190, 0.6), 1.4em, normal, 3px, 4px)
+    &:hover
+        cursor: pointer

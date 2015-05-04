@@ -1,0 +1,40 @@
+//-------------------------------------------- structure
+
+// about
+
+#about main.index
+    & section
+        margin: 70px 0 150px 0
+        padding: 0
+        & header
+            & h1
+                font-size: 5.4em
+                text-align: center
+                margin: 0
+                & img
+                    margin: 0 15px 0 0
+                    vertical-align: middle
+        & article
+            clearfloat()
+            & p
+                font-size: 1em
+            & figure
+                width: _8
+                max-width: 400px
+                &:nth-of-type(odd)
+                    float: left
+                    margin: 0 24px 0 0
+                &:nth-of-type(even)
+                    float: right
+                    margin: 0 0 0 24px
+                & figcaption
+                    font-family: 'Alegreya Sans', sans_serif
+                    font-size: 1.1em
+                    text-align: center
+                    padding: 0.5em 0 0.7em
+                    text-shadow: 1px 1px 0 _light_brown
+                    linear_gradient(top, #D1BEB3, _light_brown)
+                & img
+                    width: _16
+                    display: block
+                    border-radius: 5px 5px 0 0

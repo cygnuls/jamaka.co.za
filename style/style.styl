@@ -1,0 +1,95 @@
+//---------------------------------------------------------| imports { dependencies }
+
+@import 'reset'
+@import 'mixins'
+@import 'tools'
+
+//---------------------------------------------------------| colors { document }
+
+_default     = #333
+_headings    = #333
+_paragraphs  = #333
+
+// scheme
+_green       = #10321b
+_faded_green = #a0ad97
+_light_green = #9E9E91
+_brown       = #302319
+_faded_brown = #c6ad9a
+_light_brown = #f8f2ee
+
+//---------------------------------------------------------| anchors
+
+// color
+_link        = #1F6FBA
+_visited     = #1F6FBA
+_hover       = #8B30B2
+_active      = #8B30B2
+_focus       = #8B30B2
+
+a
+    text-decoration: none
+    transition(color 180ms ease)
+    &:link
+        color: _link
+        text-decoration: none
+    &:visited
+        color: _link
+    &:hover
+    &:focus
+        color: _hover
+        text-decoration: underline
+    &:active
+        color: _active
+
+//---------------------------------------------------------| type
+
+// required: SIZE, FAMILY; complete: 'font: style variant weight size/line-height family'
+// normal normal bold 2em/1 FreeSans, 'Nimbus Sans L', Helvetica, Arial, sans-serif
+
+avec_serif = 'Bitstream Charter', 'DejaVu Serif', 'Palatino', 'Georgia', serif
+sans_serif = 'Oxygen', 'FreeSans', 'Nimbus Sans L', 'Liberation Sans', 'Helvetica Neue LT Std', 'Helvetica', 'Arial', sans-serif
+// $monospace = 'Anonymous Pro', 'Nimbus Mono L', 'DejaVu Mono', 'Bitstream Sans Mono', 'Free Mono', 'Liberation Mono' (needs editing)
+
+// imports
+@font-face
+    font-family: 'heavyweightregular'
+    src: url('fonts/heavyweight/heavywei-webfont.eot')
+    src: url('fonts/heavyweight/heavywei-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/heavyweight/heavywei-webfont.woff') format('woff'),
+         url('fonts/heavyweight/heavywei-webfont.ttf') format('truetype'),
+         url('fonts/heavyweight/heavywei-webfont.svg#heavyweightregular') format('svg')
+    font-weight: normal
+    font-style: normal
+    
+//---------------------------------------------------------| borders
+
+border = 1px solid #aaa // borders
+rule   = 1px dotted #ccc // columns
+
+//---------------------------------------------------------| structure
+
+//-------------------------------------------- document
+
+html
+    position: relative
+    min-height: 100%
+    font-family: sans_serif
+    background: _light_brown
+
+//---------------------------------------------------------| lines
+
+hr
+    height: 1px
+    border: none
+    margin: 0
+    padding: 0
+    linear_gradient(left, _light_brown, _faded_brown, _light_brown)
+
+//---------------------------------------------------------| imports { platforms }
+
+@import '0-480'
+@import '481-768'
+@import '769-1024'
+@import '1025-1599'
+@import '1600+'

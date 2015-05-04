@@ -1,0 +1,749 @@
+//-------------------------------------------- structure
+
+// stay
+
+#stay .choose
+    clearfloat()
+    section div
+        float: left
+        width: _8
+        margin-top: 60px
+        &:first-of-type
+            & a
+                color: #E8E3DC
+                background: _brown url('../images/stay/cottages.jpg') no-repeat center
+                background-size: cover
+                border-color: _brown
+                &:hover
+                    opacity: 0.9
+                    border-color: darken(_brown, 40%)
+        &:last-of-type
+            & a
+                color: #E8EDE9
+                background: _green url('../images/stay/campsite.jpg') no-repeat center
+                background-size: cover
+                border-color: _green
+                &:hover
+                    opacity: 0.9
+                    border-color: darken(_green, 40%)
+        & img
+            float: left
+            margin: 8px 18px 0 0
+        & p
+            font-size: 1.4em
+            margin-top: 0
+            margin-bottom: 1.2em
+        & a
+            display: block
+            width: 100%
+            padding: 26% 0 22% 0
+            border-radius: 12px
+            border: none
+            font-family: heavyweightregular, sans_serif
+            text-transform: lowercase
+            font-size: 5.6em
+            text-align: center
+            border-width: 6px
+            border-style: solid
+            text-shadow: 1px 1px 0 #000
+            text-decoration: none
+            line-height: 0
+            transition(all 250ms ease)
+
+// stay → cottages + campsite
+
+#stay .cottages, #stay .campsite
+    margin-top: 70px
+    & section:first-of-type
+        padding: 2.8em 0 1.4em 0
+        background-size: contain
+        text-shadow: 1px 1px 0 #F8F2EE
+        & h2
+            font-size: 5.8em
+            text-align: center
+            margin: 0 0 0.13em 0
+        & h3
+            font-size: 2.4em
+            text-align: center
+            margin: 0
+    & section:last-of-type
+        margin: 45px 0 40px 0
+        clearfloat()
+        & a
+            position: relative
+            float: left
+            width: _4
+            margin: auto
+            padding: 12.6% 0
+            text-decoration: none
+            background-size: cover !important
+            & span
+                position: absolute
+                top: 0
+                left: 0
+                width: _16
+                background-size: cover !important
+                margin: 0
+                padding: 50.4% 0
+                text-shadow: 1px 1px 0 _light_brown
+                transition(opacity 400ms ease)
+                & h4
+                    font-size: 5em
+                    text-align: center
+                    line-height: 0
+                    margin: 0
+                & p
+                    position: absolute
+                    bottom: 12%
+                    left: 50%
+                    width: _16
+                    transform(translate(-50%, 0%))
+                    font-size: 1.1em
+                    text-align: center
+                    line-height: 0
+                    margin: 0
+                &:hover
+                    opacity: 0
+
+// stay → cottages
+
+#stay .cottages
+    & section:first-of-type
+        background: transparent url('../images/stay/cottages/header.png') no-repeat center
+    & section:last-of-type a
+        &:nth-of-type(1)
+            background: transparent url('../images/stay/cottages/1.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/cottages/1_overlay.jpg') no-repeat center
+        &:nth-of-type(2)
+            background: transparent url('../images/stay/cottages/2.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/cottages/2_overlay.jpg') no-repeat center
+        &:nth-of-type(3)
+            background: transparent url('../images/stay/cottages/3.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/cottages/3_overlay.jpg') no-repeat center
+        &:nth-of-type(4)
+            background: transparent url('../images/stay/cottages/4.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/cottages/4_overlay.jpg') no-repeat center
+        &:nth-of-type(5)
+            background: transparent url('../images/stay/cottages/5.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/cottages/5_overlay.jpg') no-repeat center
+        &:nth-of-type(6)
+            background: transparent url('../images/stay/cottages/6.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/cottages/6_overlay.jpg') no-repeat center
+        &:nth-of-type(7)
+            background: transparent url('../images/stay/cottages/7.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/cottages/7_overlay.jpg') no-repeat center
+        &:nth-of-type(8)
+            background: transparent url('../images/stay/cottages/9.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/cottages/9_overlay.jpg') no-repeat center
+        &:nth-of-type(9)
+            background: transparent url('../images/stay/cottages/10.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/cottages/10_overlay.jpg') no-repeat center
+
+// stay → campsite
+
+#stay .campsite
+    & section:first-of-type
+        background: transparent url('../images/stay/campsite/header.png') no-repeat center
+    & section:last-of-type a
+        width: 20%
+        padding: 10% 0
+        & span
+            padding: 50% 0
+            & h4
+                font-size: 4.8em
+                text-align: center
+                line-height: 0
+                margin: 0
+            & p
+                position: absolute
+                bottom: 12%
+                left: 50%
+                width: _16
+                transform(translate(-50%, 0%))
+                font-size: 1.1em
+                text-align: center
+                line-height: 0
+                margin: 0
+        &:nth-of-type(1)
+            background: transparent url('../images/stay/campsite/1.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/1_overlay.jpg') no-repeat center
+        &:nth-of-type(2)
+            background: transparent url('../images/stay/campsite/2.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/2_overlay.jpg') no-repeat center
+        &:nth-of-type(3)
+            background: transparent url('../images/stay/campsite/2a.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/2a_overlay.jpg') no-repeat center
+        &:nth-of-type(4)
+            background: transparent url('../images/stay/campsite/3.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/3_overlay.jpg') no-repeat center
+        &:nth-of-type(5)
+            background: transparent url('../images/stay/campsite/3a.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/3a_overlay.jpg') no-repeat center
+        &:nth-of-type(6)
+            background: transparent url('../images/stay/campsite/4.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/4_overlay.jpg') no-repeat center
+        &:nth-of-type(7)
+            background: transparent url('../images/stay/campsite/4a.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/4a_overlay.jpg') no-repeat center
+        &:nth-of-type(8)
+            background: transparent url('../images/stay/campsite/5.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/5_overlay.jpg') no-repeat center
+        &:nth-of-type(9)
+            background: transparent url('../images/stay/campsite/6.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/6_overlay.jpg') no-repeat center
+        &:nth-of-type(10)
+            background: transparent url('../images/stay/campsite/7.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/7_overlay.jpg') no-repeat center                
+        &:nth-of-type(11)
+            background: transparent url('../images/stay/campsite/8.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/8_overlay.jpg') no-repeat center
+        &:nth-of-type(12)
+            background: transparent url('../images/stay/campsite/9.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/9_overlay.jpg') no-repeat center
+        &:nth-of-type(13)
+            background: transparent url('../images/stay/campsite/9a.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/9a_overlay.jpg') no-repeat center
+        &:nth-of-type(14)
+            background: transparent url('../images/stay/campsite/10.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/10_overlay.jpg') no-repeat center                
+        &:nth-of-type(15)
+            background: transparent url('../images/stay/campsite/10a.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/10a_overlay.jpg') no-repeat center
+        &:nth-of-type(16)
+            background: transparent url('../images/stay/campsite/11.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/11_overlay.jpg') no-repeat center
+        &:nth-of-type(17)
+            background: transparent url('../images/stay/campsite/11a.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/11a_overlay.jpg') no-repeat center                
+        &:nth-of-type(18)
+            background: transparent url('../images/stay/campsite/11b.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/11b_overlay.jpg') no-repeat center
+        &:nth-of-type(19)
+            background: transparent url('../images/stay/campsite/11c.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/11c_overlay.jpg') no-repeat center                
+        &:nth-of-type(20)
+            background: transparent url('../images/stay/campsite/12.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/12_overlay.jpg') no-repeat center
+        &:nth-of-type(21)
+            background: transparent url('../images/stay/campsite/12a.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/12a_overlay.jpg') no-repeat center
+        &:nth-of-type(22)
+            background: transparent url('../images/stay/campsite/12b.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/12b_overlay.jpg') no-repeat center
+        &:nth-of-type(23)
+            background: transparent url('../images/stay/campsite/12c.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/12c_overlay.jpg') no-repeat center
+        &:nth-of-type(24)
+            background: transparent url('../images/stay/campsite/12d.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/12d_overlay.jpg') no-repeat center
+        &:nth-of-type(25)
+            background: transparent url('../images/stay/campsite/12e.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/12e_overlay.jpg') no-repeat center
+        &:nth-of-type(26)
+            background: transparent url('../images/stay/campsite/13.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/13_overlay.jpg') no-repeat center
+        &:nth-of-type(27)
+            background: transparent url('../images/stay/campsite/13a.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/13a_overlay.jpg') no-repeat center                
+        &:nth-of-type(28)
+            background: transparent url('../images/stay/campsite/13c.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/13c_overlay.jpg') no-repeat center   
+        &:nth-of-type(29)
+            background: transparent url('../images/stay/campsite/14.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/14_overlay.jpg') no-repeat center   
+        &:nth-of-type(30)
+            background: transparent url('../images/stay/campsite/14.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/14_overlay.jpg') no-repeat center 
+        &:nth-of-type(31)
+            background: transparent url('../images/stay/campsite/14a.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/14a_overlay.jpg') no-repeat center
+        &:nth-of-type(32)
+            background: transparent url('../images/stay/campsite/15.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/15_overlay.jpg') no-repeat center                 
+        &:nth-of-type(33)
+            background: transparent url('../images/stay/campsite/15a.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/15a_overlay.jpg') no-repeat center                 
+        &:nth-of-type(34)
+            background: transparent url('../images/stay/campsite/15b.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/15b_overlay.jpg') no-repeat center                 
+        &:nth-of-type(35)
+            background: transparent url('../images/stay/campsite/15c.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/15c_overlay.jpg') no-repeat center                 
+        &:nth-of-type(36)
+            background: transparent url('../images/stay/campsite/16.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/16_overlay.jpg') no-repeat center                 
+        &:nth-of-type(37)
+            background: transparent url('../images/stay/campsite/17.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/17_overlay.jpg') no-repeat center                 
+        &:nth-of-type(38)
+            background: transparent url('../images/stay/campsite/17a.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/17a_overlay.jpg') no-repeat center                 
+        &:nth-of-type(39)
+            background: transparent url('../images/stay/campsite/17b.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/17b_overlay.jpg') no-repeat center                 
+        &:nth-of-type(40)
+            background: transparent url('../images/stay/campsite/17c.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/17c_overlay.jpg') no-repeat center                 
+        &:nth-of-type(41)
+            background: transparent url('../images/stay/campsite/17d.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/17d_overlay.jpg') no-repeat center                 
+        &:nth-of-type(42)
+            background: transparent url('../images/stay/campsite/17e.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/17e_overlay.jpg') no-repeat center                 
+        &:nth-of-type(43)
+            background: transparent url('../images/stay/campsite/18.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/18_overlay.jpg') no-repeat center                  
+        &:nth-of-type(44)
+            background: transparent url('../images/stay/campsite/19.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/19_overlay.jpg') no-repeat center                  
+        &:nth-of-type(45)
+            background: transparent url('../images/stay/campsite/20.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/20_overlay.jpg') no-repeat center                  
+        &:nth-of-type(46)
+            background: transparent url('../images/stay/campsite/21.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/21_overlay.jpg') no-repeat center                     
+        &:nth-of-type(47)
+            background: transparent url('../images/stay/campsite/22.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/22_overlay.jpg') no-repeat center                     
+        &:nth-of-type(48)
+            background: transparent url('../images/stay/campsite/23.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/23_overlay.jpg') no-repeat center                     
+        &:nth-of-type(49)
+            background: transparent url('../images/stay/campsite/24.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/24_overlay.jpg') no-repeat center                     
+        &:nth-of-type(50)
+            background: transparent url('../images/stay/campsite/25.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/25_overlay.jpg') no-repeat center                     
+        &:nth-of-type(51)
+            background: transparent url('../images/stay/campsite/26.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/26_overlay.jpg') no-repeat center                     
+        &:nth-of-type(52)
+            background: transparent url('../images/stay/campsite/27.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/27_overlay.jpg') no-repeat center                     
+        &:nth-of-type(53)
+            background: transparent url('../images/stay/campsite/28.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/28_overlay.jpg') no-repeat center                     
+        &:nth-of-type(54)
+            background: transparent url('../images/stay/campsite/30.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/30_overlay.jpg') no-repeat center                     
+        &:nth-of-type(55)
+            background: transparent url('../images/stay/campsite/30a.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/30a_overlay.jpg') no-repeat center                     
+        &:nth-of-type(56)
+            background: transparent url('../images/stay/campsite/31.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/31_overlay.jpg') no-repeat center
+        &:nth-of-type(57)
+            background: transparent url('../images/stay/campsite/32.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/32_overlay.jpg') no-repeat center                 
+        &:nth-of-type(58)
+            background: transparent url('../images/stay/campsite/33.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/33_overlay.jpg') no-repeat center                 
+        &:nth-of-type(59)
+            background: transparent url('../images/stay/campsite/34.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/34_overlay.jpg') no-repeat center                   
+        &:nth-of-type(60)
+            background: transparent url('../images/stay/campsite/35.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/35_overlay.jpg') no-repeat center                   
+        &:nth-of-type(61)
+            background: transparent url('../images/stay/campsite/36.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/36_overlay.jpg') no-repeat center                   
+        &:nth-of-type(62)
+            background: transparent url('../images/stay/campsite/37.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/37_overlay.jpg') no-repeat center                 
+        &:nth-of-type(63)
+            background: transparent url('../images/stay/campsite/38.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/38_overlay.jpg') no-repeat center                 
+        &:nth-of-type(64)
+            background: transparent url('../images/stay/campsite/39.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/39_overlay.jpg') no-repeat center                 
+        &:nth-of-type(65)
+            background: transparent url('../images/stay/campsite/40.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/40_overlay.jpg') no-repeat center                 
+        &:nth-of-type(66)
+            background: transparent url('../images/stay/campsite/41.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/41_overlay.jpg') no-repeat center                 
+        &:nth-of-type(67)
+            background: transparent url('../images/stay/campsite/42.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/42_overlay.jpg') no-repeat center                 
+        &:nth-of-type(68)
+            background: transparent url('../images/stay/campsite/43.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/43_overlay.jpg') no-repeat center                 
+        &:nth-of-type(69)
+            background: transparent url('../images/stay/campsite/44.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/44_overlay.jpg') no-repeat center                 
+        &:nth-of-type(70)
+            background: transparent url('../images/stay/campsite/45.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/45_overlay.jpg') no-repeat center                 
+        &:nth-of-type(71)
+            background: transparent url('../images/stay/campsite/46.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/46_overlay.jpg') no-repeat center                 
+        &:nth-of-type(72)
+            background: transparent url('../images/stay/campsite/47.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/47_overlay.jpg') no-repeat center                 
+        &:nth-of-type(73)
+            background: transparent url('../images/stay/campsite/47a.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/47a_overlay.jpg') no-repeat center                     
+        &:nth-of-type(74)
+            background: transparent url('../images/stay/campsite/48.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/48_overlay.jpg') no-repeat center                     
+        &:nth-of-type(75)
+            background: transparent url('../images/stay/campsite/49.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/49_overlay.jpg') no-repeat center                     
+        &:nth-of-type(76)
+            background: transparent url('../images/stay/campsite/49a.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/49a_overlay.jpg') no-repeat center                     
+        &:nth-of-type(77)
+            background: transparent url('../images/stay/campsite/50.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/50_overlay.jpg') no-repeat center                     
+        &:nth-of-type(78)
+            background: transparent url('../images/stay/campsite/54.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/54_overlay.jpg') no-repeat center                   
+        &:nth-of-type(79)
+            background: transparent url('../images/stay/campsite/58.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/58_overlay.jpg') no-repeat center                   
+        &:nth-of-type(80)
+            background: transparent url('../images/stay/campsite/60.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/60_overlay.jpg') no-repeat center                   
+        &:nth-of-type(81)
+            background: transparent url('../images/stay/campsite/64.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/64_overlay.jpg') no-repeat center                   
+        &:nth-of-type(82)
+            background: transparent url('../images/stay/campsite/68.jpg') no-repeat center
+            & span
+                background: transparent url('../images/stay/campsite/68_overlay.jpg') no-repeat center
+
+// stay → cottages → units +  stay → campsite → units
+
+#stay .cottages.units
+#stay .campsite.units
+    margin-top: 70px
+    & > div:nth-of-type(1)
+        width: _16
+        margin: 0 0 -0.2em 0
+        padding: 0
+        clearfloat()
+        & h2
+            color: _light_brown
+            font-size: 4.3em
+            letter-spacing: 8px
+            line-height: 1.7
+            text-align: center
+            text-shadow: -1px -1px 0 #2B1B03
+            padding-top: 0.2em
+            background: transparent url('../images/stay/cottages/header_units.png') no-repeat center
+    & > div:nth-of-type(2)
+        margin: 0
+        clearfloat()
+        & img
+            display: block
+            margin: 0 auto
+        & #display
+            float: left
+            width: _11
+            position: relative
+            margin: 0
+            padding: 0
+            padding-bottom: 32.5%
+            & img
+                position: absolute
+                width: _16
+                top: 0
+                left: 0
+        & #gallery
+            float: left
+            width: _5
+            margin: 0
+            padding: 0
+            & a
+                float: left
+                width: 33.3%
+                & img
+                    margin: 0
+    & > div:nth-of-type(3)
+        margin-top: 0
+        clearfloat()
+        & section
+            width: _11
+            float: left
+            clear: both
+            margin: 0
+            padding: 0
+            background: none
+            & p
+                font-size: 1.1em
+                line-height: 1.7
+                text-shadow: none
+                padding-right: 1.4em
+                &:first-of-type:first-letter
+                    font: 5em/0.8 heavyweightregular, sans_serif
+                    text-transform: lowercase
+                    letter-spacing: 0
+                    float: left
+                    margin: 0.13em 0.1em 0 0
+                &:last-of-type
+                    padding-bottom: 1em
+                    border-bottom: 1px solid #D3C6BA
+            & a
+                width: auto
+                font-family: heavyweightregular, sans_serif
+                text-transform: lowercase
+                margin: 6px 12px 0 0
+                button(light, rgba(191, 172, 145, 0.5), 1.4em, normal, 5px, 13px 20px 10px)
+                & i
+                    font-size: 1em
+                    vertical-align: middle
+        & aside
+            width: _5
+            float: left
+            padding: 2em 0
+            background: _brown url('../images/stay/cottages/background_aside.jpg') repeat
+            & h4
+                color: _brown
+                margin: 1em 0 0.3em
+                font-size: 2.5em
+                letter-spacing: 3px
+                text-align: center
+                text-shadow: 1px 1px 0 white
+                &:first-of-type
+                    margin-top: 0.2em
+            & table
+                width: _13
+                table-layout: fixed
+                margin: 0 auto 30px
+                padding: 0
+                text-align: center
+                border-collapse: collapse
+                & th, tfoot tr:first-of-type td
+                    font-family: heavyweightregular, sans_serif
+                    text-transform: lowercase
+                    font-weight: normal
+                & thead
+                    & tr
+                        background: rgba(158, 141, 126, 0.5)
+                        & th
+                            color: #30251D
+                            font-size: 1.6em
+                            letter-spacing: 2px
+                            padding: 0.6em 0 0.4em
+                            text-shadow: 1px 1px 0 #DDD6D0
+                            &:first-of-type
+                                border-right: 1px solid #9E8D7E
+                & tbody
+                    white-space: nowrap
+                    & tr
+                        background: transparent
+                        & td
+                            color: _brown
+                            font-family: 'Alegreya Sans', sans_serif
+                            font-size: 2.2em
+                            padding: 0.2em 1.1em
+                            border-bottom: 1px solid #9E8D7E
+                            &:first-of-type
+                                border-right: 1px solid #9E8D7E
+                        &:last-of-type td
+                            border-bottom: none
+                & tfoot
+                    & tr
+                        &:first-of-type
+                            background: rgba(158, 141, 126, 0.5)
+                            & td
+                                color: #30251D
+                                font-size: 1.6em
+                                letter-spacing: 2px
+                                padding: 0.6em 0 0.4em
+                                text-shadow: 1px 1px 0 #DDD6D0
+                                &:first-of-type
+                                    border-right: 1px solid #9E8D7E
+                        &:last-of-type
+                            & td
+                                color: _brown
+                                font-family: 'Alegreya Sans', sans_serif
+                                font-size: 2.2em
+                                padding: 0.2em 0
+                                background: transparent
+                                &:first-of-type
+                                    border-right: 1px solid #9E8D7E
+            & ul
+                width: _13
+                margin: auto
+                padding: 1.2em 2em
+                background-color: rgba(248, 242, 238, 0.5)
+                & li
+                    color: _brown
+                    font-family: 'Alegreya Sans', sans_serif
+                    font-size: 1.1em
+                    & i
+                        color: #938070
+                        margin: 0 0 0 0
+                        padding: 0 0.35em 0 0
+                        vertical-align: middle
+                        text-shadow: 1px 1px 0 white
+
+// stay → campsite → units
+
+#stay .campsite.units
+    & > div:nth-of-type(1) h2
+        letter-spacing: 6px
+        text-shadow: -1px -1px 0 _green
+        background: transparent url('../images/stay/campsite/header_units.png') no-repeat center
+    & > div:nth-of-type(2) #gallery a
+        width: 50%
+    & > div:nth-of-type(3)
+        & section
+            & p:last-of-type
+                padding-bottom: 1em
+                border-bottom: 1px solid #A9B59F
+            & a
+                button(light, rgba(169, 181, 159, 0.6), 1.4em, normal, 5px, 12px 20px 10px)
+        & aside
+            background: _brown url('../images/stay/campsite/background_aside.jpg') repeat
+            & h4
+                color: _green
+                margin: 0.2em 0 0.3em
+                text-shadow: 1px 1px 0 white
+            & table
+                margin: 0 auto
+                & thead tr
+                    background: rgba(58, 86, 47, 0.35)
+                    & th
+                        color: _green
+                        padding: 0.6em 0 0.4em
+                        text-shadow: 1px 1px 0 #BEC9B1
+                        &:first-of-type
+                            border: none
+                & tbody tr td
+                    color: _green
+                    padding: 0.6em 1.1em
+                    border-bottom: 1px solid #536B4E
+                    &:first-of-type
+                        border: none
+                & tfoot tr
+                    &:first-of-type
+                        background: rgba(58, 86, 47, 0.35)
+                        & td
+                            color: _green
+                            font-size: 1.6em
+                            padding: 0.6em 0 0.4em
+                            text-shadow: 1px 1px 0 #BEC9B1
+                            &:first-of-type
+                                border: none
+                    &:last-of-type td
+                        color: _green
+                        padding: 0.6em 0
+                        &:first-of-type
+                            border: none
+            & ul
+                background-color: rgba(255, 255, 255, 0.4)
+                & li
+                    color: _green
+                    &:last-of-type
+                        margin-top: 0.8em
+                        padding-top: 0.8em
+                        border-top: 2px dotted #869678
+                    & i
+                        color: #6A8260
+                        text-shadow: 1px 1px 0 white
+
+//-------------------------------------------- headings
+
+
+//-------------------------------------------- paragraphs
+
+
+//-------------------------------------------- anchors
+
+
+//-------------------------------------------- images
+
+
+//-------------------------------------------- tables 

@@ -1,0 +1,139 @@
+//---------------------------------------------------------| HELPERS
+
+vendor(property, arguments)
+    -webkit-{property}: arguments
+    -moz-{property}: arguments
+    -ms-{property}: arguments
+    -o-{property}: arguments
+    {property}: arguments
+
+//---------------------------------------------------------| POSITIONING
+
+// args: (translate(10px, 20px))
+transform()
+    vendor('transform', arguments)
+
+//---------------------------------------------------------| ANIMATION
+
+// args: (all 200ms ease)
+transition()
+    vendor('transition', arguments)
+
+//---------------------------------------------------------| GRADIENTS
+
+// args: (top, #CCC, #666)
+linear_gradient(origin, colors...)
+    
+    fallback = colors[1][0]
+    colors = join(', ', colors)
+    colors = unquote(colors)
+    
+    background-color: fallback
+    background-image: -webkit-linear-gradient(origin, colors) // Chrome, Safari
+    background-image:    -moz-linear-gradient(origin, colors) // Firefox (3.6 to 15)
+    background-image:     -ms-linear-gradient(origin, colors) // IE 10
+    background-image:      -o-linear-gradient(origin, colors) // Opera (11.1 to 12.0) 
+    background-image:         linear-gradient(origin, colors) // W3C
+    
+    // ADD IE8/9 SYNTAX MANUALLY TO TARGET RULE UNTILL @CSS DUPLICATION BUG IS FIXED:
+    // IE9 ('filter' to 'none'):
+    // background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzRjNGM0YyIgc3RvcC1vcGFjaXR5PSIwLjciLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzMzMzMzMyIgc3RvcC1vcGFjaXR5PSIwLjgiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==)
+    // IE6-8:
+    // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr={color_top}, endColorstr={color_bottom}, GradientType=0)
+
+//---------------------------------------------------------| BUTTONS
+
+// args: (light, rgba(200,200,200,0.7), 0.9em, normal, 5px, 10px 30px) - (light)
+// args: (dark, rgba(76,76,76,0.7), 0.9em, normal, 5px, 8px 18px) - (dark)
+// The aim is to reduce the color-specific margin of error in future revisions.
+// 'type' is predefined and should be either 'light' or 'dark'. The rest is obvious.
+// 'padding' supports both short & long notation, '10px 20px' || '10px 20px 10px 20px'
+button(type, color, size, weight, radius, padding...)
+
+    display: inline-block
+    padding: padding
+    font-size: size
+    font-weight: weight
+    text-align: center
+    border-radius: radius
+    transition(all 200ms ease-out)
+
+    if type is light
+
+        color: darken(rgb(color), 63%)
+        border 1px solid lighten(color, 30%)
+        text-shadow: 1px 1px 0 lighten(color, 100%)
+        box-shadow: \
+            inset 0 1px 1px lighten(color, 80%),      // top light
+            inset 1px 0 0 lighten(color, 40%),        // left light
+            inset -1px 0 0 color,                     // right dark
+            0 1px 0 darken(color, 10%)                // bottom dark
+        
+        linear_gradient(top, lighten(color, 75%), color)
+        
+        &:hover
+            cursor: pointer
+            color: darken(rgb(color), 70%)
+            border-color: darken(color, 15%)
+            background-color: darken(color, 35%)
+            text-shadow: 1px 1px 0 lighten(rgb(color), 80%)
+            box-shadow: \
+                inset 0 1px 0 color,                  // L (top)
+                inset 1px 0 0 color,                  // L (left)
+                inset -1px 0 0 color,                 // L (right)
+                0 1px 0 darken(color, 30%)            // D (bottom)
+
+    else if type is dark
+        color: lighten(color, 77%)
+        border: none
+        text-shadow: -1px -1px 0 darken(color, 55%)
+        box-shadow: \
+            0 0 5px darken(color, 55%),               // D (perimeter)
+            inset 0 1px 1px lighten(color, 15%),      // L (top)
+            inset 1px 0 0 darken(color, 6%),          // L (left)
+            inset -1px 0 0 darken(color, 60%),        // D (right)
+            0 -1px 0 darken(color, 50%),              // D (top)
+            0 1px 0 darken(color, 55%)                // D (bottom)
+        
+        linear_gradient(top, color, darken(color, 33%))
+        
+        &:hover
+            cursor: pointer
+            color: lighten(color, 88%)
+            background-color: darken(color, 65%)
+            text-shadow: -1px -1px 0 darken(color, 60%)
+            box-shadow: \
+                0 0 5px darken(color, 55%),           // D (perimeter)
+                inset 0 1px 1px lighten(color, 3%),   // L (top)
+                inset 1px 0 0 darken(color, 22%),     // L (left)
+                inset -1px 0 0 darken(color, 62%),    // D (right)
+                0 -1px 0 darken(color, 50%),          // D (top)
+                0 1px 0 darken(color, 55%)            // D (bottom)
+    
+    &:active
+        position: relative
+        top: 1px
+        
+//---------------------------------------------------------| TEXT
+
+columns(count, gap, rule...)
+    -moz-column-count: count
+    -moz-column-gap: gap
+    -moz-column-rule: rule
+    -webkit-column-count: count
+    -webkit-column-gap: gap
+    -webkit-column-rule: rule
+    column-count: count
+    column-gap: gap
+    column-rule: rule
+
+dropcap(color, size, weight, line, margin...)
+    &:first-of-type:first-letter
+        color: color
+        font-size: size
+        font-weight: weight
+        line-height: line
+        letter-spacing: 0
+        text-transform: uppercase
+        float: left
+        margin: margin

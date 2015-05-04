@@ -1,0 +1,231 @@
+//---------------------------------------------------------| structure
+
+_1  = 6.25%
+_2  = 12.5%
+_3  = 18.75%
+_4  = 25%
+_5  = 31.25%
+_6  = 37.5%
+_7  = 43.75%
+_8  = 50%
+_9  = 56.25%
+_10 = 62.5%
+_11 = 68.75%
+_12 = 75%
+_13 = 81.25%
+_14 = 87.5%
+_15 = 93.75%
+_16 = 100%
+
+body
+    margin: 0 0 270px 0
+    color: _default
+
+header#general
+    width: _16
+    margin: 0
+    clearfloat()
+    linear_gradient(bottom, #1D3824, #5B8264)
+    & div
+        width: _16
+        margin: 0
+        margin-left: auto
+        margin-right: auto
+        padding: 0 0.5em
+        & h1
+            position: absolute
+            top: 0
+            left: 50%
+            margin: 0 0 0 -122px
+            padding: 0
+            z-index: 2
+
+main
+    width: _15
+    position: relative
+    margin: 0 auto
+    padding: 0 0 30px 0
+
+//---------------------------------------------------------| headings
+
+h1, h2, h3, h4, h5, h6
+    font-family: heavyweightregular, sans_serif
+    text-transform: lowercase
+    color: _headings
+
+h1
+    font-size: 2em
+    margin: 0.67em 0
+    letter-spacing:-2px
+
+h2
+    font-size: 1.5em
+    margin: 0.5em 0
+    letter-spacing:-1px
+
+h3
+    font-size: 1.17em
+    margin: 1em 0
+
+h4
+    font-size: 1.1em
+    margin: 1.33em 0
+
+h5 
+    font-size: 0.83em
+    margin: 1.67em 0
+
+h6
+    font-size: 0.75em
+    margin: 2.33em 0
+
+//---------------------------------------------------------| paragraphs
+
+p
+    font: 400 1em sans_serif
+    line-height: 1.5
+    margin: 1em 0
+    color: _paragraphs
+
+//---------------------------------------------------------| miscellaneous
+
+em
+    padding-right: 0.12em
+    font-weight: 300
+
+//---------------------------------------------------------| tables
+
+table
+    & caption
+        padding: 12px 0 14px 0
+        font-size: x-large
+        font-weight: 700
+        letter-spacing: 0.02em
+        border-radius: 5px 5px 0 0
+    & th
+        font-size: 1.4em
+        font-weight: bold
+        padding: 12px 15px
+    & td
+        font-size: 1.1em
+
+//---------------------------------------------------------| lists 
+
+ol, ul
+    margin: 14px 0
+    padding: 0 0 0 40px
+
+ol li, ul li
+    font-size: 1.2em
+    margin: 12px 0
+
+ol
+    list-style: decimal
+    list-style-position: outside
+
+//ul
+
+//ol li
+
+//ul li
+
+//---------------------------------------------------------| navigation
+
+header nav[role='primary']
+    display: none
+    position: absolute
+    top: 49px
+    left: 0
+    width: _16
+    margin: 0
+    padding: 0
+    background: #CBD3CE
+    border-bottom: 1px solid #57725D
+    z-index: 1
+    & ul
+        width: _16
+        font-size: 0.66em
+        line-height: 0
+        margin: 0
+        padding: 0
+        & li
+            width: _16
+            line-height: 0
+            margin: 0
+            padding: 0    
+            & a
+                display: block
+                width: _16
+                font-family: 'Alegreya Sans', sans_serif
+                font-size: 1.1em
+                font-weight: 700
+                letter-spacing: 1px
+                text-transform: uppercase
+                text-shadow: 1px 1px 0 #F7F9F8
+                margin: 0
+                padding: 1.6em 0 1.6em 1.5em
+                color: _green
+                transition(all 220ms ease)
+                &:hover
+                    color: #DCE5DF
+                    text-decoration: none
+                    text-shadow: -1px -1px 0 rgba(10,10,10,0.9)
+                    //                  left right blur spread
+                    box-shadow: inset -5px 0 5px -2px rgba(30,30,30,0.7),
+                                inset 5px 0 5px -4px rgba(30,30,30,0.7)
+                    background: #1D3824
+
+header button
+    float: right
+    font-size: 1.35em
+    color: #A1AFA4
+    margin: 8px -10px 8px 0
+    padding: 0.26em 0.35em
+    background: none
+    border: none
+    border-radius: 3px
+    text-shadow: -1px -1px 0 #1E3A25
+    transition(all 200ms ease)
+    &:hover
+        color: #1D3824
+        background: #DCE2DD
+        cursor: pointer
+        text-shadow: none
+        box-shadow: inset 0 0 2px #1C3322
+
+// class to be applied via jQuery
+.navHoverBack
+    text-decoration: none
+    //                  left right blur spread
+    box-shadow: inset -5px 0 5px -2px rgba(10,10,10,0.8),
+                inset 5px 0 5px -4px rgba(10,10,10,0.8)
+    background: #B6C1BA
+
+//-------------------------------------------- dropdown
+
+header nav[role='primary'] > ul
+    & li > ul
+        display: none
+        position: absolute
+        background: #1D3824
+        box-shadow: 0 3px 2px -1px rgba(0,0,0,0.5)
+        z-index: 1
+        & li
+            float: none
+            &:first-of-type a
+                border-top: none
+            & a
+                font-size: 1.5em
+                color: #CBD3CE
+                padding: 1.4em 0 1.4em 2.1em
+                text-shadow: -1px -1px 0 rgba(15,15,15,0.6)
+                box-shadow: inset 0 1px 0 #3F5944 !important
+                border-top: 1px solid #122616
+                border-left: none !important
+                border-right: none !important
+                transition(all 220ms ease)
+                &:hover
+                    color: #1D3824
+                    text-shadow: 1px 1px 0 #EDEFEE
+                    box-shadow: inset 0 1px 0 #7F9683 !important
+                    background: #CBD3CE

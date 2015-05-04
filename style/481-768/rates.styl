@@ -1,0 +1,235 @@
+//-------------------------------------------- structure
+
+// rates
+
+#rates
+    & section
+        margin: 60px 0 160px
+        & table
+            width: _16
+            table-layout: fixed
+            margin: 40px 0
+            padding: 0
+            text-align: center
+            border-collapse: collapse
+            background: _brown url('../images/stay/campsite/background_aside.jpg') repeat
+            & caption
+                font-family: heavyweightregular, sans_serif
+                text-transform: lowercase
+                padding: 0.3em 0
+                font-size: 3.4em
+                font-weight: normal
+                letter-spacing: 1px
+                & img
+                    margin-right: 0.3em
+            & thead
+                background: _brown url('../images/rates/caption_background_campsite.jpg') repeat
+                & tr
+                    & th
+                        font-family: heavyweightregular, sans_serif
+                        text-transform: lowercase
+                        font-weight: normal
+                        font-size: 1.4em
+                        color: #DDE0D5
+                        letter-spacing: 2px
+                        text-shadow: -1px -1px 0 #1A2111
+                        padding: 0.6em 0 0.4em
+                        border: 1px solid #627763
+                        &:first-of-type
+                            border-left: none
+                            border-bottom: 1px solid #1F3822
+                        &:nth-of-type(2)
+                            border-bottom: 1px solid #1F3822
+                        &:last-of-type
+                            border-right: none
+                    &:first-of-type th
+                        border-top: none
+                    &:last-of-type th
+                        border-bottom: none
+            & tbody
+                white-space: nowrap
+                & tr
+                    background: transparent
+                    & td
+                        color: _green
+                        font-family: 'Alegreya Sans', sans_serif
+                        font-size: 1.2em
+                        padding: 0.3em 1.1em
+                        border: 1px solid #5E6D52
+                        &:last-of-type
+                            border-right: none
+                        &:first-of-type
+                            border-left: none
+                        & sup
+                            display: none
+                    &:first-of-type td
+                        border-top: none
+                    &:last-of-type td
+                        border-bottom: none
+            & tfoot
+                background: _brown url('../images/rates/caption_background_campsite.jpg') repeat
+                & tr
+                    & td
+                        color: #DDE0D5
+                        font-family: 'Alegreya Sans', sans_serif
+                        font-size: 1em
+                        text-align: left
+                        text-shadow: -1px -1px 0 #1A2111
+                        padding: 0.5em 0 0.5em 1.2em
+                        & i
+                            padding-right: 0.4em
+                    &:first-of-type td
+                        padding-top: 1.2em
+                    &:last-of-type td
+                        padding-bottom: 1.2em
+            &:last-of-type
+                background: _brown url('../images/stay/cottages/background_aside.jpg') repeat
+                & thead
+                    background: _brown url('../images/rates/caption_background_cottages.jpg') repeat
+                    & tr
+                        & th
+                            color: #E7DBCF
+                            text-shadow: -1px -1px 0 #1C140F
+                            border: 1px solid #776962
+                            &:first-of-type
+                                border-left: none
+                                border-bottom: 1px solid #413026
+                            &:nth-of-type(2)
+                                border-bottom: 1px solid #413026
+                            &:last-of-type
+                                border-right: none
+                        &:first-of-type th
+                            border-top: none
+                        &:last-of-type th
+                            border-bottom: none
+                & tbody
+                    & tr
+                        & td
+                            color: _brown
+                            border: 1px solid #685A4E
+                            &:last-of-type
+                                border-right: none
+                            &:first-of-type
+                                border-left: none
+                        &:first-of-type td
+                            border-top: none
+                        &:last-of-type td
+                            border-bottom: none
+                & tfoot
+                    background: _brown url('../images/rates/caption_background_cottages.jpg') repeat
+                    & tr
+                        & td
+                            font-size: 1em
+                            line-height: 1.2
+                            color: #E7DBCF
+                            text-shadow: -1px -1px 0 #1C140F
+
+// rates -> promotions
+
+#rates .promotions
+    margin-bottom: 360px
+    & header
+        margin-top: 50px
+        padding: 3.1em 0 1.7em 0
+        text-shadow: 1px 1px 0 #F8F2EE
+        background: transparent url('../images/rates/promotions/header.png') no-repeat center
+        background-size: contain
+        & > h2
+            font-size: 5em
+            text-align: center
+            margin: 0 0 0.13em 0
+        & > h3
+            font-size: 2.2em
+            text-align: center
+            line-height: 1.2
+            margin: 0
+    & section:first-of-type
+        margin: 0
+        padding: 0
+        border-radius: 7px
+        background: _light_brown url('../images/rates/promotions/campsite.jpg') no-repeat center
+        background-size: auto
+        clearfloat()
+        & div
+            width: _15
+            float: right
+            margin: 0
+            padding: 5% 30px 4% 0
+            text-align: right
+            linear_gradient(right, rgba(248, 242, 238,0.9), rgba(255,255,255,0.0))
+            & h1
+                font-size: 4em
+                color: _green
+                margin: 0
+                padding: 0
+                text-shadow: 1px 1px 0 _light_brown
+            & h2
+                font-family: 'Alegreya Sans', sans_serif
+                font-weight: 700
+                font-size: 2.4em
+                text-transform: capitalize
+                margin: 0
+                padding: 0
+                color: #111
+            & p
+                font-family: 'Alegreya Sans', sans_serif
+                font-size: 1.2em
+                margin: 0
+                padding: 0
+                color: #111
+            & a
+                margin: 12px 0
+                button(dark, rgba(66, 112, 62, 0.8), 1em, 400, 3px, 8px 12px 10px)
+                &:hover
+                    text-decoration: none                
+    & section:last-of-type
+        margin: 26px 0
+        padding: 0
+        border-radius: 7px
+        background: _light_brown url('../images/rates/promotions/cottages.jpg') no-repeat center
+        background-size: auto
+        & div
+            width: _15
+            margin: 0
+            padding: 5% 0 4% 30px      
+            linear_gradient(left, rgba(248, 242, 238,0.9), rgba(255,255,255,0.0))
+            & h1
+                font-size: 4em
+                color: _brown
+                margin: 0
+                padding: 0
+                text-shadow: 1px 1px 0 _light_brown
+            & h2
+                font-family: 'Alegreya Sans', sans_serif
+                font-weight: 700
+                font-size: 2.4em
+                text-transform: capitalize
+                color: #111
+                margin: 0
+                padding: 0
+            & p
+                font-family: 'Alegreya Sans', sans_serif
+                font-weight: 700
+                font-size: 1.2em
+                margin: 0
+                padding: 0
+                color: #111
+            & a
+                margin: 12px 0
+                button(dark, rgba(211, 123, 35, 0.8), 1em, 400, 3px, 8px 12px 10px)
+                &:hover
+                    text-decoration: none
+
+//-------------------------------------------- headings
+
+
+//-------------------------------------------- paragraphs
+
+
+//-------------------------------------------- anchors
+
+
+//-------------------------------------------- images
+
+
+//-------------------------------------------- tables 

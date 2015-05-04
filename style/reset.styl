@@ -1,0 +1,91 @@
+// make border + padding part of the width
+*, *:before, *:after
+    -moz-box-sizing: border-box
+    -webkit-box-sizing: border-box
+    box-sizing: border-box
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, default, time, mark, audio, video
+    margin: 0
+    padding: 0
+    border: 0
+    outline: 0
+    font-size: 100%
+
+h1, h2, h3, h4, h5, h6
+    font-weight: normal
+
+html, button, input, select, textarea
+    font-family: FreeSans, 'Nimbus Sans L', 'Liberation Sans', 'Helvetica Neue LT Std', Helvetica, Arial, sans-serif
+
+code, kbd, pre, samp
+    font-family: 'Anonymous Pro', 'Free Mono', Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", 'DejaVu Mono', "DejaVu Sans Mono", 'Bitstream Sans Mono', "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace
+    font-size: 1em
+
+sub, sup
+    position: relative
+    top: -0.4em
+    font-size: 75%
+    line-height: 0
+    vertical-align: baseline
+
+sub
+    top: 0.4em
+
+main, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+    display: block
+
+// correct overflow displayed oddly in IE 9
+svg:not(:root)
+    overflow: hidden
+
+pre
+    white-space: pre
+    white-space: pre-wrap
+    word-wrap: break-word
+
+textarea
+    overflow: auto
+    vertical-align: top
+    resize: vertical
+
+ol, ul
+    padding-left: 0
+    list-style: none
+
+a:visited, a:active
+    outline: none !important
+
+a:focus
+    outline: thin dotted
+
+b, strong
+    font-weight: bold
+
+html
+    overflow-y: scroll
+
+small
+    font-size: 80%
+
+body
+    line-height: 1
+
+// set general buffers - subject to overriding on case by case basis
+div, section, article, aside, header
+// margins of floated, cleared, inline-block, absolutely positioned elements do not collapse ( http://reference.sitepoint.com/css/collapsingmargins )
+// vertical margins on different elements that touch each other (thus have no content, padding, or borders separating them) will collapse, forming a single margin that is equal to the greater of the adjoining margins. This does not happen on horizontal margins, only vertical
+    margin: 1.5em 0
+    padding: 0 1em
+
+// remove border around the button's text on click
+button, input[type="reset"], input[type="button"], input[type="submit"], input[type="file"] > input[type="button"]
+    &::-moz-focus-inner
+        border: none
+
+// ensure containment within fluid grid
+img
+embed
+object
+video
+    max-width: 100%
+    height: auto // override inline attributes

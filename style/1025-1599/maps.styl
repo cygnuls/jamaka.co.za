@@ -1,0 +1,319 @@
+//-------------------------------------------- structure
+
+// maps
+
+#maps
+    & section:first-of-type
+        margin-top: 60px
+        padding: 3.1em 0 1.7em 0
+        text-shadow: 1px 1px 0 #F8F2EE
+        background: transparent url('../images/maps/header.png') no-repeat center
+        background-size: contain
+        & > h2
+            font-size: 5.8em
+            text-align: center
+            margin: 0 0 0.13em 0
+        & > h3
+            font-size: 2.4em
+            text-align: center
+            margin: 0
+    & section:last-of-type
+        margin: 60px 0 270px
+        clearfloat()
+        & > div
+            width: 17.66%
+            float: left
+            margin: 0 2.9% 0 0
+            padding: 0
+            & h4
+                font-size: 2.3em
+                text-align: center
+                margin: 0.6em 0
+                padding: 0
+            &:nth-of-type(1) a
+                background-image: url('../images/maps/directions.png')
+                & span
+                    background-image: url('../images/maps/directions_.png')
+            &:nth-of-type(2) a
+                background-image: url('../images/maps/farm.png')
+                & span
+                    background-image: url('../images/maps/farm_.png')
+            &:nth-of-type(3) a
+                background-image: url('../images/maps/cottages.png')
+                & span
+                    background-image: url('../images/maps/cottages_.png')
+            &:nth-of-type(4) a
+                background-image: url('../images/maps/campsites.png')
+                & span
+                    background-image: url('../images/maps/campsites_.png')
+            &:nth-of-type(5)
+                margin-right: 0
+                & a
+                    background-image: url('../images/maps/hiking-trails.png')
+                    & span
+                        background-image: url('../images/maps/hiking-trails_.png')
+            & a
+                position: relative
+                display: block
+                margin: 0
+                padding: 50% 0
+                background-repeat: no-repeat
+                background-position: center
+                background-size: contain
+                & span
+                    position: absolute
+                    top: 0
+                    left: 0
+                    width: _16
+                    margin: 0
+                    padding: 50% 0
+                    background-repeat: no-repeat
+                    background-position: center
+                    background-size: contain
+                    transition(opacity 500ms ease)
+                    &:hover
+                        opacity: 0
+                &:active
+                    top: 1px
+
+// ----------------------------------------------- maps -> generic
+
+#maps.map
+    height: 906px
+    margin: 0 0 343px 0
+    & main *
+        margin: auto
+        padding: 0
+        max-width: none
+        -moz-box-sizing: content-box
+        -webkit-box-sizing: content-box
+        box-sizing: content-box
+
+// ----------------------------------------------- maps -> directions
+
+#maps.map main.directions
+    float: left
+    width: _12
+    height: _16
+    margin: 0
+    padding: 0
+    border-right: 1px dashed #AA9B92
+    & #map-directions
+        height: _16
+        & #control-directions
+            margin: 15px 0 0 13px
+            padding: 18px 16px 17px
+            font-size: 1em
+            border: 1px solid white
+            border-radius: 4px
+            background: rgba(255,255,255,0.7)
+            & select
+                margin: 0
+                padding: 0
+                line-height: 0
+                & option
+                    margin: 0
+                    padding: 0
+                    &[selected]
+                        color: #444
+                        background: #D3D3D3
+            & span
+                color: #555
+                font-size: 1.2em
+                font-weight: bold
+                letter-spacing: 1px
+                text-transform: uppercase
+
+#maps.map #text-directions
+    position: relative
+    float: left
+    width: 23.6%
+    height: _16
+    overflow: auto
+    padding: 0
+    margin: 7px 0 0 1%
+    & *
+        margin: 0
+        padding: 0
+        max-width: none
+        -moz-box-sizing: content-box
+        -webkit-box-sizing: content-box
+        box-sizing: content-box
+    & tr
+        padding: 5px 0
+    & tr:first-of-type
+        padding: 0 0 0 10px
+    & table.adp-placemark
+        margin: 8px 0 0 0
+        padding: 4px 0
+        & tr
+            & td
+                & img.adp-marker
+                    margin: 0 5px
+                &.adp-text
+                    font-size: 1em
+                    padding: 0 10px 0 0
+    & div.adp-summary
+        margin: 0
+        padding: 10px 0 7px 0
+    & table.adp-directions
+        & tr
+            margin: 5px 0
+            padding: 5px 0
+            & td
+                &.adp-substep
+                    font-size: 1em
+                    padding: 8px 0
+                    & div.adp-distance
+                        font-size: 1em
+                    &:nth-of-type(1)
+                        padding-right: 7px
+                    &:nth-of-type(3)
+                        padding-right: 7px
+                        & div
+                            padding: 5px 0 0 0
+    & div.adp-legal
+        font-size: 0.8em
+        margin: 8px 0 0 0
+    & i
+        position: absolute
+        top: 40%
+        left: 50%
+        margin: 0 0 0 -135px
+        font-size: 16em
+        color: #E0D6D0
+        z-index: -1
+
+// ----------------------------------------------- maps -> farm
+
+#maps.map main.farm
+    width: _16
+    height: _16
+    margin: 0
+    padding: 0
+    position: relative
+    & #map-farm
+        width: _16
+        height: _16
+    & #legend
+        top: 50%
+        right: 0
+        margin: -111px 0 0 0
+        padding: 12px 20px 10px 14px
+        position: absolute
+        border-radius: 3px 0 0 3px
+        background: rgba(248, 242, 238, 0.8)
+        & table
+            margin: 0
+            padding: 0
+            & thead
+                & th
+                    font-family: 'Alegreya Sans', sans_serif
+                    font-size: 1.3em
+                    text-transform: uppercase
+                    letter-spacing: 2px
+                    padding-bottom: 4px
+            & tbody
+                & td
+                    font-size: 1em
+                    margin: 0
+                    padding: 4px 0
+                    &:last-of-type
+                        padding-left: 7px
+                    & img
+                        margin: 0
+                        padding: 0
+                        vertical-align: middle
+                        
+// ----------------------------------------------- maps -> cottages                        
+                        
+#maps.map main.cottages
+    width: _16
+    height: _16
+    margin: 0
+    padding: 0
+    & #map-cottages
+        width: _16
+        height: _16
+
+// ----------------------------------------------- maps -> campsites
+
+#maps.map main.campsites
+    width: _16
+    height: _16
+    margin: 0
+    padding: 0
+    position: relative
+    & #map-campsites
+        width: _16
+        height: _16
+    & #legend
+        top: 50%
+        right: 0
+        margin: -111px 0 0 0
+        padding: 12px 20px 10px 14px
+        position: absolute
+        border-radius: 3px 0 0 3px
+        background: rgba(248, 242, 238, 0.9)
+        & table
+            margin: 0
+            padding: 0
+            & thead
+                & th
+                    font-family: 'Alegreya Sans', sans_serif
+                    font-size: 1.3em
+                    text-transform: uppercase
+                    letter-spacing: 2px
+                    padding-bottom: 2px
+            & tbody
+                & td
+                    font-size: 1em
+                    margin: 0
+                    padding: 4px 0
+                    &:last-of-type
+                        padding-left: 7px
+                    & img
+                        margin: 0
+                        padding: 0
+                        vertical-align: middle
+
+// ----------------------------------------------- maps -> hiking trails
+
+#maps.map main.hiking
+    width: _16
+    height: _16
+    margin: 0
+    padding: 0
+    position: relative
+    & #map-hiking
+        width: _16
+        height: _16
+    & #legend
+        top: 50%
+        right: 0
+        margin: -111px 0 0 0
+        padding: 12px 20px 10px 14px
+        position: absolute
+        border-radius: 3px 0 0 3px
+        background: rgba(248, 242, 238, 0.9)
+        & table
+            margin: 0
+            padding: 0
+            & thead
+                & th
+                    font-family: 'Alegreya Sans', sans_serif
+                    font-size: 1.3em
+                    text-transform: uppercase
+                    letter-spacing: 2px
+                    padding-bottom: 2px
+            & tbody
+                & td
+                    font-size: 1em
+                    margin: 0
+                    padding: 4px 0
+                    &:last-of-type
+                        padding-left: 7px
+                    & img
+                        margin: 0
+                        padding: 0
+                        vertical-align: middle
