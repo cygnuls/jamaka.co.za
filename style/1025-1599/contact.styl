@@ -36,6 +36,37 @@
                     width: _16
                     margin: 0
                     padding: 5px 0
+                    &#getal // number of guests
+                        clearfloat()
+                        & p
+                            float: left
+                            width: 20%
+                            font-family: avec_serif
+                            font-size: 1em
+                            font-weight: bold
+                            color: #564D48
+                            margin: 0
+                            line-height: 1.9
+                        & div
+                            float: left
+                            margin: 0
+                            padding: 0
+                            & input
+                                width: 63px
+                                margin: 0
+                            & label
+                                margin: 0
+                                padding: 0 5px 0 0
+                                line-height: 1.9
+                            &:first-of-type
+                                width: 34%
+                                margin-right: 8px
+                                & label
+                                    width: 63px
+                            &:last-of-type
+                                width: 37%
+                                & label
+                                    width: 77px
                     &#type // target accommodation type section
                         clearfloat() // resume normal flow after radio buttons (for "type")
                         & p
@@ -68,11 +99,11 @@
                             padding: 10px 20px
                             border: 1px solid #CCC4BF
                             border-radius: 5px
-                            background: #E5DAD3                            
+                            background: #E5DAD3
                             clearfloat()
                             & div:first-of-type
                                 float: left
-                                width: 60%                                
+                                width: 60%
                                 margin: 0
                                 padding: 0 4% 0 0
                                 border-right: 2px dotted _faded_brown
@@ -107,9 +138,9 @@
                             padding: 14px 20px
                             border: 1px solid #CCC4BF
                             border-radius: 5px
-                            background: #E5DAD3                  
+                            background: #E5DAD3
                             & div
-                                width: _6                        
+                                width: _6
                                 margin: 0 auto
                                 padding: 0
                                 & input
@@ -252,7 +283,7 @@
                     padding: 0
                     & thead
                         margin: 0
-                        padding: 0                    
+                        padding: 0
                         & th
                             font-family: avec_serif
                             margin: 0
@@ -279,8 +310,8 @@
                         font-size: 1.1em
                         margin: 5px 0
                         padding: 0
-            
-    
+
+
 // continue form styling
 :invalid
 	box-shadow: none // remove firefox's persistent red box shadow
