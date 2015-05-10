@@ -13125,7 +13125,7 @@ hr {
     padding: 0;
   }
   #contact main.index section:first-of-type form fieldset > div#type div input {
-    margin: 4px 5px 0 0;
+    margin: 5px 5px 0 0;
   }
   #contact main.index section:first-of-type form fieldset > div#type div label {
     font-size: 0.9em;
@@ -13258,7 +13258,7 @@ hr {
   #contact main.index section:first-of-type form fieldset > div:last-of-type > div div input {
     width: auto;
     float: left;
-    margin: 9px 0 0 0;
+    margin: 5px 0 0 0;
     padding: 0;
   }
   #contact main.index section:first-of-type form fieldset > div:last-of-type > div div:last-of-type label {
@@ -16395,6 +16395,50 @@ hr {
     width: 100%;
     margin: 0;
     padding: 5px 0;
+  }
+  #contact main.index section:first-of-type form fieldset > div#getal:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  #contact main.index section:first-of-type form fieldset > div#getal p {
+    float: left;
+    width: 20%;
+    font-family: 'Bitstream Charter', 'DejaVu Serif', 'Palatino', 'Georgia', serif;
+    font-size: 1em;
+    font-weight: bold;
+    color: #564d48;
+    margin: 0;
+    line-height: 2.2;
+  }
+  #contact main.index section:first-of-type form fieldset > div#getal div {
+    float: left;
+    margin: 0;
+    padding: 0;
+  }
+  #contact main.index section:first-of-type form fieldset > div#getal div input {
+    width: 46%;
+    margin: 0;
+  }
+  #contact main.index section:first-of-type form fieldset > div#getal div label {
+    font-size: 1em;
+    margin: 0;
+    padding: 0 5px 0 0;
+    letter-spacing: -1px;
+    line-height: 2.2;
+  }
+  #contact main.index section:first-of-type form fieldset > div#getal div:first-of-type {
+    width: 34%;
+    margin-right: 0;
+  }
+  #contact main.index section:first-of-type form fieldset > div#getal div:first-of-type label {
+    width: 57px;
+  }
+  #contact main.index section:first-of-type form fieldset > div#getal div:last-of-type {
+    width: 37%;
+  }
+  #contact main.index section:first-of-type form fieldset > div#getal div:last-of-type label {
+    width: 70px;
   }
   #contact main.index section:first-of-type form fieldset > div#type:after {
     content: "";
