@@ -270,6 +270,7 @@ hr {
   body {
     margin: 0 0 270px 0;
     color: #333;
+    min-width: 270px;
   }
   header#general {
     width: 100%;
@@ -3002,6 +3003,48 @@ hr {
     margin: 0;
     padding: 5px 0;
   }
+  #contact main.index section:first-of-type form fieldset > div#getal:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  #contact main.index section:first-of-type form fieldset > div#getal p {
+    float: left;
+    width: 28%;
+    font-family: 'Bitstream Charter', 'DejaVu Serif', 'Palatino', 'Georgia', serif;
+    font-size: 1em;
+    font-weight: bold;
+    color: #564d48;
+    margin: 0;
+    line-height: 2.2;
+  }
+  #contact main.index section:first-of-type form fieldset > div#getal div {
+    float: left;
+    margin: 0;
+    padding: 0;
+  }
+  #contact main.index section:first-of-type form fieldset > div#getal div input {
+    width: 68%;
+    margin: 0;
+  }
+  #contact main.index section:first-of-type form fieldset > div#getal div label {
+    font-size: 1em;
+    margin: 0;
+    padding: 0 5px 0 0;
+    line-height: 2.2;
+  }
+  #contact main.index section:first-of-type form fieldset > div#getal div:first-of-type {
+    width: 33%;
+  }
+  #contact main.index section:first-of-type form fieldset > div#getal div:first-of-type label {
+    width: 60px;
+  }
+  #contact main.index section:first-of-type form fieldset > div#getal div:last-of-type {
+    width: 33%;
+  }
+  #contact main.index section:first-of-type form fieldset > div#getal div:last-of-type label {
+    width: 75px;
+  }
   #contact main.index section:first-of-type form fieldset > div#type {
     margin-bottom: 2px;
   }
@@ -3052,9 +3095,11 @@ hr {
     clear: both;
   }
   #contact main.index section:first-of-type form fieldset > div#options #options-cottage div:first-of-type {
-    width: 100%;
-    margin: 0 0 0 10%;
+    width: 40%;
+    float: left;
+    margin: 0 0 0 5%;
     padding: 0;
+    border-right: 2px dotted #c6ad9a;
   }
   #contact main.index section:first-of-type form fieldset > div#options #options-cottage div:first-of-type input {
     margin: 0;
@@ -3068,8 +3113,8 @@ hr {
   }
   #contact main.index section:first-of-type form fieldset > div#options #options-cottage div:last-of-type {
     float: left;
-    width: 100%;
-    margin: 0 0 0 18%;
+    width: 30%;
+    margin: 0 0 0 9%;
     padding: 0;
   }
   #contact main.index section:first-of-type form fieldset > div#options #options-cottage div:last-of-type input {
@@ -6297,6 +6342,48 @@ hr {
     width: 100%;
     margin: 0;
     padding: 5px 0;
+  }
+  #contact main.index section:first-of-type form fieldset > div#getal:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  #contact main.index section:first-of-type form fieldset > div#getal p {
+    float: left;
+    width: 20%;
+    font-family: 'Bitstream Charter', 'DejaVu Serif', 'Palatino', 'Georgia', serif;
+    font-size: 1em;
+    font-weight: bold;
+    color: #564d48;
+    margin: 0;
+    line-height: 2.2;
+  }
+  #contact main.index section:first-of-type form fieldset > div#getal div {
+    float: left;
+    margin: 0;
+    padding: 0;
+  }
+  #contact main.index section:first-of-type form fieldset > div#getal div input {
+    width: 55%;
+    margin: 0;
+  }
+  #contact main.index section:first-of-type form fieldset > div#getal div label {
+    font-size: 1em;
+    margin: 0;
+    padding: 0 5px 0 0;
+    line-height: 2.2;
+  }
+  #contact main.index section:first-of-type form fieldset > div#getal div:first-of-type {
+    width: 37%;
+  }
+  #contact main.index section:first-of-type form fieldset > div#getal div:first-of-type label {
+    width: 60px;
+  }
+  #contact main.index section:first-of-type form fieldset > div#getal div:last-of-type {
+    width: 40%;
+  }
+  #contact main.index section:first-of-type form fieldset > div#getal div:last-of-type label {
+    width: 75px;
   }
   #contact main.index section:first-of-type form fieldset > div#type:after {
     content: "";
@@ -9684,6 +9771,50 @@ hr {
     margin: 0;
     padding: 5px 0;
   }
+  #contact main.index section:first-of-type form fieldset > div#getal:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  #contact main.index section:first-of-type form fieldset > div#getal p {
+    float: left;
+    width: 20%;
+    font-family: 'Bitstream Charter', 'DejaVu Serif', 'Palatino', 'Georgia', serif;
+    font-size: 1em;
+    font-weight: bold;
+    color: #564d48;
+    margin: 0;
+    line-height: 1.9;
+  }
+  #contact main.index section:first-of-type form fieldset > div#getal div {
+    float: left;
+    margin: 0;
+    padding: 0;
+  }
+  #contact main.index section:first-of-type form fieldset > div#getal div input {
+    width: 45%;
+    margin: 0;
+  }
+  #contact main.index section:first-of-type form fieldset > div#getal div label {
+    font-size: 0.9em;
+    margin: 0;
+    padding: 0 5px 0 0;
+    letter-spacing: -1px;
+    line-height: 2.2;
+  }
+  #contact main.index section:first-of-type form fieldset > div#getal div:first-of-type {
+    width: 39%;
+    margin-right: 0;
+  }
+  #contact main.index section:first-of-type form fieldset > div#getal div:first-of-type label {
+    width: 48px;
+  }
+  #contact main.index section:first-of-type form fieldset > div#getal div:last-of-type {
+    width: 41%;
+  }
+  #contact main.index section:first-of-type form fieldset > div#getal div:last-of-type label {
+    width: 60px;
+  }
   #contact main.index section:first-of-type form fieldset > div#type:after {
     content: "";
     display: table;
@@ -9691,7 +9822,7 @@ hr {
   }
   #contact main.index section:first-of-type form fieldset > div#type p {
     float: left;
-    width: 36%;
+    width: 40%;
     font-family: 'Bitstream Charter', 'DejaVu Serif', 'Palatino', 'Georgia', serif;
     font-size: 0.9em;
     font-weight: bold;
@@ -9700,7 +9831,7 @@ hr {
   }
   #contact main.index section:first-of-type form fieldset > div#type div {
     float: left;
-    width: 32%;
+    width: 30%;
     margin: 0;
     padding: 0;
   }
@@ -9709,7 +9840,7 @@ hr {
   }
   #contact main.index section:first-of-type form fieldset > div#type div label {
     font-size: 0.9em;
-    width: 75px;
+    width: 70px;
     margin: 0;
     padding: 0;
   }
@@ -9863,7 +9994,7 @@ hr {
     font-family: 'Bitstream Charter', 'DejaVu Serif', 'Palatino', 'Georgia', serif;
   }
   #contact main.index section:first-of-type form fieldset > div input:not([type="submit"]) {
-    width: 64%;
+    width: 61%;
     font-size: 1.1em;
     color: #424739;
     padding: 4px 5px;
@@ -9881,7 +10012,7 @@ hr {
   }
   #contact main.index section:first-of-type form fieldset > div input.duration {
     display: inline-block;
-    width: 51%;
+    width: 48%;
     margin-right: 5px;
   }
   #contact main.index section:first-of-type form fieldset > div textarea {
@@ -13080,10 +13211,6 @@ hr {
     margin: 0;
     padding: 0;
   }
-  #contact main.index section:first-of-type form fieldset > div#getal div input {
-    width: 46%;
-    margin: 0;
-  }
   #contact main.index section:first-of-type form fieldset > div#getal div label {
     font-size: 0.9em;
     margin: 0;
@@ -13092,17 +13219,22 @@ hr {
     line-height: 2.2;
   }
   #contact main.index section:first-of-type form fieldset > div#getal div:first-of-type {
-    width: 34%;
-    margin-right: 0;
+    width: 35%;
   }
   #contact main.index section:first-of-type form fieldset > div#getal div:first-of-type label {
     width: 48px;
   }
+  #contact main.index section:first-of-type form fieldset > div#getal div:first-of-type input {
+    width: 54%;
+  }
   #contact main.index section:first-of-type form fieldset > div#getal div:last-of-type {
-    width: 37%;
+    width: 41%;
   }
   #contact main.index section:first-of-type form fieldset > div#getal div:last-of-type label {
     width: 60px;
+  }
+  #contact main.index section:first-of-type form fieldset > div#getal div:last-of-type input {
+    width: 47%;
   }
   #contact main.index section:first-of-type form fieldset > div#type:after {
     content: "";
@@ -16416,10 +16548,6 @@ hr {
     margin: 0;
     padding: 0;
   }
-  #contact main.index section:first-of-type form fieldset > div#getal div input {
-    width: 46%;
-    margin: 0;
-  }
   #contact main.index section:first-of-type form fieldset > div#getal div label {
     font-size: 1em;
     margin: 0;
@@ -16428,17 +16556,23 @@ hr {
     line-height: 2.2;
   }
   #contact main.index section:first-of-type form fieldset > div#getal div:first-of-type {
-    width: 34%;
+    width: 36%;
     margin-right: 0;
   }
   #contact main.index section:first-of-type form fieldset > div#getal div:first-of-type label {
     width: 57px;
   }
+  #contact main.index section:first-of-type form fieldset > div#getal div:first-of-type input {
+    width: 53%;
+  }
   #contact main.index section:first-of-type form fieldset > div#getal div:last-of-type {
-    width: 37%;
+    width: 40%;
   }
   #contact main.index section:first-of-type form fieldset > div#getal div:last-of-type label {
     width: 70px;
+  }
+  #contact main.index section:first-of-type form fieldset > div#getal div:last-of-type input {
+    width: 48%;
   }
   #contact main.index section:first-of-type form fieldset > div#type:after {
     content: "";

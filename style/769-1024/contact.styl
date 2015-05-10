@@ -36,11 +36,44 @@
                     width: _16
                     margin: 0
                     padding: 5px 0
+                    &#getal // number of guests
+                        clearfloat()
+                        & p
+                            float: left
+                            width: 20%
+                            font-family: avec_serif
+                            font-size: 1em
+                            font-weight: bold
+                            color: #564D48
+                            margin: 0
+                            line-height: 1.9
+                        & div
+                            float: left
+                            margin: 0
+                            padding: 0
+                            & input
+                                width: 45%
+                                margin: 0
+                            & label
+                                font-size: 0.9em
+                                margin: 0
+                                padding: 0 5px 0 0
+                                letter-spacing: -1px
+                                line-height: 2.2
+                            &:first-of-type
+                                width: 39%
+                                margin-right: 0
+                                & label
+                                    width: 48px
+                            &:last-of-type
+                                width: 41%
+                                & label
+                                    width: 60px
                     &#type // target accommodation type section
                         clearfloat() // resume normal flow after radio buttons (for "type")
                         & p
                             float: left
-                            width: 36%
+                            width: 40%
                             font-family: avec_serif
                             font-size: 0.9em
                             font-weight: bold
@@ -48,14 +81,14 @@
                             margin: 0
                         & div
                             float: left
-                            width: 32%
+                            width: 30%
                             margin: 0
                             padding: 0
                             & input
                                 margin: 6px 0 0 0
                             & label
                                 font-size: 0.9em
-                                width: 75px
+                                width: 70px
                                 margin: 0
                                 padding: 0
                     &#options // target conditional options display
@@ -68,11 +101,11 @@
                             padding: 10px 20px
                             border: 1px solid #CCC4BF
                             border-radius: 5px
-                            background: #E5DAD3                            
+                            background: #E5DAD3
                             clearfloat()
                             & div:first-of-type
                                 float: left
-                                width: 60%                                
+                                width: 60%
                                 margin: 0
                                 padding: 0 2% 0 0
                                 border-right: 2px dotted _faded_brown
@@ -107,9 +140,9 @@
                             padding: 14px 20px
                             border: 1px solid #CCC4BF
                             border-radius: 5px
-                            background: #E5DAD3                  
+                            background: #E5DAD3
                             & div
-                                width: _6                        
+                                width: _6
                                 margin: 0 auto
                                 padding: 0
                                 & input
@@ -178,7 +211,7 @@
                         border: none
                         font-family: avec_serif
                         &:not([type="submit"])
-                            width: 64%
+                            width: 61%
                             font-size: 1.1em
                             color: #424739
                             padding: 4px 5px
@@ -193,7 +226,7 @@
                             float: left
                         &.duration // allow calendar buttons to wrap
                             display: inline-block
-                            width: 51%
+                            width: 48%
                             margin-right: 5px
                     & textarea
                         display: block
@@ -252,7 +285,7 @@
                     padding: 0
                     & thead
                         margin: 0
-                        padding: 0                    
+                        padding: 0
                         & th
                             font-family: avec_serif
                             margin: 0
@@ -279,8 +312,8 @@
                         font-size: 1.1em
                         margin: 5px 0
                         padding: 0
-            
-    
+
+
 // continue form styling
 :invalid
 	box-shadow: none // remove firefox's persistent red box shadow

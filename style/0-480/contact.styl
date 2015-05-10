@@ -30,7 +30,7 @@
                 & legend
                     font-size: 1.7em
                     font-family: 'heavyweightregular'
-                    text-transform: lowercase                    
+                    text-transform: lowercase
                     margin: 0
                     & i
                         font-size: 0.9em
@@ -39,6 +39,37 @@
                     width: _16
                     margin: 0
                     padding: 5px 0
+                    &#getal // number of guests
+                        clearfloat()
+                        & p
+                            float: left
+                            width: 28%
+                            font-family: avec_serif
+                            font-size: 1em
+                            font-weight: bold
+                            color: #564D48
+                            margin: 0
+                            line-height: 2.2
+                        & div
+                            float: left
+                            margin: 0
+                            padding: 0
+                            & input
+                                width: 68%
+                                margin: 0
+                            & label
+                                font-size: 1em
+                                margin: 0
+                                padding: 0 5px 0 0
+                                line-height: 2.2
+                            &:first-of-type
+                                width: 33%
+                                & label
+                                    width: 60px
+                            &:last-of-type
+                                width: 33%
+                                & label
+                                    width: 75px
                     &#type // target accommodation type section
                         margin-bottom: 2px
                         clearfloat() // resume normal flow after radio buttons (for "type")
@@ -74,9 +105,11 @@
                             background: #E5DAD3
                             clearfloat()
                             & div:first-of-type
-                                width: _16                                
-                                margin: 0 0 0 10%
+                                width: 40%
+                                float: left
+                                margin: 0 0 0 5%
                                 padding: 0
+                                border-right: 2px dotted #C6AD9A
                                 & input
                                     margin: 0
                                     padding: 0
@@ -87,8 +120,8 @@
                                     text-shadow: 1px 1px 0 _light_brown
                             & div:last-of-type
                                 float: left
-                                width: _16
-                                margin: 0 0 0 18%
+                                width: 30%
+                                margin: 0 0 0 9%
                                 padding: 0
                                 & input
                                     float: left
@@ -106,9 +139,9 @@
                             padding: 14px 20px
                             border: 1px solid #CCC4BF
                             border-radius: 5px
-                            background: #E5DAD3                  
+                            background: #E5DAD3
                             & div
-                                width: _13                        
+                                width: _13
                                 margin: 0 auto
                                 padding: 0
                                 & input
@@ -249,7 +282,7 @@
                     padding: 0
                     & thead
                         margin: 0
-                        padding: 0                    
+                        padding: 0
                         & th
                             font-size: 1.1em
                             font-family: avec_serif
@@ -280,8 +313,8 @@
                         font-size: 1em
                         margin: 5px 0
                         padding: 0
-            
-    
+
+
 // continue form styling
 :invalid
 	box-shadow: none // remove firefox's persistent red box shadow

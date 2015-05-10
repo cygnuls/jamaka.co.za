@@ -51,9 +51,6 @@
                             float: left
                             margin: 0
                             padding: 0
-                            & input
-                                width: 46%
-                                margin: 0
                             & label
                                 font-size: 0.9em
                                 margin: 0
@@ -61,14 +58,17 @@
                                 letter-spacing: -1px
                                 line-height: 2.2
                             &:first-of-type
-                                width: 34%
-                                margin-right: 0
+                                width: 35%
                                 & label
                                     width: 48px
+                                & input
+                                    width: 54%
                             &:last-of-type
-                                width: 37%
+                                width: 41%
                                 & label
                                     width: 60px
+                                & input
+                                    width: 47%
                     &#type // target accommodation type section
                         clearfloat() // resume normal flow after radio buttons (for "type")
                         & p

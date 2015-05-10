@@ -5,60 +5,75 @@
     define('SUBJECT', 'New Booking Enquiry');
     define('RECEIVER', 'stay@jamaka.co.za');
     define('BASE', 'http://jamaka.co.za');
-    
+
     # C O L L E C T
-    
+
     $sent    = false;
-    
+
     $name_first      = $_REQUEST['name_first'];
     $name_last       = $_REQUEST['name_last'];
     $email           = $_REQUEST['email'];
     $phone           = $_REQUEST['phone'];
     $type            = $_REQUEST['type'];
+    $guests_adults   = $_REQUEST['adults'];
+    $guests_children = $_REQUEST['children'];
     $number_cottage  = $_REQUEST['number_cottage'];
     $bedding         = $_REQUEST['bedding'];
     $number_campsite = $_REQUEST['number_campsite'];
     $arrival         = $_REQUEST['arrival'];
     $departure       = $_REQUEST['departure'];
     $message         = $_REQUEST['message'];
-    
+
     # S A N I T I Z E
-    
+
     $name_first = ereg_replace("[^A-Za-z .]", "", $name_first);
     $name_last  = ereg_replace("[^A-Za-z .]", "", $name_last);
     $email      = ereg_replace("[^A-Za-z.@-]", "", $email);
     $phone      = ereg_replace("[^0-9 .+-]", "", $phone);
     $message    = ereg_replace("[^0-9A-Za-z .,':?\r]", "", $message);
-    
+
     # F U N C T I O N S
-    
+
     function isXHR() {
         return isset($_SERVER['HTTP_X_REQUESTED_WITH']); // set by jQuery for XHR requests
     }
-    
-    # C O N D I T I O N S    
-    
+
+    # C O N D I T I O N S
+
     if ($bedding) {
         $bedding_yn = "Yes";
     } else {
         $bedding_yn = "No";
     };
-    
+
     if ($type == "Cottage") {
         $unit_number = $number_cottage;
     } else {
         $unit_number = $number_campsite;
     }
-    
+
+    $pluralize_adult = ($guests_adults < 2) ? 'Adult' : 'Adults';
+
+    $child = ($guests_children > 0) ? true : false;
+
+    if ($child) {
+
+        $pluralize_child = ($guests_children < 2) ? 'Child' : 'Children';
+        $guests = $guests_adults . ' ' . $pluralize_adult . ', ' . $guests_children . ' ' . $pluralize_child;
+
+    } else {
+        $guests = $guests_adults . ' ' . $pluralize_adult;
+    }
+
     # B O D Y
-    
+
     $body = <<<TEMPLATE
 <html>
 
     <head>
-    
+
         <style type="text/css">
-            
+
             /*** reset ***/
 
             article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
@@ -147,11 +162,11 @@
                 margin:0 auto;
                 border:1px solid #99928C;
             }
-            
+
             table#header {
               margin:10px 0 0 0;
             }
-            
+
             table caption {
                 font-size:1.2em;
                 font-weight:bold;
@@ -181,7 +196,7 @@
                 padding:14px 0;
                 border-top:1px solid #C1BDB4;
             }
-            
+
             table#text caption {
                 margin-bottom:4px;
             }
@@ -207,7 +222,7 @@
                 font-size:.9em;
                 border-collapse:collapse;
             }
-            
+
             td.inner-table {
                 margin:0 auto;
                 padding:0 0 20px 40px;
@@ -235,13 +250,13 @@
             a:active {
                 color:#3366BB;
             }
-            
+
         </style>
-    
+
     </head>
 
-    <body>       
-        
+    <body>
+
         <table id="backgroundTable" width="100%" cellspacing="0" cellpadding="0">
 
             <table valign="middle" align="center" id="main" width="580" cellspacing="0" cellpadding="25" border="0" bgcolor="white">
@@ -264,11 +279,11 @@
 
                 <tr>
                     <td class="inner-table">
-                    
+
                         <table align="center" id="meta" width="92%" cellspacing="3" cellpadding="5" border="0">
-                            
+
                             <caption>Client</caption>
-                            
+
                             <tr>
                                 <td class="key" width="100"  align="right" bgcolor="#3F342B" valign="middle">From:</td>
                                 <td class="value"  align="left" valign="middle">$name_first $name_last</td>
@@ -280,21 +295,25 @@
                             <tr>
                                 <td class="key" width="100"  align="right" bgcolor="#3F342B" valign="middle">Phone:</td>
                                 <td class="value"  align="left" valign="middle">$phone</td>
-                            </tr>                            
-                            
+                            </tr>
+
                         </table>
-                        
+
                     </td>
-                    
+
                 </tr>
-                
+
                 <tr>
                     <td class="inner-table">
-                    
+
                         <table align="center" id="meta" width="92%" cellspacing="3" cellpadding="5" border="0">
-                            
+
                             <caption>Booking</caption>
-                            
+
+                            <tr>
+                                <td class="key" width="100"  align="right" bgcolor="#3F342B" valign="middle">Guests:</td>
+                                <td class="value"  align="left" valign="middle">$guests</td>
+                            </tr>
                             <tr>
                                 <td class="key" width="100"  align="right" bgcolor="#3F342B" valign="middle">Type:</td>
                                 <td class="value"  align="left" valign="middle">$type</td>
@@ -302,7 +321,7 @@
                             <tr>
                                 <td class="key" width="100"  align="right" bgcolor="#3F342B" valign="middle">Unit #:</td>
                                 <td class="value"  align="left" valign="middle">$unit_number</td>
-                            </tr>                              
+                            </tr>
                             <tr>
                                 <td class="key" width="100"  align="right" bgcolor="#3F342B" valign="middle">Bedding:</td>
                                 <td class="value"  align="left" valign="middle">$bedding_yn</td>
@@ -314,60 +333,60 @@
                             <tr>
                                 <td class="key" width="100"  align="right" bgcolor="#3F342B" valign="middle">Depart:</td>
                                 <td class="value"  align="left" valign="middle">$departure</td>
-                            </tr>                              
-                            
+                            </tr>
+
                         </table>
-                        
+
                     </td>
-                    
-                </tr>                 
+
+                </tr>
 
                 <!-- text -->
 
                 <tr>
                     <td>
-                      
+
                         <table align="center" id="text" width="100%" cellspacing="0" cellpadding="25" border="0">
-                        
+
                             <caption>Message</caption>
-                        
+
                             <tr>
-                            
+
                                 <td>$message</td>
-                                
+
                             </tr>
-                            
+
                         </table>
-                        
+
                     </td>
-                    
+
                 </tr>
 
                 <!-- footer -->
 
                 <tr>
                     <td>
-                      
+
                         <table align="center" id="footer" width="100%" cellspacing="0" cellpadding="14" border="0">
-                          
+
                             <tr>
-                              
+
                                 <td align="center"><a style="color:#777777;" href="http://cygnul.com/" target="_blank">Cygnul Systems</a> ensured the safe arrival of this electronic mail.</td>
-                            
+
                             </tr>
-                            
+
                         </table>
-                        
+
                     </td>
-                    
+
                 </tr>
 
             </table>
 
-        </table>    
+        </table>
 
     </body>
-    
+
 </html>
 TEMPLATE;
 
@@ -375,17 +394,17 @@ TEMPLATE;
 
     $headers = "From: $name_first $name_last <$email>\r\n";
     $headers .= "Content-type: text/html\r\n";
-    
+
     # S E N D
-    
+
     if (!isset($_REQUEST['email'])) {
         header("Location:" . BASE);
     }
-    
+
     elseif (empty($email) || empty($message) || empty($name_first)) {
         echo "error";
     }
-    
+
     else {
         # returns true if successful, false otherwise.
         $sent = mail(RECEIVER, SUBJECT, $body, $headers);
@@ -393,40 +412,32 @@ TEMPLATE;
 
     # Return an appropriate response to the browser
     if (isXHR()) {
-        
+
         echo $sent ? "sent" : "error";
-        
+
     } else {
-        
+
     ?>
-    
+
     <html>
-        
+
         <head>
-            
+
         <title>Thanks!</title>
-        
+
         </head>
-        
+
         <body>
-            
+
             <?php if ( $sent ) echo "<p>Thanks for sending your message! We'll get back to you shortly.</p>" ?>
             <?php if ( !$sent ) echo "<p>There was a problem sending your message. Please try again.</p>" ?>
-        
+
             <p>Use your browser's Back button to return to the page.</p>
-            
+
         </body>
-        
+
     </html>
 
 <?php
 }
 ?>
-
-
-
-
-
-
-
-
