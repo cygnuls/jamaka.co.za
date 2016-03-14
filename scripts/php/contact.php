@@ -28,7 +28,7 @@
 
     $name_first = ereg_replace("[^A-Za-z .]", "", $name_first);
     $name_last  = ereg_replace("[^A-Za-z .]", "", $name_last);
-    $email      = ereg_replace("[^A-Za-z.@-]", "", $email);
+    $email      = ereg_replace("[^0-9A-Za-z.@-]", "", $email);
     $phone      = ereg_replace("[^0-9 .+-]", "", $phone);
     $message    = ereg_replace("[^0-9A-Za-z .,':?\r]", "", $message);
 
