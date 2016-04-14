@@ -1,0 +1,55 @@
+//-------------------------------------------- structure
+
+#pay main.index
+    & section
+        margin: 70px 0 0 0
+        padding: 0
+        & header
+            & h1
+                font-size: 5.4em
+                text-align: center
+                margin: 0
+                & img
+                    margin: 0 20px 0 0
+                    vertical-align: middle
+        & article
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            clearfloat()
+            & div
+                display: flex
+                flex-flow: row wrap
+                align-content: space-between;
+                padding: 20px
+                background: white
+                border: 1px solid _faded_brown
+                border-radius: 4px
+                &:first-of-type
+                    order: 2
+                    margin-bottom: 20vh
+                &:last-of-type
+                    flex: 1
+                    order: 1
+                    padding: 30px
+                    svg
+                        &:first-of-type
+                            width: 160px
+                            height: 34px
+                        &:last-of-type
+                            width: 100%
+                            height: auto
+                    p
+                        width: 100%
+                        margin: 0;
+                        &:first-of-type
+                            margin-top: 20px
+                            padding-top: 25px
+                            padding-bottom: 10px
+                            border-top: 1px solid lighten(_faded_brown, 60%)
+                        &:last-of-type
+                            margin-bottom: 20px
+                            padding-bottom: 25px
+                            padding-top: 10px
+                            border-bottom: 1px solid lighten(_faded_brown, 60%)

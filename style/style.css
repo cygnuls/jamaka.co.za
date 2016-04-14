@@ -3515,6 +3515,72 @@ hr {
   button.ui-datepicker-trigger:hover {
     cursor: pointer;
   }
+  #pay main.index section {
+    margin: 70px 0 0 0;
+    padding: 0;
+  }
+  #pay main.index section header h1 {
+    font-size: 5.4em;
+    text-align: center;
+    margin: 0;
+  }
+  #pay main.index section header h1 img {
+    margin: 0 20px 0 0;
+    vertical-align: middle;
+  }
+  #pay main.index section article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #pay main.index section article:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  #pay main.index section article div {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-between;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #c6ad9a;
+    border-radius: 4px;
+  }
+  #pay main.index section article div:first-of-type {
+    order: 2;
+    margin-bottom: 20vh;
+  }
+  #pay main.index section article div:last-of-type {
+    flex: 1;
+    order: 1;
+    padding: 30px;
+  }
+  #pay main.index section article div:last-of-type svg:first-of-type {
+    width: 160px;
+    height: 34px;
+  }
+  #pay main.index section article div:last-of-type svg:last-of-type {
+    width: 100%;
+    height: auto;
+  }
+  #pay main.index section article div:last-of-type p {
+    width: 100%;
+    margin: 0;
+  }
+  #pay main.index section article div:last-of-type p:first-of-type {
+    margin-top: 20px;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    border-top: 1px solid #e8ded7;
+  }
+  #pay main.index section article div:last-of-type p:last-of-type {
+    margin-bottom: 20px;
+    padding-bottom: 25px;
+    padding-top: 10px;
+    border-bottom: 1px solid #e8ded7;
+  }
   body#legal main {
     margin-bottom: 400px;
   }
@@ -6292,6 +6358,74 @@ hr {
     width: 100%;
     display: block;
     border-radius: 5px 5px 0 0;
+  }
+  #pay main.index section {
+    margin: 70px 0 0 0;
+    padding: 0;
+  }
+  #pay main.index section header h1 {
+    font-size: 5.4em;
+    text-align: center;
+    margin: 0;
+  }
+  #pay main.index section header h1 img {
+    margin: 0 20px 0 0;
+    vertical-align: middle;
+  }
+  #pay main.index section article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #pay main.index section article:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  #pay main.index section article div {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-between;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #c6ad9a;
+    border-radius: 4px;
+  }
+  #pay main.index section article div:first-of-type {
+    order: 2;
+    margin-bottom: 14vh;
+  }
+  #pay main.index section article div:last-of-type {
+    flex: 1;
+    order: 1;
+    margin: 0 40px 20px;
+    padding: 30px;
+  }
+  #pay main.index section article div:last-of-type svg:first-of-type {
+    width: 160px;
+    height: 34px;
+  }
+  #pay main.index section article div:last-of-type svg:last-of-type {
+    width: 80%;
+    max-width: 390px;
+    height: auto;
+  }
+  #pay main.index section article div:last-of-type p {
+    width: 100%;
+    margin: 0;
+  }
+  #pay main.index section article div:last-of-type p:first-of-type {
+    margin-top: 20px;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    border-top: 1px solid #e8ded7;
+  }
+  #pay main.index section article div:last-of-type p:last-of-type {
+    margin-bottom: 20px;
+    padding-bottom: 25px;
+    padding-top: 10px;
+    border-bottom: 1px solid #e8ded7;
   }
   #contact main.index {
     margin-bottom: 400px;
@@ -9722,6 +9856,71 @@ hr {
     width: 100%;
     display: block;
     border-radius: 5px 5px 0 0;
+  }
+  #pay main.index section {
+    margin: 70px 0 0 0;
+    padding: 0;
+  }
+  #pay main.index section header h1 {
+    font-size: 5.4em;
+    text-align: center;
+    margin: 0;
+  }
+  #pay main.index section header h1 img {
+    margin: 0 20px 0 0;
+    vertical-align: middle;
+  }
+  #pay main.index section article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #pay main.index section article:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  #pay main.index section article div {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-between;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #c6ad9a;
+    border-radius: 4px;
+  }
+  #pay main.index section article div:first-of-type {
+    order: 2;
+  }
+  #pay main.index section article div:last-of-type {
+    flex: 1;
+    order: 1;
+    padding: 30px;
+  }
+  #pay main.index section article div:last-of-type svg:first-of-type {
+    width: 160px;
+    height: 34px;
+  }
+  #pay main.index section article div:last-of-type svg:last-of-type {
+    width: 390px;
+    height: auto;
+  }
+  #pay main.index section article div:last-of-type p {
+    width: 100%;
+    margin: 0;
+  }
+  #pay main.index section article div:last-of-type p:first-of-type {
+    margin-top: 20px;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    border-top: 1px solid #e8ded7;
+  }
+  #pay main.index section article div:last-of-type p:last-of-type {
+    margin-bottom: 20px;
+    padding-bottom: 25px;
+    padding-top: 10px;
+    border-bottom: 1px solid #e8ded7;
   }
   #contact main.index {
     padding-bottom: 5%;
@@ -13706,6 +13905,69 @@ hr {
   button.ui-datepicker-trigger:hover {
     cursor: pointer;
   }
+  #pay main.index section {
+    margin: 70px 0 0 0;
+    padding: 0;
+  }
+  #pay main.index section header h1 {
+    font-size: 5.4em;
+    text-align: center;
+    margin: 0;
+  }
+  #pay main.index section header h1 img {
+    margin: 0 20px 0 0;
+    vertical-align: middle;
+  }
+  #pay main.index section article {
+    display: flex;
+    justify-content: space-between;
+  }
+  #pay main.index section article:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  #pay main.index section article div {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-between;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #c6ad9a;
+    border-radius: 4px;
+  }
+  #pay main.index section article div:first-of-type {
+    align-self: flex-start;
+  }
+  #pay main.index section article div:last-of-type {
+    flex: 1;
+    margin-left: 40px;
+    padding: 30px;
+  }
+  #pay main.index section article div:last-of-type svg:first-of-type {
+    width: 160px;
+    height: 34px;
+  }
+  #pay main.index section article div:last-of-type svg:last-of-type {
+    width: 390px;
+    height: auto;
+  }
+  #pay main.index section article div:last-of-type p {
+    width: 100%;
+    margin: 0;
+  }
+  #pay main.index section article div:last-of-type p:first-of-type {
+    margin-top: 20px;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    border-top: 1px solid #e8ded7;
+  }
+  #pay main.index section article div:last-of-type p:last-of-type {
+    margin-bottom: 20px;
+    padding-bottom: 25px;
+    padding-top: 10px;
+    border-bottom: 1px solid #e8ded7;
+  }
   body#legal main.index h1 {
     font-size: 3em;
     width: 31.25%;
@@ -17067,6 +17329,69 @@ hr {
   body#legal main.copy li {
     font-size: 0.9em;
     line-height: 1.4;
+  }
+  #pay main.index section {
+    margin: 70px 0 0 0;
+    padding: 0;
+  }
+  #pay main.index section header h1 {
+    font-size: 5.4em;
+    text-align: center;
+    margin: 0;
+  }
+  #pay main.index section header h1 img {
+    margin: 0 20px 0 0;
+    vertical-align: middle;
+  }
+  #pay main.index section article {
+    display: flex;
+    justify-content: space-between;
+  }
+  #pay main.index section article:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  #pay main.index section article div {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-between;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #c6ad9a;
+    border-radius: 4px;
+  }
+  #pay main.index section article div:first-of-type {
+    align-self: flex-start;
+  }
+  #pay main.index section article div:last-of-type {
+    flex: 1;
+    margin-left: 40px;
+    padding: 30px;
+  }
+  #pay main.index section article div:last-of-type svg:first-of-type {
+    width: 160px;
+    height: 34px;
+  }
+  #pay main.index section article div:last-of-type svg:last-of-type {
+    width: 390px;
+    height: auto;
+  }
+  #pay main.index section article div:last-of-type p {
+    width: 100%;
+    margin: 0;
+  }
+  #pay main.index section article div:last-of-type p:first-of-type {
+    margin-top: 20px;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    border-top: 1px solid #e8ded7;
+  }
+  #pay main.index section article div:last-of-type p:last-of-type {
+    margin-bottom: 20px;
+    padding-bottom: 25px;
+    padding-top: 10px;
+    border-bottom: 1px solid #e8ded7;
   }
   footer {
     position: absolute;
