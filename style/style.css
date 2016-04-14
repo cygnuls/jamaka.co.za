@@ -3564,6 +3564,7 @@ hr {
   #pay main.index section article div:last-of-type svg:last-of-type {
     width: 100%;
     height: auto;
+    align-self: flex-end;
   }
   #pay main.index section article div:last-of-type p {
     width: 100%;
@@ -6410,6 +6411,7 @@ hr {
     width: 80%;
     max-width: 390px;
     height: auto;
+    align-self: flex-end;
   }
   #pay main.index section article div:last-of-type p {
     width: 100%;
@@ -9905,6 +9907,7 @@ hr {
   #pay main.index section article div:last-of-type svg:last-of-type {
     width: 390px;
     height: auto;
+    align-self: flex-end;
   }
   #pay main.index section article div:last-of-type p {
     width: 100%;
@@ -13951,6 +13954,7 @@ hr {
   #pay main.index section article div:last-of-type svg:last-of-type {
     width: 390px;
     height: auto;
+    align-self: flex-end;
   }
   #pay main.index section article div:last-of-type p {
     width: 100%;
@@ -17376,6 +17380,7 @@ hr {
   #pay main.index section article div:last-of-type svg:last-of-type {
     width: 390px;
     height: auto;
+    align-self: flex-end;
   }
   #pay main.index section article div:last-of-type p {
     width: 100%;
