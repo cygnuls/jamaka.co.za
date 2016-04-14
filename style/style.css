@@ -3530,9 +3530,14 @@ hr {
   }
   #pay main.index section article {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-flow: row wrap;
     justify-content: center;
+    align-items: center;
+    margin: 40px 0 20vh;
+    padding: 30px;
+    background: #fff;
+    border: 1px solid #c6ad9a;
+    border-radius: 4px;
   }
   #pay main.index section article:after {
     content: "";
@@ -3542,20 +3547,15 @@ hr {
   #pay main.index section article div {
     display: flex;
     flex-flow: row wrap;
-    align-content: space-between;
-    padding: 20px;
-    background: #fff;
-    border: 1px solid #c6ad9a;
-    border-radius: 4px;
+    justify-content: center;
   }
   #pay main.index section article div:first-of-type {
-    order: 2;
-    margin-bottom: 20vh;
+    margin: 0;
+    padding: 0;
   }
   #pay main.index section article div:last-of-type {
     flex: 1;
-    order: 1;
-    padding: 30px;
+    margin-left: 10px;
   }
   #pay main.index section article div:last-of-type svg:first-of-type {
     width: 160px;
@@ -3564,22 +3564,21 @@ hr {
   #pay main.index section article div:last-of-type svg:last-of-type {
     width: 100%;
     height: auto;
-    align-self: flex-end;
   }
   #pay main.index section article div:last-of-type p {
     width: 100%;
     margin: 0;
   }
   #pay main.index section article div:last-of-type p:first-of-type {
-    margin-top: 20px;
+    margin-top: 25px;
     padding-top: 25px;
-    padding-bottom: 10px;
+    padding-bottom: 12px;
     border-top: 1px solid #e8ded7;
   }
   #pay main.index section article div:last-of-type p:last-of-type {
-    margin-bottom: 20px;
-    padding-bottom: 25px;
-    padding-top: 10px;
+    margin-bottom: 25px;
+    padding-bottom: 30px;
+    padding-top: 12px;
     border-bottom: 1px solid #e8ded7;
   }
   body#legal main {
@@ -6375,9 +6374,14 @@ hr {
   }
   #pay main.index section article {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-flow: row wrap;
     justify-content: center;
+    align-items: center;
+    margin: 40px 0 18vh;
+    padding: 30px;
+    background: #fff;
+    border: 1px solid #c6ad9a;
+    border-radius: 4px;
   }
   #pay main.index section article:after {
     content: "";
@@ -6387,46 +6391,38 @@ hr {
   #pay main.index section article div {
     display: flex;
     flex-flow: row wrap;
-    align-content: space-between;
-    padding: 20px;
-    background: #fff;
-    border: 1px solid #c6ad9a;
-    border-radius: 4px;
+    justify-content: center;
   }
   #pay main.index section article div:first-of-type {
-    order: 2;
-    margin-bottom: 14vh;
+    margin: 0;
+    padding: 0;
   }
   #pay main.index section article div:last-of-type {
     flex: 1;
-    order: 1;
-    margin: 0 40px 20px;
-    padding: 30px;
+    margin-left: 10px;
   }
   #pay main.index section article div:last-of-type svg:first-of-type {
     width: 160px;
     height: 34px;
   }
   #pay main.index section article div:last-of-type svg:last-of-type {
-    width: 80%;
-    max-width: 390px;
+    width: 360px;
     height: auto;
-    align-self: flex-end;
   }
   #pay main.index section article div:last-of-type p {
     width: 100%;
     margin: 0;
   }
   #pay main.index section article div:last-of-type p:first-of-type {
-    margin-top: 20px;
+    margin-top: 25px;
     padding-top: 25px;
-    padding-bottom: 10px;
+    padding-bottom: 12px;
     border-top: 1px solid #e8ded7;
   }
   #pay main.index section article div:last-of-type p:last-of-type {
-    margin-bottom: 20px;
-    padding-bottom: 25px;
-    padding-top: 10px;
+    margin-bottom: 25px;
+    padding-bottom: 30px;
+    padding-top: 12px;
     border-bottom: 1px solid #e8ded7;
   }
   #contact main.index {
@@ -9874,9 +9870,14 @@ hr {
   }
   #pay main.index section article {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-flow: row wrap;
     justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+    padding: 30px;
+    background: #fff;
+    border: 1px solid #c6ad9a;
+    border-radius: 4px;
   }
   #pay main.index section article:after {
     content: "";
@@ -9886,26 +9887,21 @@ hr {
   #pay main.index section article div {
     display: flex;
     flex-flow: row wrap;
-    align-content: space-between;
-    padding: 20px;
-    background: #fff;
-    border: 1px solid #c6ad9a;
-    border-radius: 4px;
   }
   #pay main.index section article div:first-of-type {
-    order: 2;
+    margin: 0;
+    padding: 0;
   }
   #pay main.index section article div:last-of-type {
     flex: 1;
-    order: 1;
-    padding: 30px;
+    margin-left: 10px;
   }
   #pay main.index section article div:last-of-type svg:first-of-type {
     width: 160px;
     height: 34px;
   }
   #pay main.index section article div:last-of-type svg:last-of-type {
-    width: 390px;
+    width: 360px;
     height: auto;
     align-self: flex-end;
   }
@@ -9914,15 +9910,15 @@ hr {
     margin: 0;
   }
   #pay main.index section article div:last-of-type p:first-of-type {
-    margin-top: 20px;
+    margin-top: 25px;
     padding-top: 25px;
-    padding-bottom: 10px;
+    padding-bottom: 12px;
     border-top: 1px solid #e8ded7;
   }
   #pay main.index section article div:last-of-type p:last-of-type {
-    margin-bottom: 20px;
-    padding-bottom: 25px;
-    padding-top: 10px;
+    margin-bottom: 25px;
+    padding-bottom: 30px;
+    padding-top: 12px;
     border-bottom: 1px solid #e8ded7;
   }
   #contact main.index {
@@ -13924,6 +13920,12 @@ hr {
   #pay main.index section article {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin: 40px 0;
+    padding: 30px;
+    background: #fff;
+    border: 1px solid #c6ad9a;
+    border-radius: 4px;
   }
   #pay main.index section article:after {
     content: "";
@@ -13933,26 +13935,20 @@ hr {
   #pay main.index section article div {
     display: flex;
     flex-flow: row wrap;
-    align-content: space-between;
-    padding: 20px;
-    background: #fff;
-    border: 1px solid #c6ad9a;
-    border-radius: 4px;
   }
   #pay main.index section article div:first-of-type {
-    align-self: flex-start;
+    margin: 0;
+    padding: 0;
   }
   #pay main.index section article div:last-of-type {
-    flex: 1;
-    margin-left: 40px;
-    padding: 30px;
+    margin-left: 10px;
   }
   #pay main.index section article div:last-of-type svg:first-of-type {
     width: 160px;
     height: 34px;
   }
   #pay main.index section article div:last-of-type svg:last-of-type {
-    width: 390px;
+    width: 360px;
     height: auto;
     align-self: flex-end;
   }
@@ -13961,15 +13957,15 @@ hr {
     margin: 0;
   }
   #pay main.index section article div:last-of-type p:first-of-type {
-    margin-top: 20px;
+    margin-top: 25px;
     padding-top: 25px;
-    padding-bottom: 10px;
+    padding-bottom: 12px;
     border-top: 1px solid #e8ded7;
   }
   #pay main.index section article div:last-of-type p:last-of-type {
-    margin-bottom: 20px;
-    padding-bottom: 25px;
-    padding-top: 10px;
+    margin-bottom: 25px;
+    padding-bottom: 30px;
+    padding-top: 12px;
     border-bottom: 1px solid #e8ded7;
   }
   body#legal main.index h1 {
@@ -17350,6 +17346,12 @@ hr {
   #pay main.index section article {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin: 40px 0;
+    padding: 30px;
+    background: #fff;
+    border: 1px solid #c6ad9a;
+    border-radius: 4px;
   }
   #pay main.index section article:after {
     content: "";
@@ -17359,19 +17361,15 @@ hr {
   #pay main.index section article div {
     display: flex;
     flex-flow: row wrap;
-    align-content: space-between;
-    padding: 20px;
-    background: #fff;
-    border: 1px solid #c6ad9a;
-    border-radius: 4px;
   }
   #pay main.index section article div:first-of-type {
-    align-self: flex-start;
+    min-width: 320px;
+    margin: 0;
+    padding: 0;
   }
   #pay main.index section article div:last-of-type {
     flex: 1;
-    margin-left: 40px;
-    padding: 30px;
+    margin-left: 10px;
   }
   #pay main.index section article div:last-of-type svg:first-of-type {
     width: 160px;
@@ -17387,15 +17385,15 @@ hr {
     margin: 0;
   }
   #pay main.index section article div:last-of-type p:first-of-type {
-    margin-top: 20px;
+    margin-top: 25px;
     padding-top: 25px;
-    padding-bottom: 10px;
+    padding-bottom: 12px;
     border-top: 1px solid #e8ded7;
   }
   #pay main.index section article div:last-of-type p:last-of-type {
-    margin-bottom: 20px;
-    padding-bottom: 25px;
-    padding-top: 10px;
+    margin-bottom: 25px;
+    padding-bottom: 30px;
+    padding-top: 12px;
     border-bottom: 1px solid #e8ded7;
   }
   footer {
