@@ -26,11 +26,11 @@
 
     # S A N I T I Z E
 
-    $name_first = ereg_replace("[^A-Za-z .]", "", $name_first);
-    $name_last  = ereg_replace("[^A-Za-z .]", "", $name_last);
-    $email      = ereg_replace("[^0-9A-Za-z.@-]", "", $email);
-    $phone      = ereg_replace("[^0-9 .+-]", "", $phone);
-    $message    = ereg_replace("[^0-9A-Za-z .,':?\r]", "", $message);
+    $name_first = filter_var($name_first, FILTER_SANITIZE_STRING);
+    $name_last  = filter_var($name_last, FILTER_SANITIZE_STRING);
+    $email      = filter_var($email, FILTER_SANITIZE_EMAIL);
+    $phone      = filter_var($phone, FILTER_SANITIZE_NUMBER_INT);
+    $message    = filter_var($message, FILTER_SANITIZE_STRING);
 
     # F U N C T I O N S
 
