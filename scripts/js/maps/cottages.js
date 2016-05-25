@@ -631,7 +631,7 @@ jQuery(function() {
 
     };
 
-    var InfoWindowHouse11 = new google.maps.InfoWindow(WindowOptionsHouse10);
+    var InfoWindowHouse11 = new google.maps.InfoWindow(WindowOptionsHouse11);
 
     google.maps.event.addListener(house11, 'click', function() {
 
@@ -663,7 +663,7 @@ jQuery(function() {
 
     };
 
-    var InfoWindowHouse12 = new google.maps.InfoWindow(WindowOptionsHouse10);
+    var InfoWindowHouse12 = new google.maps.InfoWindow(WindowOptionsHouse12);
 
     google.maps.event.addListener(house12, 'click', function() {
 
