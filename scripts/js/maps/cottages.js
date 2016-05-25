@@ -111,7 +111,9 @@ jQuery(function() {
         LatLngHouse7  = new google.maps.LatLng(-32.340485,19.03002),
         LatLngHouse8  = new google.maps.LatLng(-32.33883,19.024436),
         LatLngHouse9  = new google.maps.LatLng(-32.340439,19.028915),
-        LatLngHouse10 = new google.maps.LatLng(-32.337419,19.022247);
+        LatLngHouse10 = new google.maps.LatLng(-32.337419,19.022247),
+        LatLngHouse11 = new google.maps.LatLng(-32.337365,19.021477),
+        LatLngHouse12 = new google.maps.LatLng(-32.337792,19.021494);
 
     // options
 
@@ -252,6 +254,34 @@ jQuery(function() {
         position: LatLngHouse10,
         map: map,
         title: 'House 10'
+
+    });
+
+    var house11 = new StyledMarker({
+
+        styleIcon: new StyledIcon(StyledIconTypes.MARKER, {
+
+            text:"11"
+
+        }, cottageStyle),
+
+        position: LatLngHouse11,
+        map: map,
+        title: 'House 11'
+
+    });
+
+    var house12 = new StyledMarker({
+
+        styleIcon: new StyledIcon(StyledIconTypes.MARKER, {
+
+            text:"12"
+
+        }, cottageStyle),
+
+        position: LatLngHouse12,
+        map: map,
+        title: 'House 12'
 
     });
 
@@ -574,6 +604,70 @@ jQuery(function() {
     google.maps.event.addListener(house10, 'click', function() {
 
         InfoWindowHouse10.open(map, house10);
+
+    });
+
+    WindowOptionsHouse11 = {
+
+        position: LatLngHouse11,
+
+        content:
+
+        '<div id="info-window" style="overflow: hidden; text-align: center;">'+
+
+            '<h1 style="font-family: sans-serif; font-size: 1.3em; font-weight: bold; text-transform: none; margin: 0 0 4px 0; padding: 3px 0 6px 0; letter-spacing: normal; color: #665751; border-bottom: 1px dotted #83736D">'+
+
+                'Cottage 11'+
+
+            '</h1>'+
+
+            '<a href="stay/cottages/11" style="font-size: 1.05em; line-height: 1.3; padding: 0 0 5px 0;">'+
+
+                'View Details'+
+
+            '</a>'+
+
+        '</div>'
+
+    };
+
+    var InfoWindowHouse11 = new google.maps.InfoWindow(WindowOptionsHouse10);
+
+    google.maps.event.addListener(house11, 'click', function() {
+
+        InfoWindowHouse11.open(map, house11);
+
+    });
+
+    WindowOptionsHouse12 = {
+
+        position: LatLngHouse12,
+
+        content:
+
+        '<div id="info-window" style="overflow: hidden; text-align: center;">'+
+
+            '<h1 style="font-family: sans-serif; font-size: 1.3em; font-weight: bold; text-transform: none; margin: 0 0 4px 0; padding: 3px 0 6px 0; letter-spacing: normal; color: #665751; border-bottom: 1px dotted #83736D">'+
+
+                'Cottage 12'+
+
+            '</h1>'+
+
+            '<a href="stay/cottages/12" style="font-size: 1.05em; line-height: 1.3; padding: 0 0 5px 0;">'+
+
+                'View Details'+
+
+            '</a>'+
+
+        '</div>'
+
+    };
+
+    var InfoWindowHouse12 = new google.maps.InfoWindow(WindowOptionsHouse10);
+
+    google.maps.event.addListener(house12, 'click', function() {
+
+        InfoWindowHouse12.open(map, house12);
 
     });
 
