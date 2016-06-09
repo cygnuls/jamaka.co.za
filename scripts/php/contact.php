@@ -18,7 +18,6 @@
     $guests_adults   = $_REQUEST['adults'];
     $guests_children = $_REQUEST['children'];
     $number_cottage  = $_REQUEST['number_cottage'];
-    $bedding         = $_REQUEST['bedding'];
     $number_campsite = $_REQUEST['number_campsite'];
     $arrival         = $_REQUEST['arrival'];
     $departure       = $_REQUEST['departure'];
@@ -39,12 +38,6 @@
     }
 
     # C O N D I T I O N S
-
-    if ($bedding) {
-        $bedding_yn = "Yes";
-    } else {
-        $bedding_yn = "No";
-    };
 
     if ($type == "Cottage") {
         $unit_number = $number_cottage;
@@ -321,10 +314,6 @@
                             <tr>
                                 <td class="key" width="100"  align="right" bgcolor="#3F342B" valign="middle">Unit #:</td>
                                 <td class="value"  align="left" valign="middle">$unit_number</td>
-                            </tr>
-                            <tr>
-                                <td class="key" width="100"  align="right" bgcolor="#3F342B" valign="middle">Bedding:</td>
-                                <td class="value"  align="left" valign="middle">$bedding_yn</td>
                             </tr>
                             <tr>
                                 <td class="key" width="100"  align="right" bgcolor="#3F342B" valign="middle">Arrive:</td>
