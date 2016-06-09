@@ -3100,38 +3100,18 @@ hr {
     display: table;
     clear: both;
   }
-  #contact main.index section:first-of-type form fieldset > div#options #options-cottage div:first-of-type {
-    width: 40%;
-    float: left;
-    margin: 0 0 0 5%;
+  #contact main.index section:first-of-type form fieldset > div#options #options-cottage div {
+    width: 81.25%;
+    margin: 0 auto;
     padding: 0;
-    border-right: 2px dotted #c6ad9a;
   }
-  #contact main.index section:first-of-type form fieldset > div#options #options-cottage div:first-of-type input {
+  #contact main.index section:first-of-type form fieldset > div#options #options-cottage div input {
     margin: 0;
     padding: 0;
   }
-  #contact main.index section:first-of-type form fieldset > div#options #options-cottage div:first-of-type label {
+  #contact main.index section:first-of-type form fieldset > div#options #options-cottage div label {
     width: auto;
     margin: 0 10px 0 0;
-    padding: 0;
-    text-shadow: 1px 1px 0 #f8f2ee;
-  }
-  #contact main.index section:first-of-type form fieldset > div#options #options-cottage div:last-of-type {
-    float: left;
-    width: 30%;
-    margin: 0 0 0 9%;
-    padding: 0;
-  }
-  #contact main.index section:first-of-type form fieldset > div#options #options-cottage div:last-of-type input {
-    float: left;
-    width: auto;
-    margin: 9px 6px 0 0;
-    padding: 0;
-  }
-  #contact main.index section:first-of-type form fieldset > div#options #options-cottage div:last-of-type label {
-    width: auto;
-    margin: 0;
     padding: 0;
     text-shadow: 1px 1px 0 #f8f2ee;
   }
@@ -6575,38 +6555,18 @@ hr {
     display: table;
     clear: both;
   }
-  #contact main.index section:first-of-type form fieldset > div#options #options-cottage div:first-of-type {
-    float: left;
+  #contact main.index section:first-of-type form fieldset > div#options #options-cottage div {
     width: 50%;
-    margin: 0;
-    padding: 0;
-    border-right: 2px dotted #c6ad9a;
-  }
-  #contact main.index section:first-of-type form fieldset > div#options #options-cottage div:first-of-type input {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
   }
-  #contact main.index section:first-of-type form fieldset > div#options #options-cottage div:first-of-type label {
+  #contact main.index section:first-of-type form fieldset > div#options #options-cottage div input {
+    margin: 0;
+    padding: 0;
+  }
+  #contact main.index section:first-of-type form fieldset > div#options #options-cottage div label {
     width: auto;
     margin: 0 10px 0 0;
-    padding: 0;
-    text-shadow: 1px 1px 0 #f8f2ee;
-  }
-  #contact main.index section:first-of-type form fieldset > div#options #options-cottage div:last-of-type {
-    float: left;
-    width: 50%;
-    margin: 0;
-    padding: 0 0 0 5%;
-  }
-  #contact main.index section:first-of-type form fieldset > div#options #options-cottage div:last-of-type input {
-    float: left;
-    width: auto;
-    margin: 9px 6px 0 0;
-    padding: 0;
-  }
-  #contact main.index section:first-of-type form fieldset > div#options #options-cottage div:last-of-type label {
-    width: auto;
-    margin: 0;
     padding: 0;
     text-shadow: 1px 1px 0 #f8f2ee;
   }
@@ -10078,40 +10038,19 @@ hr {
     display: table;
     clear: both;
   }
-  #contact main.index section:first-of-type form fieldset > div#options #options-cottage div:first-of-type {
-    float: left;
+  #contact main.index section:first-of-type form fieldset > div#options #options-cottage div {
     width: 60%;
-    margin: 0;
+    margin: 0 auto;
     padding: 0 2% 0 0;
-    border-right: 2px dotted #c6ad9a;
   }
-  #contact main.index section:first-of-type form fieldset > div#options #options-cottage div:first-of-type input {
+  #contact main.index section:first-of-type form fieldset > div#options #options-cottage div input {
     margin: 0;
     padding: 0;
   }
-  #contact main.index section:first-of-type form fieldset > div#options #options-cottage div:first-of-type label {
+  #contact main.index section:first-of-type form fieldset > div#options #options-cottage div label {
     width: auto;
     font-size: 0.9em;
     margin: 2px 10px 0 0;
-    padding: 0;
-    text-shadow: 1px 1px 0 #f8f2ee;
-  }
-  #contact main.index section:first-of-type form fieldset > div#options #options-cottage div:last-of-type {
-    float: left;
-    width: 40%;
-    margin: 0;
-    padding: 0 0 0 3%;
-  }
-  #contact main.index section:first-of-type form fieldset > div#options #options-cottage div:last-of-type input {
-    float: left;
-    width: auto;
-    margin: 6px 6px 0 0;
-    padding: 0;
-  }
-  #contact main.index section:first-of-type form fieldset > div#options #options-cottage div:last-of-type label {
-    width: auto;
-    font-size: 0.9em;
-    margin: 0;
     padding: 0;
     text-shadow: 1px 1px 0 #f8f2ee;
   }
@@ -13507,40 +13446,19 @@ hr {
     display: table;
     clear: both;
   }
-  #contact main.index section:first-of-type form fieldset > div#options #options-cottage div:first-of-type {
-    float: left;
+  #contact main.index section:first-of-type form fieldset > div#options #options-cottage div {
     width: 60%;
-    margin: 0;
+    margin: 0 auto;
     padding: 0 4% 0 0;
-    border-right: 2px dotted #c6ad9a;
   }
-  #contact main.index section:first-of-type form fieldset > div#options #options-cottage div:first-of-type input {
+  #contact main.index section:first-of-type form fieldset > div#options #options-cottage div input {
     margin: 0;
     padding: 0;
   }
-  #contact main.index section:first-of-type form fieldset > div#options #options-cottage div:first-of-type label {
+  #contact main.index section:first-of-type form fieldset > div#options #options-cottage div label {
     width: auto;
     font-size: 1em;
     margin: 0 10px 0 0;
-    padding: 0;
-    text-shadow: 1px 1px 0 #f8f2ee;
-  }
-  #contact main.index section:first-of-type form fieldset > div#options #options-cottage div:last-of-type {
-    float: left;
-    width: 40%;
-    margin: 0;
-    padding: 0 0 0 5%;
-  }
-  #contact main.index section:first-of-type form fieldset > div#options #options-cottage div:last-of-type input {
-    float: left;
-    width: auto;
-    margin: 9px 6px 0 0;
-    padding: 0;
-  }
-  #contact main.index section:first-of-type form fieldset > div#options #options-cottage div:last-of-type label {
-    width: auto;
-    font-size: 1em;
-    margin: 0;
     padding: 0;
     text-shadow: 1px 1px 0 #f8f2ee;
   }
@@ -16912,38 +16830,18 @@ hr {
     display: table;
     clear: both;
   }
-  #contact main.index section:first-of-type form fieldset > div#options #options-cottage div:first-of-type {
-    float: left;
+  #contact main.index section:first-of-type form fieldset > div#options #options-cottage div {
     width: 50%;
-    margin: 0;
-    padding: 0;
-    border-right: 2px dotted #c6ad9a;
-  }
-  #contact main.index section:first-of-type form fieldset > div#options #options-cottage div:first-of-type input {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
   }
-  #contact main.index section:first-of-type form fieldset > div#options #options-cottage div:first-of-type label {
+  #contact main.index section:first-of-type form fieldset > div#options #options-cottage div input {
+    margin: 0;
+    padding: 0;
+  }
+  #contact main.index section:first-of-type form fieldset > div#options #options-cottage div label {
     width: auto;
     margin: 0 10px 0 0;
-    padding: 0;
-    text-shadow: 1px 1px 0 #f8f2ee;
-  }
-  #contact main.index section:first-of-type form fieldset > div#options #options-cottage div:last-of-type {
-    float: left;
-    width: 50%;
-    margin: 0;
-    padding: 0 0 0 5%;
-  }
-  #contact main.index section:first-of-type form fieldset > div#options #options-cottage div:last-of-type input {
-    float: left;
-    width: auto;
-    margin: 9px 6px 0 0;
-    padding: 0;
-  }
-  #contact main.index section:first-of-type form fieldset > div#options #options-cottage div:last-of-type label {
-    width: auto;
-    margin: 0;
     padding: 0;
     text-shadow: 1px 1px 0 #f8f2ee;
   }
