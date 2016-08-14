@@ -14,10 +14,10 @@ footer
     text-shadow: -1px -1px 0 #000
     background: #21170F
     box-shadow: inset 0 1px 1px #050505, inset 0 2px 1px #060606, inset 0 4px 2px #111
-    & div
+    > div
         width: _16
         margin: 0 auto
-        & div
+        > div
             width: _16
             float: left
             padding: 0.8em 0
@@ -25,26 +25,32 @@ footer
             box-shadow: 0 1px 0 #332820
             &:last-of-type
                 border-bottom: none
-                box-shadow: none            
+                box-shadow: none
             &:last-of-type p
                 font-size: 1.4em
-                & i
+                i
                     padding: 0 10px 0 0
-            & p
+            p
                 display: inline-block
                 font-size: 0.9em
                 color: #82786E
                 margin: 0.15em 0
                 &:not(:last-of-type):after
-                    content: ' \2022'                
-    & > a
+                    content: ' \2022'
+            &.tripadvisor
+                text-shadow: none
+                div
+                    margin: unset
+                    padding-left: unset
+                    padding-right: unset                               
+    > a
         position: absolute
         right: 10px
         bottom: 10px
         color: #42342C !important
         &:hover
             color: #665348 !important
-            text-decoration: none !important                
+            text-decoration: none !important
 
 //-------------------------------------------- tables
 

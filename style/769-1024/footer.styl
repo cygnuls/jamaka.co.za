@@ -14,30 +14,36 @@ footer
     text-shadow: -1px -1px 0 #000
     background: #21170F
     box-shadow: inset 0 1px 1px #050505, inset 0 2px 1px #060606, inset 0 4px 2px #111
-    & div
+    > div
         width: _15
         margin: 0 auto
-        & div
+        > div
             width: _4
             float: left
             padding: 0
             &:last-of-type p
                 font-size: 1.4em
                 margin: 60px 0 0 0
-                & i
+                i
                     padding: 0 10px 0 0
-            & p
+            p
                 font-size: 0.9em
                 color: #82786E
                 margin: 0.15em 0
-    & > a
+            &.tripadvisor
+                text-shadow: none
+                div
+                    margin: unset
+                    padding-left: unset
+                    padding-right: unset                
+    > a
         position: absolute
         right: 10px
         bottom: 10px
         color: #42342C !important
         &:hover
             color: #665348 !important
-            text-decoration: none !important                
+            text-decoration: none !important
 
 //-------------------------------------------- tables
 
