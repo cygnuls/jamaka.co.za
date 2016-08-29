@@ -251,6 +251,7 @@ jQuery(function() {
 
         LatLngSite5   = new google.maps.LatLng(-32.33806,19.019941),
         LatLngSite6   = new google.maps.LatLng(-32.338132,19.019841),
+        LatLngSite6A  = new google.maps.LatLng(-32.338210,19.020535),
         LatLngSite7   = new google.maps.LatLng(-32.338391,19.019876),
         LatLngSite8   = new google.maps.LatLng(-32.338701,19.020008),
 
@@ -341,7 +342,9 @@ jQuery(function() {
         LatLngSite53  = new google.maps.LatLng(-32.343143,19.023258),
         LatLngSite53A = new google.maps.LatLng(-32.343035,19.023123),
         LatLngSite54  = new google.maps.LatLng(-32.344016,19.025385),
-        LatLngSite56  = new google.maps.LatLng(-32.344233,19.025763),
+        LatLngSite55  = new google.maps.LatLng(-32.344023,19.024904),
+        LatLngSite56  = new google.maps.LatLng(-32.344140,19.025030),
+        LatLngSite57  = new google.maps.LatLng(-32.344408,19.025922),
         LatLngSite58  = new google.maps.LatLng(-32.344171,19.025230),
         LatLngSite60  = new google.maps.LatLng(-32.344434,19.025419),
         LatLngSite64  = new google.maps.LatLng(-32.344621,19.025647),
@@ -382,6 +385,7 @@ jQuery(function() {
         site4A  = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"4A"  }, siteStyle      ), position: LatLngSite4A,  map: map, title: 'Campsite 4A'  }),
         site5   = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"5"   }, siteStyleRiver ), position: LatLngSite5,   map: map, title: 'Campsite 5'   }),
         site6   = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"6"   }, siteStyleRiver ), position: LatLngSite6,   map: map, title: 'Campsite 6'   }),
+        site6A  = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"6A"  }, siteStyleRiver ), position: LatLngSite6A,  map: map, title: 'Campsite 6A'  }),
         site7   = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"7"   }, siteStyleRiver ), position: LatLngSite7,   map: map, title: 'Campsite 7'   }),
         site8   = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"8"   }, siteStyleRiver ), position: LatLngSite8,   map: map, title: 'Campsite 8'   }),
         site9   = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"9"   }, siteStyleRiver ), position: LatLngSite9,   map: map, title: 'Campsite 9'   }),
@@ -461,7 +465,9 @@ jQuery(function() {
         site53  = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"53"  }, siteStyle      ), position: LatLngSite53,  map: map, title: 'Campsite 53'  }),
         site53A = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"53A" }, siteStyle      ), position: LatLngSite53A, map: map, title: 'Campsite 53A' }),
         site54  = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"54"  }, siteStyle      ), position: LatLngSite54,  map: map, title: 'Campsite 54'  }),
+        site55  = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"55"  }, siteStyle      ), position: LatLngSite55,  map: map, title: 'Campsite 55'  }),
         site56  = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"56"  }, siteStyle      ), position: LatLngSite56,  map: map, title: 'Campsite 56'  }),
+        site57  = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"57"  }, siteStyle      ), position: LatLngSite57,  map: map, title: 'Campsite 57'  }),
         site58  = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"58"  }, siteStyle      ), position: LatLngSite58,  map: map, title: 'Campsite 58'  }),
         site60  = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"60"  }, siteStyle      ), position: LatLngSite60,  map: map, title: 'Campsite 60'  }),
         site64  = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"64"  }, siteStyle      ), position: LatLngSite64,  map: map, title: 'Campsite 64'  }),
@@ -555,6 +561,10 @@ jQuery(function() {
     winOptsSite6 = { position: LatLngSite6, content: winBegin + '6' + winEnd };
     var windowSite6 = new google.maps.InfoWindow(winOptsSite6);
     google.maps.event.addListener(site6, 'click', function() { windowSite6.open(map, site6) });
+
+    winOptsSite6A = { position: LatLngSite6A, content: winBegin + '6A' + winEnd };
+    var windowSite6A = new google.maps.InfoWindow(winOptsSite6A);
+    google.maps.event.addListener(site6A, 'click', function() { windowSite6A.open(map, site6A) });
 
     winOptsSite7 = { position: LatLngSite7, content: winBegin + '7' + winEnd };
     var windowSite7 = new google.maps.InfoWindow(winOptsSite7);
@@ -840,9 +850,41 @@ jQuery(function() {
     var windowSite52B = new google.maps.InfoWindow(winOptsSite52B);
     google.maps.event.addListener(site52B, 'click', function() { windowSite52B.open(map, site52B) });
 
+    winOptsSite53 = { position: LatLngSite53, content: winBegin + '53' + winEnd };
+    var windowSite53 = new google.maps.InfoWindow(winOptsSite53);
+    google.maps.event.addListener(site53, 'click', function() { windowSite53.open(map, site53) });
+
+    winOptsSite53A = { position: LatLngSite53A, content: winBegin + '53A' + winEnd };
+    var windowSite53A = new google.maps.InfoWindow(winOptsSite53A);
+    google.maps.event.addListener(site53A, 'click', function() { windowSite53A.open(map, site53A) });
+
     winOptsSite54 = { position: LatLngSite54, content: winBegin + '54' + winEnd };
     var windowSite54 = new google.maps.InfoWindow(winOptsSite54);
     google.maps.event.addListener(site54, 'click', function() { windowSite54.open(map, site54) });
+
+    winOptsSite55 = { position: LatLngSite55, content: winBegin + '55' + winEnd };
+    var windowSite55 = new google.maps.InfoWindow(winOptsSite55);
+    google.maps.event.addListener(site55, 'click', function() { windowSite55.open(map, site55) });
+
+    winOptsSite56 = { position: LatLngSite56, content: winBegin + '56' + winEnd };
+    var windowSite56 = new google.maps.InfoWindow(winOptsSite56);
+    google.maps.event.addListener(site56, 'click', function() { windowSite56.open(map, site56) });
+
+    winOptsSite57 = { position: LatLngSite57, content: winBegin + '57' + winEnd };
+    var windowSite57 = new google.maps.InfoWindow(winOptsSite57);
+    google.maps.event.addListener(site57, 'click', function() { windowSite57.open(map, site57) });
+
+    winOptsSite58 = { position: LatLngSite58, content: winBegin + '58' + winEnd };
+    var windowSite58 = new google.maps.InfoWindow(winOptsSite58);
+    google.maps.event.addListener(site58, 'click', function() { windowSite58.open(map, site58) });
+
+    winOptsSite60 = { position: LatLngSite60, content: winBegin + '60' + winEnd };
+    var windowSite60 = new google.maps.InfoWindow(winOptsSite60);
+    google.maps.event.addListener(site60, 'click', function() { windowSite60.open(map, site60) });
+
+    winOptsSite64 = { position: LatLngSite64, content: winBegin + '64' + winEnd };
+    var windowSite64 = new google.maps.InfoWindow(winOptsSite64);
+    google.maps.event.addListener(site64, 'click', function() { windowSite64.open(map, site64) });
 
     winOptsSite68 = { position: LatLngSite68, content: winBegin + '68' + winEnd };
     var windowSite68 = new google.maps.InfoWindow(winOptsSite68);
