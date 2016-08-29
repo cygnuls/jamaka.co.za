@@ -431,20 +431,20 @@ jQuery(function() {
         site28  = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"28"  }, siteStyleRiver ), position: LatLngSite28,  map: map, title: 'Campsite 28'  }),
         site30  = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"30"  }, siteStyleRiver ), position: LatLngSite30,  map: map, title: 'Campsite 30'  }),
         site30A = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"30A" }, siteStyleRiver ), position: LatLngSite30A, map: map, title: 'Campsite 30A' }),
-        site30B = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"30B" }, siteStyleRiver ), position: LatLngSite30B, map: map, title: 'Campsite 30B' }),
+        site30B = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"30B" }, siteStyle      ), position: LatLngSite30B, map: map, title: 'Campsite 30B' }),
         site31  = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"31"  }, siteStyleRiver ), position: LatLngSite31,  map: map, title: 'Campsite 31'  }),
         site32  = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"32"  }, siteStyleRiver ), position: LatLngSite32,  map: map, title: 'Campsite 32'  }),
         site33  = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"33"  }, siteStyleRiver ), position: LatLngSite33,  map: map, title: 'Campsite 33'  }),
         site34  = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"34"  }, siteStyleRiver ), position: LatLngSite34,  map: map, title: 'Campsite 34'  }),
         site35  = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"35"  }, siteStyleRiver ), position: LatLngSite35,  map: map, title: 'Campsite 35'  }),
         site36  = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"36"  }, siteStyleRiver ), position: LatLngSite36,  map: map, title: 'Campsite 36'  }),
-        site36A = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"36A" }, siteStyleRiver ), position: LatLngSite36A, map: map, title: 'Campsite 36A' }),
+        site36A = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"36A" }, siteStyle      ), position: LatLngSite36A, map: map, title: 'Campsite 36A' }),
         site37  = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"37"  }, siteStyleRiver ), position: LatLngSite37,  map: map, title: 'Campsite 37'  }),
         site38  = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"38"  }, siteStyleRiver ), position: LatLngSite38,  map: map, title: 'Campsite 38'  }),
         site39  = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"39"  }, siteStyleRiver ), position: LatLngSite39,  map: map, title: 'Campsite 39'  }),
         site40  = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"40"  }, siteStyleRiver ), position: LatLngSite40,  map: map, title: 'Campsite 40'  }),
-        site40A = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"40A" }, siteStyleRiver ), position: LatLngSite40A, map: map, title: 'Campsite 40A' }),
-        site40B = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"40B" }, siteStyleRiver ), position: LatLngSite40B, map: map, title: 'Campsite 40B' }),
+        site40A = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"40A" }, siteStyle      ), position: LatLngSite40A, map: map, title: 'Campsite 40A' }),
+        site40B = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"40B" }, siteStyle      ), position: LatLngSite40B, map: map, title: 'Campsite 40B' }),
         site41  = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"41"  }, siteStyleRiver ), position: LatLngSite41,  map: map, title: 'Campsite 41'  }),
         site42  = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"42"  }, siteStyleRiver ), position: LatLngSite42,  map: map, title: 'Campsite 42'  }),
         site43  = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"43"  }, siteStyleRiver ), position: LatLngSite43,  map: map, title: 'Campsite 43'  }),
@@ -464,14 +464,14 @@ jQuery(function() {
         site52B = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"52B" }, siteStyle      ), position: LatLngSite52B, map: map, title: 'Campsite 52B' }),
         site53  = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"53"  }, siteStyle      ), position: LatLngSite53,  map: map, title: 'Campsite 53'  }),
         site53A = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"53A" }, siteStyle      ), position: LatLngSite53A, map: map, title: 'Campsite 53A' }),
-        site54  = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"54"  }, siteStyle      ), position: LatLngSite54,  map: map, title: 'Campsite 54'  }),
+        site54  = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"54"  }, siteStyleRiver ), position: LatLngSite54,  map: map, title: 'Campsite 54'  }),
         site55  = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"55"  }, siteStyle      ), position: LatLngSite55,  map: map, title: 'Campsite 55'  }),
         site56  = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"56"  }, siteStyle      ), position: LatLngSite56,  map: map, title: 'Campsite 56'  }),
-        site57  = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"57"  }, siteStyle      ), position: LatLngSite57,  map: map, title: 'Campsite 57'  }),
+        site57  = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"57"  }, siteStyleRiver ), position: LatLngSite57,  map: map, title: 'Campsite 57'  }),
         site58  = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"58"  }, siteStyle      ), position: LatLngSite58,  map: map, title: 'Campsite 58'  }),
         site60  = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"60"  }, siteStyle      ), position: LatLngSite60,  map: map, title: 'Campsite 60'  }),
         site64  = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"64"  }, siteStyle      ), position: LatLngSite64,  map: map, title: 'Campsite 64'  }),
-        site68  = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"68"  }, siteStyleRiver ), position: LatLngSite68,  map: map, title: 'Campsite 68'  });
+        site68  = new StyledMarker({ styleIcon: new StyledIcon(StyledIconTypes.MARKER, { text:"68"  }, siteStyle      ), position: LatLngSite68,  map: map, title: 'Campsite 68'  });
 
     // caravans
 
@@ -742,6 +742,10 @@ jQuery(function() {
     var windowSite30A = new google.maps.InfoWindow(winOptsSite30A);
     google.maps.event.addListener(site30A, 'click', function() { windowSite30A.open(map, site30A) });
 
+    winOptsSite30B = { position: LatLngSite30B, content: winBegin + '30B' + winEnd };
+    var windowSite30B = new google.maps.InfoWindow(winOptsSite30B);
+    google.maps.event.addListener(site30B, 'click', function() { windowSite30B.open(map, site30B) });
+
     winOptsSite31 = { position: LatLngSite31, content: winBegin + '31' + winEnd };
     var windowSite31 = new google.maps.InfoWindow(winOptsSite31);
     google.maps.event.addListener(site31, 'click', function() { windowSite31.open(map, site31) });
@@ -766,6 +770,10 @@ jQuery(function() {
     var windowSite36 = new google.maps.InfoWindow(winOptsSite36);
     google.maps.event.addListener(site36, 'click', function() { windowSite36.open(map, site36) });
 
+    winOptsSite36A = { position: LatLngSite36A, content: winBegin + '36A' + winEnd };
+    var windowSite36A = new google.maps.InfoWindow(winOptsSite36A);
+    google.maps.event.addListener(site36A, 'click', function() { windowSite36A.open(map, site36A) });
+
     winOptsSite37 = { position: LatLngSite37, content: winBegin + '37' + winEnd };
     var windowSite37 = new google.maps.InfoWindow(winOptsSite37);
     google.maps.event.addListener(site37, 'click', function() { windowSite37.open(map, site37) });
@@ -781,6 +789,14 @@ jQuery(function() {
     winOptsSite40 = { position: LatLngSite40, content: winBegin + '40' + winEnd };
     var windowSite40 = new google.maps.InfoWindow(winOptsSite40);
     google.maps.event.addListener(site40, 'click', function() { windowSite40.open(map, site40) });
+
+    winOptsSite40A = { position: LatLngSite40A, content: winBegin + '40A' + winEnd };
+    var windowSite40A = new google.maps.InfoWindow(winOptsSite40A);
+    google.maps.event.addListener(site40A, 'click', function() { windowSite40A.open(map, site40A) });
+
+    winOptsSite40B = { position: LatLngSite40B, content: winBegin + '40B' + winEnd };
+    var windowSite40B = new google.maps.InfoWindow(winOptsSite40B);
+    google.maps.event.addListener(site40B, 'click', function() { windowSite40B.open(map, site40B) });
 
     winOptsSite41 = { position: LatLngSite41, content: winBegin + '41' + winEnd };
     var windowSite41 = new google.maps.InfoWindow(winOptsSite41);
