@@ -109,7 +109,7 @@ jQuery(function() {
         LatLngHouse5  = new google.maps.LatLng(-32.344981,19.030894),
         LatLngHouse6  = new google.maps.LatLng(-32.341201,19.029741),
         LatLngHouse7  = new google.maps.LatLng(-32.340485,19.03002),
-        LatLngHouse8  = new google.maps.LatLng(-32.33883,19.024436),
+        LatLngHouse8  = new google.maps.LatLng(-32.341722,19.029719),
         LatLngHouse9  = new google.maps.LatLng(-32.340439,19.028915),
         LatLngHouse10 = new google.maps.LatLng(-32.337419,19.022247),
         LatLngHouse11 = new google.maps.LatLng(-32.337365,19.021477),
