@@ -1,13 +1,32 @@
-# directories
-build/
-**/.temp/
+### NATIVE
+
+# root
+/dev/
+/prd/
+/prod/
+
+# deps
 node_modules/
 
-# backups
-*~
+### 3RD PARTY
 
-# gimp
+# VS Code
+.vscode/
+
+# JetBrains
+.idea/
+*.iml
+
+# Komodo
+*.komodoproject
+
+# Gimp
 *.xcf
 
-# komodo
-*.komodoproject
+# Netlify
+.netlify/
+
+### GENERIC
+
+*~
+*.log

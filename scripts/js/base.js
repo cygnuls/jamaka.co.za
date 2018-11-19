@@ -252,6 +252,8 @@ var modules = {
         function feedback(response) {
 
             response = $.trim(response);
+            
+            var form = $('form');
 
             var sentMarkup = $('<div id="sent">\
                                \
@@ -267,9 +269,7 @@ var modules = {
 
             var failMarkup = $('<p id="error">Error sending mail, please retry.</p>');
 
-            if (response == 'sent') {
-
-                var form = $('form');
+            if (response /*== 'sent'*/) {
 
                 form.html(sentMarkup.fadeIn('slow', function() {
 
@@ -323,8 +323,8 @@ var modules = {
 
             } else {
 
-                $.ajax({
-                    url        : self.prop('action'),
+                $.ajax({ // DOEN: gradeer jQuery op en gebruik JSONP in plaas van CORS
+                    url        : 'https://cors-anywhere.herokuapp.com/' + self.prop('action'),
                     type       : self.prop('method'),
                     data       : self.serialize(),
                     beforeSend : visualize,
