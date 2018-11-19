@@ -1,0 +1,10 @@
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "sameorigin"
+
+[[redirects]]
+  from = "https://jamaka.netlify.com/*"
+  to = "https://jamaka.co.za/:splat"
+  status = 301
+  force = true
