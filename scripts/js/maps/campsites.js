@@ -512,7 +512,7 @@ jQuery(function() {
 
             '</h1></div>'; //+
         //
-        //     '<a href="stay/campsites/',
+        //     '<a href="/stay/campsites/',
         //
         // winEnd =
         //

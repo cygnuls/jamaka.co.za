@@ -301,7 +301,7 @@ jQuery(function() {
 
             '</h1>'+
 
-            '<a href="stay/cottages/1" style="font-size: 1.05em; line-height: 1.2; padding: 0 0 5px 0;">'+
+            '<a href="/stay/cottages/1" style="font-size: 1.05em; line-height: 1.2; padding: 0 0 5px 0;">'+
 
                 'View Details'+
 
@@ -333,7 +333,7 @@ jQuery(function() {
 
             '</h1>'+
 
-            '<a href="stay/cottages/2" style="font-size: 1.05em; line-height: 1.2; padding: 0 0 5px 0;">'+
+            '<a href="/stay/cottages/2" style="font-size: 1.05em; line-height: 1.2; padding: 0 0 5px 0;">'+
 
                 'View Details'+
 
@@ -365,7 +365,7 @@ jQuery(function() {
 
             '</h1>'+
 
-            '<a href="stay/cottages/3" style="font-size: 1.05em; line-height: 1.3; padding: 0 0 5px 0;">'+
+            '<a href="/stay/cottages/3" style="font-size: 1.05em; line-height: 1.3; padding: 0 0 5px 0;">'+
 
                 'View Details'+
 
@@ -397,7 +397,7 @@ jQuery(function() {
 
             '</h1>'+
 
-            '<a href="stay/cottages/4" style="font-size: 1.05em; line-height: 1.3; padding: 0 0 5px 0;">'+
+            '<a href="/stay/cottages/4" style="font-size: 1.05em; line-height: 1.3; padding: 0 0 5px 0;">'+
 
                 'View Details'+
 
@@ -429,7 +429,7 @@ jQuery(function() {
 
             '</h1>'+
 
-            '<a href="stay/cottages/5" style="font-size: 1.05em; line-height: 1.3; padding: 0 0 5px 0;">'+
+            '<a href="/stay/cottages/5" style="font-size: 1.05em; line-height: 1.3; padding: 0 0 5px 0;">'+
 
                 'View Details'+
 
@@ -461,7 +461,7 @@ jQuery(function() {
 
             '</h1>'+
 
-            '<a href="stay/cottages/6" style="font-size: 1.05em; line-height: 1.3; padding: 0 0 5px 0;">'+
+            '<a href="/stay/cottages/6" style="font-size: 1.05em; line-height: 1.3; padding: 0 0 5px 0;">'+
 
                 'View Details'+
 
@@ -493,7 +493,7 @@ jQuery(function() {
 
             '</h1>'+
 
-            '<a href="stay/cottages/7" style="font-size: 1.05em; line-height: 1.3; padding: 0 0 5px 0;">'+
+            '<a href="/stay/cottages/7" style="font-size: 1.05em; line-height: 1.3; padding: 0 0 5px 0;">'+
 
                 'View Details'+
 
@@ -525,7 +525,7 @@ jQuery(function() {
 
             '</h1>'+
 
-            '<a href="maps/cottages" style="font-size: 1.05em; line-height: 1.3; padding: 0 0 5px 0;">'+
+            '<a href="/maps/cottages" style="font-size: 1.05em; line-height: 1.3; padding: 0 0 5px 0;">'+
 
                 'View Details'+
 
@@ -557,7 +557,7 @@ jQuery(function() {
 
             '</h1>'+
 
-            '<a href="stay/cottages/9" style="font-size: 1.05em; line-height: 1.3; padding: 0 0 5px 0;">'+
+            '<a href="/stay/cottages/9" style="font-size: 1.05em; line-height: 1.3; padding: 0 0 5px 0;">'+
 
                 'View Details'+
 
@@ -589,7 +589,7 @@ jQuery(function() {
 
             '</h1>'+
 
-            '<a href="stay/cottages/10" style="font-size: 1.05em; line-height: 1.3; padding: 0 0 5px 0;">'+
+            '<a href="/stay/cottages/10" style="font-size: 1.05em; line-height: 1.3; padding: 0 0 5px 0;">'+
 
                 'View Details'+
 
@@ -621,7 +621,7 @@ jQuery(function() {
 
             '</h1>'+
 
-            '<a href="stay/cottages/11" style="font-size: 1.05em; line-height: 1.3; padding: 0 0 5px 0;">'+
+            '<a href="/stay/cottages/11" style="font-size: 1.05em; line-height: 1.3; padding: 0 0 5px 0;">'+
 
                 'View Details'+
 
@@ -653,7 +653,7 @@ jQuery(function() {
 
             '</h1>'+
 
-            '<a href="stay/cottages/12" style="font-size: 1.05em; line-height: 1.3; padding: 0 0 5px 0;">'+
+            '<a href="/stay/cottages/12" style="font-size: 1.05em; line-height: 1.3; padding: 0 0 5px 0;">'+
 
                 'View Details'+
 

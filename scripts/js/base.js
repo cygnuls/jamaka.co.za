@@ -74,7 +74,7 @@ var modules = {
 
         var target = $('#gallery main section a');
 
-        target.append('<img src="images/gallery/focus.png">');
+        target.append('<img src="/images/gallery/focus.png">');
 
         target.bind({
 
