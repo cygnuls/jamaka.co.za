@@ -23,6 +23,7 @@
         <script>window.jQuery || document.write('<script src="/scripts/js/jquery/1.11.0.min.js"><\/script>')</script>
         <script src="/scripts/js/jquery/ui/1.10.4.min.js"></script>
         <script src="/scripts/js/base.min.js"></script>
+        <script src="/scripts/js/contact.babel.min.js" defer></script>
 
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116463434-1"></script>
         <script>
@@ -41,6 +42,11 @@
 
         <link rel="next" href="/.">
         <link rel="prefetch" href="/images/home/billboard_1.jpg">
+
+        <style>
+            /* this is a quick workaround for an indiscriminate rule in root.css that interferes with recaptcha */
+            div { margin: initial; padding: initial; }
+        </style>
 
     </head>
 
@@ -143,7 +149,7 @@
 
             <section>
 
-                <form action="https://mail.cygnul.com/jamaka/send.php" method="post">
+                <form>
 
                     <fieldset>
 
@@ -361,44 +367,6 @@
                                       placeholder="Type here..."
                                       required
                             ></textarea>
-
-                        </div>
-
-                        <div id="quiz">
-
-                            <p>Answer:&nbsp; 9 &#247; 3 =</p>
-
-                            <div>
-
-                                <div>
-
-                                    <input type="radio" name="spam" id="1" value="2" checked>
-                                    <label for="1">2</label>
-
-                                </div>
-
-                                <div>
-
-                                    <input type="radio" name="spam" id="2" value="11">
-                                    <label for="2">11</label>
-
-                                </div>
-
-                                <div>
-
-                                    <input type="radio" name="spam" id="3" value="3" required>
-                                    <label for="3">3</label>
-
-                                </div>
-
-                                <div>
-
-                                    <input type="radio" name="spam" id="4" value="23">
-                                    <label for="4">23</label>
-
-                                </div>
-
-                            </div>
 
                         </div>
 
