@@ -292,6 +292,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     new Mailbox({
         id: 'jamaka_1',
+        carrier: 'xhr',
         destination: 'https://forms.cygnul.com/',
         recaptcha: '6LfiaNoZAAAAALtFL8I8M_joMoppfEG_Hb0HRX9x',
         busy,
