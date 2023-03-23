@@ -113,7 +113,9 @@ jQuery(function() {
         LatLngHouse9  = new google.maps.LatLng(-32.340439,19.028915),
         LatLngHouse10 = new google.maps.LatLng(-32.337419,19.022247),
         LatLngHouse11 = new google.maps.LatLng(-32.337365,19.021477),
-        LatLngHouse12 = new google.maps.LatLng(-32.337792,19.021494);
+        LatLngHouse12 = new google.maps.LatLng(-32.337792,19.021494),
+        LatLngHouse15 = new google.maps.LatLng(-32.341279,19.021646),
+        LatLngLogCabin1 = new google.maps.LatLng(-32.337762,19.020322);
 
     // options
 
@@ -284,6 +286,36 @@ jQuery(function() {
         title: 'House 12'
 
     });
+
+    var house15 = new StyledMarker({
+
+        styleIcon: new StyledIcon(StyledIconTypes.MARKER, {
+
+            text:"15"
+
+        }, cottageStyle),
+
+        position: LatLngHouse15,
+        map: map,
+        title: 'House 15'
+
+    });
+
+    var logcabin1 = new StyledMarker({
+
+        styleIcon: new StyledIcon(StyledIconTypes.MARKER, {
+
+            text:"L1"
+
+        }, cottageStyle),
+
+        position: LatLngLogCabin1,
+        map: map,
+        title: 'Log Cabin 1'
+
+    });
+
+
 
     // information windows
 
@@ -658,6 +690,54 @@ jQuery(function() {
                 'View Details'+
 
             '</a>'+
+
+        '</div>'
+
+    };
+
+    WindowOptionsHouse15 = {
+
+        position: LatLngHouse15,
+
+        content:
+
+        '<div id="info-window" style="overflow: hidden; text-align: center;">'+
+
+            '<h1 style="font-family: sans-serif; font-size: 1.3em; font-weight: bold; text-transform: none; margin: 0 0 4px 0; padding: 3px 0 6px 0; letter-spacing: normal; color: #665751; border-bottom: 1px dotted #83736D">'+
+
+                'Cottage 15'+
+
+            '</h1>'+
+
+            // '<a href="/stay/cottages/12" style="font-size: 1.05em; line-height: 1.3; padding: 0 0 5px 0;">'+
+
+            //     'View Details'+
+
+            // '</a>'+
+
+        '</div>'
+
+    };
+
+    WindowOptionsLogCabin1 = {
+
+        position: LatLngLogCabin1,
+
+        content:
+
+        '<div id="info-window" style="overflow: hidden; text-align: center;">'+
+
+            '<h1 style="font-family: sans-serif; font-size: 1.3em; font-weight: bold; text-transform: none; margin: 0 0 4px 0; padding: 3px 0 6px 0; letter-spacing: normal; color: #665751; border-bottom: 1px dotted #83736D">'+
+
+                'Log Cabin 1'+
+
+            '</h1>'+
+
+            // '<a href="/stay/cottages/12" style="font-size: 1.05em; line-height: 1.3; padding: 0 0 5px 0;">'+
+
+            //     'View Details'+
+
+            // '</a>'+
 
         '</div>'
 
