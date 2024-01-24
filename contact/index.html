@@ -33,6 +33,53 @@
             gtag('config', 'UA-116463434-1');
         </script>
 
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var emailLink = document.getElementById('posbus');
+                
+                // Update the href based on data attributes
+                function updateHref() {
+                    var user = emailLink.getAttribute('data-user') || 'user';
+                    var host = emailLink.getAttribute('data-host') || 'example';
+                    var domain = emailLink.getAttribute('data-domain') || 'com';
+
+                    emailLink.href = `mailto:${user}AT${host}DOT${domain}`;
+                }
+
+                // Replace 'AT' and 'DOT' in the href attribute
+                function format(event) {
+                    var element = event.target;
+                    element.href = element.href
+                        .replace(/AT/, '@')
+                        .replace(/DOT/, '.');
+                }
+
+                // Initialize
+                emailLink.setAttribute('data-user', 'stay');
+                emailLink.setAttribute('data-host', 'jamaka');
+                emailLink.setAttribute('data-domain', 'co.za');
+                updateHref();
+
+                // Event Listener
+                emailLink.addEventListener('click', format);
+            })
+        </script>
+
+        <style>
+            #posbus:link, #posbus:visited, #posbus:active {
+                color: inherit;
+                text-decoration: none;
+            }
+
+            #posbus::before {
+                content: attr(data-user);
+            }
+
+            #posbus::after {
+                content: attr(data-host) '.' attr(data-domain);
+            }
+        </style>
+
         <!--[if (lt IE 9) & (!IEMobile 7)]>
         <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/mootools/1.4.5/mootools-yui-compressed.js"></script>
@@ -409,16 +456,22 @@
                                 <td class="country-name">South Africa</td>
                             </tr>
                             <tr>
+                                <td><i class="fa fa-envelope"></i></td>
+                                <td class="tel">
+                                    <a 
+                                    id="posbus" 
+                                    data-user="stay" 
+                                    data-host="jamaka"
+                                    href="mailto:stayATjamakaDOTco.za">@</a>
+                                </td>
+                            </tr>
+                            <tr>
                                 <td><i class="fa fa-phone"></i></td>
                                 <td class="tel"><a href="tel:27-027-482-2801">(+27) 027 482 2801</a></td>
                             </tr>
                             <tr>
                                 <td><i class="fa fa-phone"></i></td>
                                 <td class="tel"><a href="tel:27-027-482-2805">(+27) 027 482 2805</a></td>
-                            </tr>
-                            <tr>
-                                <td><i class="fa fa-phone"></i></td>
-                                <td class="tel"><a href="tel:27-027-482-2800">(+27) 027 482 2800</a></td>
                             </tr>
                             <tr>
                                 <td><i class="fa fa-whatsapp"></i></td>
