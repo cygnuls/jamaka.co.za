@@ -135,7 +135,7 @@ function initMap() {
         font-size: 14px;
         max-width: 100px;
         text-align: center;
-        margin-left: 18px;
+        margin: 0;
         padding: 0;
     ">
         <h1 style="
@@ -156,7 +156,7 @@ function initMap() {
             width: 100%;
             text-decoration: none;
             font-size: 12px;
-            margin: 0;
+            margin: 0 0 15px;
             padding: 0;
         ">
             View Details
