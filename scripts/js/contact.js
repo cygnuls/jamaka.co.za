@@ -64,12 +64,6 @@ class Mailbox {
     // form usage, we will stick to using the POST method.
     static method = 'POST';
 
-    // separate error messaging for the XMLHttpRequest API
-    get xhrError() {
-        return `Error sending message: ${ request.response }
-                Status: ${ request.statusText }`
-    }
-
     addSpamService() {
         // provision API
         const head = document.querySelector('head');
@@ -151,18 +145,21 @@ class Mailbox {
         const request = new XMLHttpRequest();
         // opens a POST request, omitting the 3rd argument as it defaults to asynchronous
         request.open(Mailbox.method, this.destination);
-        // cancel the request if unsucessful after 5 seconds
-        request.timeout = 5000;
-        // send the request
-        request.send(formData);
-        // optional progress feedback functionality
-        request.onprogress = this.busy;
+        // The relay's SMTP leg alone can take 5+ seconds, so the old 5s
+        // limit aborted sends that were still in flight on the server.
+        request.timeout = 30000;
         // called after the response is received (readyState 4)
         request.onload = () => {
-            if (request.status >= 200 && request.status < 300) this.done('success', request);
-            else console.error(this.xhrError);
+            // the relay answers HTTP 200 for failed sends too; trust responseCode
+            let body = {};
+            try { body = JSON.parse(request.responseText); } catch (error) {}
+            if (request.status >= 200 && request.status < 300 && body.responseCode === 0) this.done('success', body);
+            else this.done('failure', body);
         }
-        request.onerror = () => console.error(this.xhrError);
+        request.onerror = () => this.done('failure', { description: 'Network error' });
+        request.ontimeout = () => this.done('failure', { description: 'Request timed out' });
+        this.busy();
+        request.send(formData);
     }
 
     // the default
@@ -241,6 +238,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         }));
 
+        // undo busy(): drop the loader and bring back the form as typed
+        $('#loader').remove();
+        form.children().stop(true, true).fadeIn(400);
+        $(':submit').attr('disabled', false).val('Submit Booking');
+
     }
 
     // Ajax beforeSend procedure
@@ -253,7 +255,7 @@ document.addEventListener('DOMContentLoaded', () => {
         var loadImg = new Image();
         loadImg['src'] = '../images/contact/load.gif';
         // create img element
-        var loaderGif = '<img src="' + loadImg.src + '" width="54" height="55">';
+        var loaderGif = '<img id="loader" src="' + loadImg.src + '" width="54" height="55">';
         // future augmentation: exclude submit button from fade
         form.children().fadeOut(800);
 
@@ -295,7 +297,8 @@ document.addEventListener('DOMContentLoaded', () => {
         carrier: 'xhr',
         destination: 'https://forms.cygnul.com/',
         recaptcha: '6LfiaNoZAAAAALtFL8I8M_joMoppfEG_Hb0HRX9x',
-        busy,
+        // the constructor reads "progress"; passed as "busy" it was silently dropped
+        progress: busy,
         success,
         failure,
     });

@@ -13,6 +13,9 @@ node_modules/
 # VS Code
 .vscode/
 
+# Claude Code (local launch config, session settings)
+.claude/
+
 # JetBrains
 .idea/
 *.iml

@@ -67,12 +67,6 @@ var Mailbox = /*#__PURE__*/function () {
   }
 
   _createClass(Mailbox, [{
-    key: "xhrError",
-    get:
-    function get() {
-      return "Error sending message: ".concat(request.response, "\n                Status: ").concat(request.statusText);
-    }
-  }, {
     key: "addSpamService",
     value: function addSpamService() {
       var head = document.querySelector('head');
@@ -152,15 +146,22 @@ var Mailbox = /*#__PURE__*/function () {
       var _this2 = this;
       var request = new XMLHttpRequest();
       request.open(Mailbox.method, this.destination);
-      request.timeout = 5000;
-      request.send(formData);
-      request.onprogress = this.busy;
+      request.timeout = 30000;
       request.onload = function () {
-        if (request.status >= 200 && request.status < 300) _this2.done('success', request);else console.error(_this2.xhrError);
+        var body = {};
+        try {
+          body = JSON.parse(request.responseText);
+        } catch (error) {}
+        if (request.status >= 200 && request.status < 300 && body.responseCode === 0) _this2.done('success', body);else _this2.done('failure', body);
       };
       request.onerror = function () {
-        return console.error(_this2.xhrError);
+        return _this2.done('failure', { description: 'Network error' });
       };
+      request.ontimeout = function () {
+        return _this2.done('failure', { description: 'Request timed out' });
+      };
+      this.busy();
+      request.send(formData);
     }
   }, {
     key: "fetch",
@@ -225,6 +226,9 @@ document.addEventListener('DOMContentLoaded', function () {
         $(this).remove();
       });
     }));
+    $('#loader').remove();
+    form.children().stop(true, true).fadeIn(400);
+    $(':submit').attr('disabled', false).val('Submit Booking');
   };
 
   function busy() {
@@ -232,7 +236,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var form = $('form');
     var loadImg = new Image();
     loadImg['src'] = '../images/contact/load.gif';
-    var loaderGif = '<img src="' + loadImg.src + '" width="54" height="55">';
+    var loaderGif = '<img id="loader" src="' + loadImg.src + '" width="54" height="55">';
     form.children().fadeOut(800);
     form.prepend(loaderGif);
   };
@@ -263,7 +267,7 @@ document.addEventListener('DOMContentLoaded', function () {
     carrier: 'xhr',
     destination: 'https://forms.cygnul.com/',
     recaptcha: '6LfiaNoZAAAAALtFL8I8M_joMoppfEG_Hb0HRX9x',
-    busy: busy,
+    progress: busy,
     success: success,
     failure: failure
   });
