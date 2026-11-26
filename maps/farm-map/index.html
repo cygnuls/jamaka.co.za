@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Explore Jamaka Organic Farm & Resort: campsites, cottages, caravan sites, swimming pools and farm roads.">
+<title>Explore Jamaka | Interactive Farm Map</title>
+<style>
+:root{--forest:#183e32;--ink:#20352e;--muted:#64756b;--paper:#f6f5ef;--line:#e2e6db;--river:#9edcf5;--hill:#f1cc93;--caravan:#e8a19b;--ablution:#b9e2a5;--pool:#8ce4e7;--cottage:#ffe18a}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.45 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input{font:inherit}button{cursor:pointer}a{color:inherit}header{display:flex;align-items:center;justify-content:space-between;gap:18px;background:var(--forest);color:#fff;padding:18px clamp(16px,4vw,50px)}.brand{display:flex;gap:14px;align-items:center;text-decoration:none}.brand svg{width:46px;height:46px;flex:none}.brand strong{font-family:Georgia,serif;font-size:clamp(24px,3vw,34px);font-weight:500;letter-spacing:.01em;display:block;line-height:1}.brand small{font-size:10px;letter-spacing:.19em;text-transform:uppercase;color:#d0dfcf;display:block;margin-top:6px}.back{font-size:13px;color:#e7eee5;text-decoration:none;white-space:nowrap}.back:hover{text-decoration:underline}
+main{max-width:1680px;margin:auto;padding:24px clamp(12px,3vw,36px) 20px}.intro{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:16px}.eyebrow{font-size:10px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#5a725c}h1{font:400 clamp(30px,4vw,43px)/1.1 Georgia,serif;margin:4px 0 5px}.intro p{margin:0;color:var(--muted);font-size:14px}.count{white-space:nowrap;font-size:12px;font-weight:700;color:var(--forest);border:1px solid #d8e2d5;border-radius:30px;padding:8px 13px;background:#eef2e9}.layout{display:grid;grid-template-columns:292px minmax(0,1fr);min-height:630px;height:clamp(630px,76vh,950px);border:1px solid #d7ded2;border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 10px 30px #1d382214}.sidebar{display:flex;min-height:0;flex-direction:column;gap:0;overflow:auto;padding:20px;background:#fff}.section-title{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:#647569;margin:0 0 10px}.search{width:100%;background:#f6f8f3;border:1px solid #dce3d8;border-radius:9px;padding:11px 12px;color:var(--ink);outline-color:var(--forest)}.filters{display:grid;gap:4px;margin:0 0 14px}.filter{display:flex;align-items:center;gap:9px;padding:6px 0;cursor:pointer;font-size:13px}.filter input{accent-color:var(--forest);width:16px;height:16px;margin:0}.filter .n{margin-left:auto;color:#718075;font-size:11px}.swatch{width:17px;height:17px;border-radius:50%;border:1px solid #233a3030;display:inline-grid;place-items:center;color:#183e32;flex:none}.swatch svg{width:12px;height:12px}.river{--marker:var(--river)}.hill{--marker:var(--hill)}.caravan{--marker:var(--caravan)}.ablution{--marker:var(--ablution)}.pool{--marker:var(--pool)}.cottage{--marker:var(--cottage)}.swatch,.pin{background:var(--marker)}.swatch.caravan,.swatch.cottage,.swatch.ablution,.swatch.pool{border-radius:5px}.rule{border:0;border-top:1px solid var(--line);margin:16px 0}.roadline{height:4px;width:24px;border-radius:5px;display:inline-block;flex:none}.roadkey{display:flex;align-items:center;gap:9px;font-size:12px;margin:8px 0}.results{margin:9px 0 0;max-height:190px;overflow:auto;display:grid;gap:3px}.result{display:flex;align-items:center;gap:8px;padding:9px;border:1px solid transparent;border-radius:7px;text-align:left;background:#f6f8f3;color:var(--ink);font-size:13px}.result:hover,.result:focus-visible{border-color:#7c9a84}.hint{font-size:12px;color:var(--muted);margin:9px 0 0}.map-wrap{position:relative;min-width:0;min-height:0;background:#e4e9de}#map{width:100%;height:100%;min-height:400px}.map-tools{position:absolute;top:12px;left:12px;display:flex;gap:6px;flex-wrap:wrap;max-width:calc(100% - 24px);z-index:2}.tool{background:#fff;color:var(--forest);border:0;border-radius:8px;padding:9px 12px;box-shadow:0 2px 10px #0003;font-size:12px;font-weight:700}.tool[aria-pressed=true]{background:var(--forest);color:#fff}.tool:hover{filter:brightness(.95)}.tool:disabled{opacity:.6;cursor:default}.status{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:white;border-radius:12px;box-shadow:0 5px 30px #0002;padding:20px;width:min(340px,90%);text-align:center;z-index:3}.status[hidden]{display:none}.pin{position:absolute;transform:translate(-50%,-50%);border:1.5px solid white;border-radius:50%;padding:0;min-width:23px;width:auto;height:23px;display:flex;align-items:center;justify-content:center;gap:2px;color:#17342d;font-size:10px;font-weight:850;line-height:1;box-shadow:0 1px 4px #0008;white-space:nowrap;pointer-events:auto;user-select:none}.pin .pin-id{padding:0 3px}.pin.river,.pin.hill{min-width:23px}.pin.caravan,.pin.cottage,.pin.ablution,.pin.pool{border-radius:7px;height:27px;padding:0 3px;z-index:3}.pin svg{width:15px;height:15px;flex:none}.pin:hover,.pin:focus-visible,.pin.selected{z-index:100!important;outline:2px solid #fff;outline-offset:2px;box-shadow:0 0 0 5px #17342d88}.pin[hidden]{display:none!important}.pin-layer.compact .pin.river,.pin-layer.compact .pin.hill{height:12px;min-width:12px;width:12px;border-width:1px}.pin-layer.compact .pin.river .pin-id,.pin-layer.compact .pin.hill .pin-id{display:none}.pin-layer.compact .pin.river:hover,.pin-layer.compact .pin.hill:hover,.pin-layer.compact .pin.selected{height:23px;width:auto;min-width:23px}.pin-layer.compact .pin:hover .pin-id,.pin-layer.compact .pin.selected .pin-id{display:block}.popup{font-family:system-ui,sans-serif;min-width:145px;max-width:240px;color:var(--ink);padding:3px 4px 6px}.popup small{color:#627368;font-weight:600}.popup h2{font-size:17px;margin:5px 0 8px}.popup a{display:block;color:#20563a;font-weight:650;font-size:13px;margin:6px 0;text-decoration:underline}.popup .coord{font-size:11px;color:#65776b;margin:4px 0}footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;color:var(--muted);font-size:12px;margin-top:14px;padding:0 3px}button:focus-visible,a:focus-visible{outline:2px solid #5d9568;outline-offset:3px}
+@media(max-width:760px){header{padding:14px 16px}.brand svg{width:36px;height:36px}.brand small{font-size:9px}.back{font-size:11px}main{padding:16px 10px}.intro{align-items:start}.intro p{font-size:12px}.count{display:none}.layout{display:flex;flex-direction:column;height:auto;min-height:0;border-radius:12px}.map-wrap{order:-1;height:62vh;min-height:380px}.sidebar{padding:16px;overflow:visible}.filters{grid-template-columns:1fr 1fr;gap:0 12px}.filter{font-size:12px}.results{max-height:160px}.roadkey{display:inline-flex;margin-right:12px}.map-tools{top:9px;left:9px}.tool{padding:8px 10px;font-size:11px}}
+</style></head>
+<body><header><a class="brand" href="https://jamaka.co.za/" aria-label="Jamaka home"><svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><circle cx="24" cy="24" r="22" stroke="#c5d8ba" stroke-width="1.4"/><path d="m7 32 12-15 8 9 5-6 9 12M24 18c0-8 5-10 10-10-1 6-4 10-10 10Zm0 0c0-6-3-8-8-9 0 6 3 9 8 9Z" stroke="#e4eddb" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Jamaka</strong><small>Organic Farm &amp; Resort</small></span></a><a class="back" href="https://jamaka.co.za/">← Back to website</a></header>
+<main><div class="intro"><div><div class="eyebrow">Cederberg · South Africa</div><h1>Explore the farm</h1><p>Find your campsite, cottage and facilities on the interactive farm map.</p></div><span class="count" id="total">201 locations</span></div>
+<div class="layout"><aside class="sidebar"><div class="section-title">Find your spot</div><label for="search" class="hint" style="margin:0 0 5px">Search by name or site number</label><input class="search" id="search" type="search" placeholder="e.g. 16A, Cottage 2, Pool" autocomplete="off"><div id="results" class="results" aria-live="polite"></div><p class="hint" id="search-hint">Select a location to zoom in. Tap a marker for details.</p><hr class="rule"><div class="section-title">Map legend &amp; filters</div><div class="filters" id="filters"></div><label class="filter"><input id="roads-toggle" type="checkbox" checked><span>Farm roads</span></label><div id="road-legend"></div><hr class="rule"><p class="hint" style="margin:0">All points are from the existing Jamaka map files. Zoom in to see individual campsite numbers clearly.</p></aside>
+<div class="map-wrap"><div id="map" aria-label="Google Maps satellite view of Jamaka"></div><div class="map-tools"><button class="tool" id="fit" disabled>⌖ Whole farm</button><button class="tool" id="satellite" disabled aria-pressed="true">Satellite</button><button class="tool" id="street" disabled aria-pressed="false">Map</button></div><div class="status" id="status" role="status">Loading Google Maps…</div></div></div>
+<footer><span>Jamaka Organic Farm &amp; Resort · Cederberg</span><span>Map locations are indicative; follow signs on the farm.</span></footer></main>
+<script>
+// CONFIGURATION: browser-facing Google Maps API key from the original Jamaka page.
+// Restrict it to your website in Google Cloud. Use a separate restricted test key for local testing.
+const GOOGLE_MAPS_API_KEY = "AIzaSyA3AIf7bzmB14CKdon0q7yj5-Xc13PJ6Nc";
+// Original source data (GPS coordinates unchanged). Edit this array to add or update sites.
+const LOCATIONS = [
+  {"id":"A1","type":"river","title":"Campsite A1","lat":-32.3352616026147,"lng":19.020079841929},
+  {"id":"A2","type":"river","title":"Campsite A2","lat":-32.3351574810395,"lng":19.0200755188452},
+  {"id":"A3","type":"river","title":"Campsite A3","lat":-32.3350436002152,"lng":19.0200754554512},
+  {"id":"A4","type":"river","title":"Campsite A4","lat":-32.3349208118059,"lng":19.0200652633945},
+  {"id":"A5","type":"river","title":"Campsite A5","lat":-32.3348025119203,"lng":19.0200713952905},
+  {"id":"27","type":"river","title":"Campsite 27","lat":-32.336328460858,"lng":19.0201775826862},
+  {"id":"28","type":"river","title":"Campsite 28","lat":-32.3360338074693,"lng":19.0201277015141},
+  {"id":"1","type":"river","title":"Campsite 1","lat":-32.3364978129839,"lng":19.0201839717987},
+  {"id":"2A","type":"river","title":"Campsite 2A","lat":-32.3367576007806,"lng":19.0201717940992},
+  {"id":"3","type":"river","title":"Campsite 3","lat":-32.3370812146157,"lng":19.0201704046688},
+  {"id":"5","type":"river","title":"Campsite 5","lat":-32.3380472452752,"lng":19.0200251471735},
+  {"id":"6","type":"river","title":"Campsite 6","lat":-32.3382409877281,"lng":19.019989984313},
+  {"id":"7","type":"river","title":"Campsite 7","lat":-32.3384295880941,"lng":19.0199649147514},
+  {"id":"8","type":"river","title":"Campsite 8","lat":-32.3385888796739,"lng":19.0199920535559},
+  {"id":"9","type":"river","title":"Campsite 9","lat":-32.3387768446347,"lng":19.0200377917845},
+  {"id":"9A","type":"river","title":"Campsite 9A","lat":-32.3389003123569,"lng":19.0201203040051},
+  {"id":"10","type":"river","title":"Campsite 10","lat":-32.3385554350583,"lng":19.0196053910651},
+  {"id":"11","type":"river","title":"Campsite 11","lat":-32.3387201032814,"lng":19.0196939470446},
+  {"id":"11A","type":"river","title":"Campsite 11A","lat":-32.3390414110771,"lng":19.0198154614499},
+  {"id":"11B","type":"river","title":"Campsite 11B","lat":-32.3391707090051,"lng":19.0198082270329},
+  {"id":"11C","type":"river","title":"Campsite 11C","lat":-32.3392819489823,"lng":19.0198786715234},
+  {"id":"24","type":"river","title":"Campsite 24","lat":-32.3393949202696,"lng":19.0199208417333},
+  {"id":"24A","type":"river","title":"Campsite 24A","lat":-32.339525737698,"lng":19.0199729630601},
+  {"id":"12","type":"river","title":"Campsite 12","lat":-32.3396674752367,"lng":19.0200206608532},
+  {"id":"12A","type":"river","title":"Campsite 12A","lat":-32.3397955627664,"lng":19.0202046382354},
+  {"id":"13F","type":"river","title":"Campsite 13F","lat":-32.3399576376738,"lng":19.0202390308098},
+  {"id":"13E","type":"river","title":"Campsite 13E","lat":-32.3401194197236,"lng":19.0203256516368},
+  {"id":"13D","type":"river","title":"Campsite 13D","lat":-32.3402448218222,"lng":19.0204022414416},
+  {"id":"13C","type":"river","title":"Campsite 13C","lat":-32.3403670195135,"lng":19.0204809650877},
+  {"id":"14","type":"river","title":"Campsite 14","lat":-32.3404791314899,"lng":19.0205525065881},
+  {"id":"14A","type":"river","title":"Campsite 14A","lat":-32.3406183666071,"lng":19.0206288318993},
+  {"id":"15A","type":"river","title":"Campsite 15A","lat":-32.3407678085181,"lng":19.0206935347839},
+  {"id":"15","type":"river","title":"Campsite 15","lat":-32.3409141709493,"lng":19.0207502071111},
+  {"id":"16","type":"river","title":"Campsite 16","lat":-32.3411453374385,"lng":19.0207437943104},
+  {"id":"17","type":"river","title":"Campsite 17","lat":-32.3412656068339,"lng":19.0208200527391},
+  {"id":"17A","type":"river","title":"Campsite 17A","lat":-32.3413762462173,"lng":19.0209009100496},
+  {"id":"17B","type":"river","title":"Campsite 17B","lat":-32.3414679360156,"lng":19.0210067116328},
+  {"id":"17C","type":"river","title":"Campsite 17C","lat":-32.3415729982661,"lng":19.0210814587957},
+  {"id":"16A","type":"river","title":"Campsite 16A","lat":-32.3414310542554,"lng":19.0213795667167},
+  {"id":"16B","type":"river","title":"Campsite 16B","lat":-32.3415685910837,"lng":19.0214400416239},
+  {"id":"16C","type":"river","title":"Campsite 16C","lat":-32.3416821256522,"lng":19.0215154530952},
+  {"id":"16D","type":"river","title":"Campsite 16D","lat":-32.3417980964079,"lng":19.0216085869144},
+  {"id":"16E","type":"river","title":"Campsite 16E","lat":-32.3419063668146,"lng":19.0217224219703},
+  {"id":"16I","type":"river","title":"Campsite 16I","lat":-32.3422625804347,"lng":19.0221819838017},
+  {"id":"16J","type":"river","title":"Campsite 16J","lat":-32.3423177288378,"lng":19.0223170451988},
+  {"id":"16K","type":"river","title":"Campsite 16K","lat":-32.3423423007117,"lng":19.0224442815142},
+  {"id":"16L","type":"river","title":"Campsite 16L","lat":-32.3423268188144,"lng":19.0225800551722},
+  {"id":"16M","type":"river","title":"Campsite 16M","lat":-32.3422829339884,"lng":19.0226794600811},
+  {"id":"30","type":"river","title":"Campsite 30","lat":-32.3426223193245,"lng":19.0224798473629},
+  {"id":"30A","type":"river","title":"Campsite 30A","lat":-32.342671423797,"lng":19.0222664710874},
+  {"id":"31","type":"river","title":"Campsite 31","lat":-32.3426608671565,"lng":19.0226740592291},
+  {"id":"32","type":"river","title":"Campsite 32","lat":-32.3426438901783,"lng":19.0229347634822},
+  {"id":"33","type":"river","title":"Campsite 33","lat":-32.3423736561651,"lng":19.0230850912955},
+  {"id":"33A","type":"river","title":"Campsite 33A","lat":-32.3424648438009,"lng":19.0231635449644},
+  {"id":"34","type":"river","title":"Campsite 34","lat":-32.3425633585146,"lng":19.0232569441797},
+  {"id":"35","type":"river","title":"Campsite 35","lat":-32.3426363789745,"lng":19.0233371696978},
+  {"id":"36","type":"river","title":"Campsite 36","lat":-32.3427296004183,"lng":19.0234243058666},
+  {"id":"37","type":"river","title":"Campsite 37","lat":-32.3428116871308,"lng":19.0235206627525},
+  {"id":"38","type":"river","title":"Campsite 38","lat":-32.3428870839752,"lng":19.0236332418319},
+  {"id":"39","type":"river","title":"Campsite 39","lat":-32.3429624530517,"lng":19.0237398223135},
+  {"id":"40","type":"river","title":"Campsite 40","lat":-32.3430446437381,"lng":19.023893066179},
+  {"id":"41","type":"river","title":"Campsite 41","lat":-32.3430951899211,"lng":19.0240202584301},
+  {"id":"42","type":"river","title":"Campsite 42","lat":-32.3431580056048,"lng":19.0241579337699},
+  {"id":"43","type":"river","title":"Campsite 43","lat":-32.3432350808583,"lng":19.024306695332},
+  {"id":"44","type":"river","title":"Campsite 44","lat":-32.3433826328074,"lng":19.0245062304456},
+  {"id":"45","type":"river","title":"Campsite 45","lat":-32.34349206256,"lng":19.0246556142534},
+  {"id":"46","type":"river","title":"Campsite 46","lat":-32.3436102504624,"lng":19.024811352723},
+  {"id":"47","type":"river","title":"Campsite 47","lat":-32.3436464084977,"lng":19.0249895995861},
+  {"id":"47A","type":"river","title":"Campsite 47A","lat":-32.3437021627015,"lng":19.0252114293116},
+  {"id":"54","type":"river","title":"Campsite 54","lat":-32.3438381896073,"lng":19.0253736598111},
+  {"id":"54A","type":"river","title":"Campsite 54A","lat":-32.3439948651286,"lng":19.0254490540941},
+  {"id":"57","type":"river","title":"Campsite 57","lat":-32.34414354773,"lng":19.0256847241618},
+  {"id":"69","type":"river","title":"Campsite 69","lat":-32.3451197337487,"lng":19.026453996},
+  {"id":"70","type":"river","title":"Campsite 70","lat":-32.3452304613085,"lng":19.0264608962971},
+  {"id":"71","type":"river","title":"Campsite 71","lat":-32.3453479632554,"lng":19.0264439396318},
+  {"id":"72","type":"river","title":"Campsite 72","lat":-32.3454688934757,"lng":19.0264493188264},
+  {"id":"73","type":"river","title":"Campsite 73","lat":-32.3456313352436,"lng":19.026495538433},
+  {"id":"74","type":"river","title":"Campsite 74","lat":-32.3457599408684,"lng":19.0265264649828},
+  {"id":"75","type":"river","title":"Campsite 75","lat":-32.3458944522094,"lng":19.0265582702693},
+  {"id":"76","type":"river","title":"Campsite 76","lat":-32.3460132419667,"lng":19.0265904177816},
+  {"id":"77","type":"river","title":"Campsite 77","lat":-32.3461558443717,"lng":19.0266512263639},
+  {"id":"78","type":"river","title":"Campsite 78","lat":-32.3471730347284,"lng":19.0274067441339},
+  {"id":"79","type":"river","title":"Campsite 79","lat":-32.3461718052696,"lng":19.0267965431184},
+  {"id":"80","type":"river","title":"Campsite 80","lat":-32.3459978096442,"lng":19.0267336389129},
+  {"id":"81","type":"river","title":"Campsite 81","lat":-32.3458681946823,"lng":19.0267099498865},
+  {"id":"82","type":"river","title":"Campsite 82","lat":-32.3457637498412,"lng":19.0267145649026},
+  {"id":"83","type":"river","title":"Campsite 83","lat":-32.3456395872734,"lng":19.0267079835768},
+  {"id":"84","type":"river","title":"Campsite 84","lat":-32.34551298661,"lng":19.0267102421776},
+  {"id":"85","type":"river","title":"Campsite 85","lat":-32.3453785078898,"lng":19.0266947687453},
+  {"id":"86","type":"river","title":"Campsite 86","lat":-32.3461737670869,"lng":19.0269756519618},
+  {"id":"87","type":"river","title":"Campsite 87","lat":-32.3462995952156,"lng":19.0270542397482},
+  {"id":"88","type":"river","title":"Campsite 88","lat":-32.3464069154144,"lng":19.0271338791158},
+  {"id":"89","type":"river","title":"Campsite 89","lat":-32.3465094365632,"lng":19.0272212824952},
+  {"id":"91","type":"river","title":"Campsite 91","lat":-32.3465920375719,"lng":19.0273512642997},
+  {"id":"93","type":"river","title":"Campsite 93","lat":-32.3466756111759,"lng":19.0274678264509},
+  {"id":"95","type":"river","title":"Campsite 95","lat":-32.3467722508468,"lng":19.0275696717203},
+  {"id":"98","type":"river","title":"Campsite 98","lat":-32.3469190620283,"lng":19.0277688819758},
+  {"id":"26","type":"hill","title":"Campsite 26","lat":-32.3356471782691,"lng":19.0204423483362},
+  {"id":"25","type":"hill","title":"Campsite 25","lat":-32.3360143927124,"lng":19.0203340886123},
+  {"id":"2","type":"hill","title":"Campsite 2","lat":-32.3369136053292,"lng":19.0204311569493},
+  {"id":"2B","type":"hill","title":"Campsite 2B","lat":-32.3370204786454,"lng":19.0204167348612},
+  {"id":"3A","type":"hill","title":"Campsite 3A","lat":-32.3371341896104,"lng":19.0204199256149},
+  {"id":"4","type":"hill","title":"Campsite 4","lat":-32.3372633958866,"lng":19.0204190130686},
+  {"id":"4A","type":"hill","title":"Campsite 4A","lat":-32.3374168049327,"lng":19.0204226980874},
+  {"id":"4B","type":"hill","title":"Campsite 4B","lat":-32.3375687469387,"lng":19.0204036201762},
+  {"id":"6A","type":"hill","title":"Campsite 6A","lat":-32.3383015719291,"lng":19.020433558185},
+  {"id":"7A","type":"hill","title":"Campsite 7A","lat":-32.3382269787642,"lng":19.0202488074901},
+  {"id":"7B","type":"hill","title":"Campsite 7B","lat":-32.3383599014372,"lng":19.0202194610784},
+  {"id":"10A","type":"hill","title":"Campsite 10A","lat":-32.3388244530379,"lng":19.0195166716092},
+  {"id":"23","type":"hill","title":"Campsite 23","lat":-32.3390409464387,"lng":19.0194411815146},
+  {"id":"22","type":"hill","title":"Campsite 22","lat":-32.3392156926861,"lng":19.0194214514588},
+  {"id":"22A","type":"hill","title":"Campsite 22A","lat":-32.3393602089996,"lng":19.0194474484888},
+  {"id":"21","type":"hill","title":"Campsite 21","lat":-32.3397788641399,"lng":19.0194952995755},
+  {"id":"21A","type":"hill","title":"Campsite 21A","lat":-32.3398890799501,"lng":19.0195173820429},
+  {"id":"20","type":"hill","title":"Campsite 20","lat":-32.3400091838672,"lng":19.0195928424628},
+  {"id":"20A","type":"hill","title":"Campsite 20A","lat":-32.3400923678435,"lng":19.0197292789517},
+  {"id":"20B","type":"hill","title":"Campsite 20B","lat":-32.3401579647183,"lng":19.0198430137612},
+  {"id":"12B","type":"hill","title":"Campsite 12B","lat":-32.3399360546822,"lng":19.0199606853835},
+  {"id":"12C","type":"hill","title":"Campsite 12C","lat":-32.3400883182883,"lng":19.0200547985535},
+  {"id":"12D","type":"hill","title":"Campsite 12D","lat":-32.3402034272614,"lng":19.0201365659437},
+  {"id":"12E","type":"hill","title":"Campsite 12E","lat":-32.3404705272684,"lng":19.020237457349},
+  {"id":"13A","type":"hill","title":"Campsite 13A","lat":-32.3406414251997,"lng":19.0201652731662},
+  {"id":"15E","type":"hill","title":"Campsite 15E","lat":-32.3405926083794,"lng":19.020309051117},
+  {"id":"15D","type":"hill","title":"Campsite 15D","lat":-32.3406884377646,"lng":19.0203617285543},
+  {"id":"15C","type":"hill","title":"Campsite 15C","lat":-32.340779563086,"lng":19.0204049764978},
+  {"id":"15B","type":"hill","title":"Campsite 15B","lat":-32.3408807002978,"lng":19.0204453232575},
+  {"id":"13B","type":"hill","title":"Campsite 13B","lat":-32.3409328211551,"lng":19.0201550707958},
+  {"id":"19","type":"hill","title":"Campsite 19","lat":-32.3410709821059,"lng":19.0202587046587},
+  {"id":"19A","type":"hill","title":"Campsite 19A","lat":-32.3409846923149,"lng":19.0203822181277},
+  {"id":"18","type":"hill","title":"Campsite 18","lat":-32.3412083534281,"lng":19.0203541560479},
+  {"id":"18A","type":"hill","title":"Campsite 18A","lat":-32.3411481883184,"lng":19.0205018038883},
+  {"id":"17E","type":"hill","title":"Campsite 17E","lat":-32.3415045386605,"lng":19.0206017988414},
+  {"id":"17F","type":"hill","title":"Campsite 17F","lat":-32.3415627740954,"lng":19.0207945070224},
+  {"id":"17D","type":"hill","title":"Campsite 17D","lat":-32.3415586263568,"lng":19.0209446768954},
+  {"id":"30B","type":"hill","title":"Campsite 30B","lat":-32.3428860075638,"lng":19.0225382316589},
+  {"id":"36A","type":"hill","title":"Campsite 36A","lat":-32.3428555063216,"lng":19.0232674302386},
+  {"id":"53A","type":"hill","title":"Campsite 53A","lat":-32.3429954132007,"lng":19.0230523084466},
+  {"id":"53","type":"hill","title":"Campsite 53","lat":-32.3431227693773,"lng":19.023253080441},
+  {"id":"52C","type":"hill","title":"Campsite 52C","lat":-32.3433502115232,"lng":19.0231392812432},
+  {"id":"52","type":"hill","title":"Campsite 52","lat":-32.3434205299417,"lng":19.0233227482766},
+  {"id":"52B","type":"hill","title":"Campsite 52B","lat":-32.3434804984442,"lng":19.0234825214057},
+  {"id":"52A","type":"hill","title":"Campsite 52A","lat":-32.3431918007414,"lng":19.023409447278},
+  {"id":"39A","type":"hill","title":"Campsite 39A","lat":-32.3430798257464,"lng":19.023589582602},
+  {"id":"40A","type":"hill","title":"Campsite 40A","lat":-32.3432206283998,"lng":19.0236699655789},
+  {"id":"40B","type":"hill","title":"Campsite 40B","lat":-32.3432238770283,"lng":19.0238605640387},
+  {"id":"51B","type":"hill","title":"Campsite 51B","lat":-32.3433882023825,"lng":19.0236578349724},
+  {"id":"51A","type":"hill","title":"Campsite 51A","lat":-32.343487941233,"lng":19.0238549976486},
+  {"id":"51","type":"hill","title":"Campsite 51","lat":-32.3435384290118,"lng":19.0240210168566},
+  {"id":"50","type":"hill","title":"Campsite 50","lat":-32.3436276441373,"lng":19.0241930581559},
+  {"id":"49","type":"hill","title":"Campsite 49","lat":-32.3437005616078,"lng":19.0243572532022},
+  {"id":"49A","type":"hill","title":"Campsite 49A","lat":-32.3435596887986,"lng":19.0243943931981},
+  {"id":"48","type":"hill","title":"Campsite 48","lat":-32.3437823337792,"lng":19.0245523180424},
+  {"id":"55","type":"hill","title":"Campsite 55","lat":-32.3439926303376,"lng":19.0249003404924},
+  {"id":"56","type":"hill","title":"Campsite 56","lat":-32.3441008600686,"lng":19.0249615768428},
+  {"id":"56A","type":"hill","title":"Campsite 56A","lat":-32.3441945942875,"lng":19.0250255839826},
+  {"id":"59","type":"hill","title":"Campsite 59","lat":-32.3442966014783,"lng":19.0251104319642},
+  {"id":"58","type":"hill","title":"Campsite 58","lat":-32.3443666464833,"lng":19.0252587508477},
+  {"id":"60","type":"hill","title":"Campsite 60","lat":-32.3444449661983,"lng":19.025368330849},
+  {"id":"61","type":"hill","title":"Campsite 61","lat":-32.344502975936,"lng":19.0254761674089},
+  {"id":"62","type":"hill","title":"Campsite 62","lat":-32.3445752186887,"lng":19.0255576188299},
+  {"id":"63","type":"hill","title":"Campsite 63","lat":-32.3446500602536,"lng":19.0256253542992},
+  {"id":"64","type":"hill","title":"Campsite 64","lat":-32.3447512776635,"lng":19.0256962380067},
+  {"id":"65","type":"hill","title":"Campsite 65","lat":-32.344860435235,"lng":19.0257672046833},
+  {"id":"66","type":"hill","title":"Campsite 66","lat":-32.3449762434832,"lng":19.0258525345488},
+  {"id":"67","type":"hill","title":"Campsite 67","lat":-32.3450907857113,"lng":19.025927041652},
+  {"id":"68","type":"hill","title":"Campsite 68","lat":-32.3451765596296,"lng":19.0259808577363},
+  {"id":"68A","type":"hill","title":"Campsite 68A","lat":-32.3452783813998,"lng":19.0260896618812},
+  {"id":"90","type":"hill","title":"Campsite 90","lat":-32.3463765809298,"lng":19.0274565327712},
+  {"id":"92","type":"hill","title":"Campsite 92","lat":-32.346469117303,"lng":19.0275689984936},
+  {"id":"94","type":"hill","title":"Campsite 94","lat":-32.3465726877276,"lng":19.0276672677966},
+  {"id":"96","type":"hill","title":"Campsite 96","lat":-32.3466711700327,"lng":19.0277355775388},
+  {"id":"97","type":"hill","title":"Campsite 97","lat":-32.3467755762959,"lng":19.0277833587577},
+  {"id":"47B","type":"hill","title":"Campsite 47B","lat":-32.3439908426648,"lng":19.0251491481136},
+  {"id":"1","type":"caravan","title":"Caravan 1","lat":-32.337677,"lng":19.020349},
+  {"id":"2","type":"caravan","title":"Caravan 2","lat":-32.33781,"lng":19.02033},
+  {"id":"3","type":"caravan","title":"Caravan 3","lat":-32.337792,"lng":19.020115},
+  {"id":"4","type":"caravan","title":"Caravan 4","lat":-32.338948,"lng":19.0199},
+  {"id":"5","type":"caravan","title":"Caravan 5","lat":-32.340557,"lng":19.020091},
+  {"id":"A","type":"ablution","title":"Ablution Block A","lat":-32.336797,"lng":19.020359},
+  {"id":"B","type":"ablution","title":"Ablution Block B","lat":-32.338017,"lng":19.02048},
+  {"id":"C","type":"ablution","title":"Ablution Block C","lat":-32.340405,"lng":19.019844},
+  {"id":"D","type":"ablution","title":"Ablution Block D","lat":-32.343222,"lng":19.022577},
+  {"id":"E","type":"ablution","title":"Ablution Block E","lat":-32.343508,"lng":19.023637},
+  {"id":"F","type":"ablution","title":"Ablution Block F","lat":-32.34389,"lng":19.024762},
+  {"id":"1","type":"pool","title":"Swimming Pool 1","lat":-32.337647,"lng":19.019831},
+  {"id":"2","type":"pool","title":"Swimming Pool 2","lat":-32.342225,"lng":19.022913},
+  {"id":"3","type":"pool","title":"Swimming Pool 3","lat":-32.344518,"lng":19.026273},
+  {"id":"1","type":"cottage","title":"Cottage 1","lat":-32.337384,"lng":19.02465,"url":"https://jamaka.co.za/stay/cottages/1"},
+  {"id":"2","type":"cottage","title":"Cottage 2","lat":-32.338051,"lng":19.023931,"url":"https://jamaka.co.za/stay/cottages/2"},
+  {"id":"3","type":"cottage","title":"Cottage 3","lat":-32.338019,"lng":19.02325,"url":"https://jamaka.co.za/stay/cottages/3"},
+  {"id":"4","type":"cottage","title":"Cottage 4","lat":-32.336632,"lng":19.020627,"url":"https://jamaka.co.za/stay/cottages/4"},
+  {"id":"5","type":"cottage","title":"Cottage 5","lat":-32.344981,"lng":19.030894,"url":"https://jamaka.co.za/stay/cottages/5"},
+  {"id":"6","type":"cottage","title":"Cottage 6","lat":-32.341201,"lng":19.029741,"url":"https://jamaka.co.za/stay/cottages/6"},
+  {"id":"7","type":"cottage","title":"Cottage 7","lat":-32.340485,"lng":19.03002,"url":"https://jamaka.co.za/stay/cottages/7"},
+  {"id":"8","type":"cottage","title":"Cottage 8","lat":-32.341722,"lng":19.029719,"url":"https://jamaka.co.za/stay/cottages/8"},
+  {"id":"9","type":"cottage","title":"Cottage 9","lat":-32.340439,"lng":19.028915,"url":"https://jamaka.co.za/stay/cottages/9"},
+  {"id":"10","type":"cottage","title":"Cottage 10","lat":-32.337419,"lng":19.022247,"url":"https://jamaka.co.za/stay/cottages/10"},
+  {"id":"11","type":"cottage","title":"Cottage 11","lat":-32.337365,"lng":19.021477,"url":"https://jamaka.co.za/stay/cottages/11"},
+  {"id":"12","type":"cottage","title":"Cottage 12","lat":-32.337792,"lng":19.021494,"url":"https://jamaka.co.za/stay/cottages/12"},
+  {"id":"15","type":"cottage","title":"Cottage 15","lat":-32.341279,"lng":19.021646,"url":"https://jamaka.co.za/stay/cottages/15"},
+  {"id":"L1","type":"cottage","title":"Log Cabin 1","lat":-32.337762,"lng":19.020322,"url":"https://jamaka.co.za/stay/cottages/L1"}
+];
+const ROADS = [
+  {"title":"Office to entrance","color":"#ff8263","path":[{"lat":-32.341074,"lng":19.029226},{"lat":-32.341167,"lng":19.0291},{"lat":-32.341108,"lng":19.02862},{"lat":-32.341169,"lng":19.028298},{"lat":-32.340412,"lng":19.027885},{"lat":-32.339075,"lng":19.027075},{"lat":-32.33651,"lng":19.025573},{"lat":-32.336544,"lng":19.025493},{"lat":-32.33658,"lng":19.02545}]},
+  {"title":"Old campsite road","color":"#50c5fa","path":[{"lat":-32.336596,"lng":19.025423},{"lat":-32.336634,"lng":19.025402},{"lat":-32.336686,"lng":19.025343},{"lat":-32.336759,"lng":19.025225},{"lat":-32.336845,"lng":19.024959},{"lat":-32.33692,"lng":19.024771},{"lat":-32.336924,"lng":19.024514},{"lat":-32.336977,"lng":19.023865},{"lat":-32.337017,"lng":19.023715},{"lat":-32.337056,"lng":19.023433},{"lat":-32.337137,"lng":19.023183},{"lat":-32.337201,"lng":19.022931},{"lat":-32.337205,"lng":19.022843},{"lat":-32.337176,"lng":19.022752},{"lat":-32.336847,"lng":19.021968},{"lat":-32.336788,"lng":19.021464},{"lat":-32.336766,"lng":19.021389},{"lat":-32.336732,"lng":19.021338},{"lat":-32.336575,"lng":19.021191},{"lat":-32.336473,"lng":19.021056},{"lat":-32.336387,"lng":19.020922},{"lat":-32.336342,"lng":19.020775},{"lat":-32.33631,"lng":19.0207},{"lat":-32.336233,"lng":19.020614},{"lat":-32.336229,"lng":19.02056},{"lat":-32.336245,"lng":19.020517},{"lat":-32.336322,"lng":19.020477},{"lat":-32.336444,"lng":19.020391},{"lat":-32.336487,"lng":19.02034},{"lat":-32.336539,"lng":19.020281},{"lat":-32.336603,"lng":19.020246}]},
+  {"title":"Krip se Vlei road","color":"#a6df69","path":[{"lat":-32.336607,"lng":19.025445},{"lat":-32.336682,"lng":19.025399},{"lat":-32.336947,"lng":19.025219},{"lat":-32.337208,"lng":19.024994},{"lat":-32.33745,"lng":19.024932},{"lat":-32.337516,"lng":19.024849},{"lat":-32.337611,"lng":19.024595},{"lat":-32.337661,"lng":19.024256},{"lat":-32.337681,"lng":19.023862},{"lat":-32.337783,"lng":19.02365},{"lat":-32.337876,"lng":19.02358},{"lat":-32.338039,"lng":19.023562},{"lat":-32.338223,"lng":19.023629},{"lat":-32.338309,"lng":19.023803},{"lat":-32.338846,"lng":19.023835},{"lat":-32.338989,"lng":19.023851},{"lat":-32.339705,"lng":19.02387},{"lat":-32.339918,"lng":19.023873},{"lat":-32.339988,"lng":19.0239},{"lat":-32.340265,"lng":19.024109},{"lat":-32.340408,"lng":19.02412},{"lat":-32.340435,"lng":19.024066},{"lat":-32.3405,"lng":19.023908},{"lat":-32.34099,"lng":19.023417},{"lat":-32.341214,"lng":19.023248},{"lat":-32.341266,"lng":19.023122},{"lat":-32.341269,"lng":19.023031},{"lat":-32.341246,"lng":19.022856},{"lat":-32.341332,"lng":19.022569},{"lat":-32.341387,"lng":19.022462},{"lat":-32.341359,"lng":19.022263},{"lat":-32.341402,"lng":19.022116},{"lat":-32.341473,"lng":19.022057},{"lat":-32.341545,"lng":19.022036},{"lat":-32.341645,"lng":19.022043},{"lat":-32.341998,"lng":19.022242},{"lat":-32.342028,"lng":19.022314},{"lat":-32.342103,"lng":19.022655},{"lat":-32.342318,"lng":19.022896}]}
+];
+const TYPES = {river:{label:'Riverside campsite',plural:'Riverside campsites'},hill:{label:'Hillside campsite',plural:'Hillside campsites'},caravan:{label:'Caravan site',plural:'Caravan sites'},cottage:{label:'Cottage / cabin',plural:'Cottages & cabins'},ablution:{label:'Ablution block',plural:'Ablution blocks'},pool:{label:'Swimming pool',plural:'Swimming pools'}};
+const ICONS={cottage:'<path d="m2 8 6-5 6 5M4 7v7h8V7M7 14v-4h2v4"/>',caravan:'<rect x="2" y="4" width="11" height="8" rx="2"/><path d="M13 10h2M5 6h5M6 12v1"/><circle cx="6" cy="13" r="1.2"/>',ablution:'<circle cx="5" cy="3" r="1.1"/><circle cx="11" cy="3" r="1.1"/><path d="M3 7l2-2 2 2M5 5v9M9 9l2-4 2 4h-4ZM11 9v5"/>',pool:'<path d="M2 9q2-2 4 0t4 0 4 0M2 13q2-2 4 0t4 0 4 0M5 7V3q0-1 1-1h2M9 7V3q0-1 1-1h2M5 5h4"/>'};
+function icon(type){return ICONS[type]?'<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+ICONS[type]+'</svg>':'';}
+const $=id=>document.getElementById(id);const enabled=new Set(Object.keys(TYPES));let map,overlay,info,roadLines=[],selected=null,loadTimer;
+function setStatus(message){$('status').textContent=message;$('status').hidden=false;}
+function error(message){clearTimeout(loadTimer);setStatus(message);}
+window.gm_authFailure=()=>error('Google Maps could not authenticate. Check the Maps JavaScript API, billing and the API key’s website restrictions in Google Cloud.');
+function keyFor(p){return p.type+':'+p.id;}
+function displayTitle(p){return p.type==='caravan'?'Caravan site '+p.id:p.title;}
+function createFilters(){for(const [type,meta] of Object.entries(TYPES)){const label=document.createElement('label');label.className='filter';const input=document.createElement('input');input.type='checkbox';input.checked=true;input.dataset.type=type;input.addEventListener('change',()=>{input.checked?enabled.add(type):enabled.delete(type);if(selected&&!enabled.has(selected.type)){info?.close();selected=null;}updateVisibility();});const mark=document.createElement('span');mark.className='swatch '+type;mark.innerHTML=icon(type);const title=document.createElement('span');title.textContent=meta.plural;const count=document.createElement('span');count.className='n';count.textContent=LOCATIONS.filter(x=>x.type===type).length;label.append(input,mark,title,count);$('filters').append(label);}}
+function updateVisibility(){overlay?.refresh();const n=LOCATIONS.filter(p=>enabled.has(p.type)).length;$('total').textContent=n+' of '+LOCATIONS.length+' locations';}
+function setupRoadLegend(){ROADS.forEach(r=>{const row=document.createElement('div');row.className='roadkey';const sw=document.createElement('span');sw.className='roadline';sw.style.background=r.color;row.append(sw,document.createTextNode(r.title));$('road-legend').append(row);});$('roads-toggle').addEventListener('change',e=>roadLines.forEach(line=>line.setMap(e.target.checked?map:null)));}
+function fitAll(){if(!map)return;info?.close();selected=null;overlay?.refresh();const b=new google.maps.LatLngBounds();LOCATIONS.forEach(p=>b.extend(p));ROADS.forEach(r=>r.path.forEach(p=>b.extend(p)));map.fitBounds(b,45);}
+function setMapType(type){if(!map)return;map.setMapTypeId(type);$('satellite').setAttribute('aria-pressed',String(type==='satellite'));$('street').setAttribute('aria-pressed',String(type==='roadmap'));}
+function showPoint(p,zoom=false){if(!map)return;enabled.add(p.type);const check=document.querySelector('input[data-type="'+p.type+'"]');if(check)check.checked=true;selected=p;updateVisibility();if(zoom){map.panTo({lat:p.lat,lng:p.lng});if(map.getZoom()<19)map.setZoom(19);}
+ const content=document.createElement('div');content.className='popup';const sub=document.createElement('small');sub.textContent=TYPES[p.type].label;const title=document.createElement('h2');title.textContent=displayTitle(p);const coord=document.createElement('div');coord.className='coord';coord.textContent=p.lat.toFixed(6)+', '+p.lng.toFixed(6);content.append(sub,title,coord);
+ if(p.url){const link=document.createElement('a');link.href=p.url;link.textContent='View cottage details';content.append(link);}const nav=document.createElement('a');nav.href='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(p.lat+','+p.lng);nav.target='_blank';nav.rel='noopener';nav.textContent='Open location in Google Maps ↗';content.append(nav);
+ info.setContent(content);info.setPosition({lat:p.lat,lng:p.lng});info.setOptions({pixelOffset:new google.maps.Size(0,-16)});info.open({map,shouldFocus:false});}
+function search(){const q=$('search').value.trim().toLowerCase();$('results').replaceChildren();if(!q){$('search-hint').textContent='Select a location to zoom in. Tap a marker for details.';return;}const matches=LOCATIONS.filter(p=>[p.id,p.title,TYPES[p.type].label].join(' ').toLowerCase().includes(q)).sort((a,b)=>(b.id.toLowerCase()===q)-(a.id.toLowerCase()===q)||a.title.localeCompare(b.title,undefined,{numeric:true}));$('search-hint').textContent=matches.length?`${matches.length} matching location${matches.length===1?'':'s'}.`:'No matching locations.';matches.forEach(p=>{const b=document.createElement('button');b.className='result';const sw=document.createElement('span');sw.className='swatch '+p.type;sw.innerHTML=icon(p.type);b.append(sw,document.createTextNode(displayTitle(p)+(p.type==='river'?' · Riverside':p.type==='hill'?' · Hillside':'')));b.addEventListener('click',()=>{showPoint(p,true);if(innerWidth<=760)$('map').scrollIntoView({block:'start',behavior:'smooth'});});$('results').append(b);});}
+createFilters();setupRoadLegend();$('search').addEventListener('input',search);$('fit').addEventListener('click',fitAll);$('satellite').addEventListener('click',()=>setMapType('satellite'));$('street').addEventListener('click',()=>setMapType('roadmap'));
+window.initJamakaMap=function(){try{
+ map=new google.maps.Map($('map'),{center:{lat:-32.3409,lng:19.025},zoom:16,mapTypeId:'satellite',minZoom:10,maxZoom:22,streetViewControl:false,mapTypeControl:false,fullscreenControl:true,scaleControl:true,zoomControl:true,gestureHandling:'greedy',tilt:0,heading:0,backgroundColor:'#e4e9de'});
+ info=new google.maps.InfoWindow();info.addListener('closeclick',()=>{selected=null;overlay?.refresh();});map.addListener('click',()=>{info.close();selected=null;overlay?.refresh();});
+ // Standard Google Maps OverlayView: no legacy StyledIcon, jQuery, image server, or map ID.
+ class FarmMarkers extends google.maps.OverlayView{
+  constructor(){super();this.nodes=[];}
+  onAdd(){this.layer=document.createElement('div');this.layer.className='pin-layer';this.layer.style.position='absolute';this.layer.style.left='0';this.layer.style.top='0';this.layer.style.pointerEvents='none';this.getPanes().overlayMouseTarget.append(this.layer);for(const p of LOCATIONS){const el=document.createElement('button');el.type='button';el.className='pin '+p.type;el.title=displayTitle(p);el.setAttribute('aria-label',displayTitle(p));el.innerHTML=icon(p.type);const label=document.createElement('span');label.className='pin-id';label.textContent=p.id;el.append(label);el.addEventListener('click',e=>{e.stopPropagation();showPoint(p);});google.maps.OverlayView.preventMapHitsFrom(el);this.layer.append(el);this.nodes.push({p,el,pos:new google.maps.LatLng(p.lat,p.lng)});}this.refresh();}
+  draw(){const projection=this.getProjection();if(!projection||!this.layer)return;for(const {el,pos} of this.nodes){const pixel=projection.fromLatLngToDivPixel(pos);if(pixel){el.style.left=pixel.x+'px';el.style.top=pixel.y+'px';}}this.layer.classList.toggle('compact',(map.getZoom()||16)<18);}
+  refresh(){if(!this.layer)return;for(const {p,el} of this.nodes){el.hidden=!enabled.has(p.type);el.classList.toggle('selected',selected===p);}}
+  onRemove(){this.layer?.remove();this.layer=null;this.nodes=[];}
+ }
+ overlay=new FarmMarkers();overlay.setMap(map);
+ for(const r of ROADS){for(const style of [{strokeColor:'#203328',strokeOpacity:.85,strokeWeight:7,zIndex:1},{strokeColor:r.color,strokeOpacity:1,strokeWeight:4,zIndex:2}]){roadLines.push(new google.maps.Polyline({path:r.path,map:$('roads-toggle').checked?map:null,clickable:false,geodesic:false,...style}));}}
+ map.addListener('zoom_changed',()=>overlay?.draw());fitAll();['fit','satellite','street'].forEach(id=>$(id).disabled=false);clearTimeout(loadTimer);$('status').hidden=true;updateVisibility();
+ }catch(e){console.error(e);error('The map could not be initialized. Open the browser console for details.');}};
+if(!GOOGLE_MAPS_API_KEY||GOOGLE_MAPS_API_KEY==='YOUR_GOOGLE_MAPS_API_KEY'){error('Add your Google Maps JavaScript API key in the HTML configuration.');}else{loadTimer=setTimeout(()=>error('Google Maps is taking too long to load. Check your internet connection or API settings.'),18000);const script=document.createElement('script');script.src='https://maps.googleapis.com/maps/api/js?key='+encodeURIComponent(GOOGLE_MAPS_API_KEY)+'&v=weekly&loading=async&callback=initJamakaMap';script.async=true;script.onerror=()=>error('Unable to load Google Maps. Check your internet connection.');document.head.append(script);}
+</script></body></html>
